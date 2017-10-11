@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta property="pinp:template" page="Panel" content="/app/files/rewgt/web/templates/Panel">
+<meta property="pinp:template" page="P" content="/app/files/rewgt/web/templates/P">
+<meta property="pinp:template" page="Span" content="/app/files/rewgt/web/templates/Span">
+<meta property="pinp:template" page="Linker" content="/app/files/rewgt/web/templates/Linker">
+<meta property="pinp:template" page="Nav" content="/app/files/rewgt/web/templates/Nav">
+<meta property="pinp:template" page="Md" content="/app/files/rewgt/web/hint_marked.html">
+<meta property="pinp:template" page="bs" content="/app/rewgt/shadow-bootstrap/web/output/shared/bs">
+<meta property="pinp:template" page="Grid" content="/app/rewgt/shadow-bootstrap/web/output/shared/Grid">
+<meta property="pinp:template" page="Overlay" content="/app/rewgt/shadow-bootstrap/web/output/shared/Overlay">
+<meta property="pinp:template" page="Navigator" content="/app/rewgt/shadow-bootstrap/web/output/shared/Navigator">
+<meta property="pinp:template" page="Form" content="/app/rewgt/shadow-bootstrap/web/output/shared/Form">
+<meta property="pinp:template" page="Typography" content="/app/rewgt/shadow-bootstrap/web/output/shared/Typography">
+<meta property="pinp:template" page="Indicator" content="/app/rewgt/shadow-bootstrap/web/output/shared/Indicator">
+<meta property="pinp:template" page="Inline" content="/app/rewgt/shadow-bootstrap/web/output/shared/Inline">
+<title>Shadow Bootstrap Sample</title>
+
+</head>
+<body>
+
+<link rel="stylesheet" shared="true" href="lib/sw_base.css" />
+<link rel="stylesheet" shared="true" href="lib/bootstrap.css" />
+
+<style>
+html {
+  font-size: 16px;
+}
+</style>
+
+<!-- BEGIN OF CONTAINER, DO NOT CHANGE THIS LINE. -->
+<div id="react-container" style="visibility:hidden; position:absolute; left:0px; top:0px">
+<div $=BodyPanel key='body' klass='S5 hidden-visible-auto'>
+  <div $=Panel key='top' klass='auto-hidden-visible' height='{0.9999}'>
+
+<div $=bs.Navbar fixed-top='1'>
+  <div $=bs.NavbarHeader>
+    <span $=bs.NavbarBrand href='https://github.com/rewgt/shadow-bootstrap'>Shadow bootstrap</span>
+    <span $=bs.NavbarToggle></span>
+  </div>
+  <div $=bs.NavbarCollapse default-expanded=''>
+    <div $=bs.Nav pull-right='1'>
+      <div $=bs.NavItem key='item1'>Login</div>
+    </div>
+    <div $=bs.Nav>
+      <div $=bs.NavItem key='item2'>Product</div>
+      <pre $=bs.DropdownBtn key='drop' desc='Online help'>
+<div $=bs.MenuItem key='item3'>Chapter 1</div>
+<div $=bs.MenuItem key='item4'>Chapter 2</div>
+</pre>
+    </div>
+    <div $=bs.NavbarForm pull-right='1'>
+      <span $=bs.FormGroup>
+        <span $=bs.FormCtrl type='text' placeholder='Search'></span>
+      </span>
+    </div>
+  </div>
+</div>
+
+<div $=bs.Div2 width='{0.9999}' height='{60}'></div>
+
+<div $=bs.Grid>
+  <div $=bs.Jumbotron>
+    <div $=bs.H1>Shadow Widget + Bootstrap</div>
+    <div $=bs.P>&nbsp;</div>
+    <div $=bs.P>Bootstrap framework for Shadow Widget, simple and powerful, WYSIWYG (what you see is what you get) UI design.</div>
+    <div $=bs.P>&nbsp;</div>
+    <div $=bs.P>
+      <span $=bs.Btn bs-style='primary'>Learn more</span>
+    </div>
+  </div>
+  
+  <div $=bs.Row>
+    <div $=bs.Col lg='{4}' sm='{6}'>
+      <div $=bs.H3><span $=bs.Glyphicon glyph='magnet'></span><span $=Span> Easy to Install</span></div>
+      <pre $=bs.MarkedDiv klass='S6'>Bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla.</pre>
+    </div>
+    <div $=bs.Col lg='{4}' sm='{6}'>
+      <div $=bs.H3><span $=bs.Glyphicon glyph='list-alt'></span><span $=Span> Open Source</span></div>
+      <pre $=bs.MarkedDiv klass='S6'>Bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla.</pre>
+    </div>
+    <div $=bs.Col lg='{4}' sm='{6}'>
+      <div $=bs.H3><span $=bs.Glyphicon glyph='thumbs-up'></span><span $=Span> Modular</span></div>
+      <pre $=bs.MarkedDiv klass='S6'>Bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla.</pre>
+    </div>
+  </div>
+</div>
+
+<div $=bs.Div2 width='{0.9999}' height='{20}'></div>
+
+  </div>
+</div>
+</div>
+<!-- END OF CONTAINER, DO NOT CHANGE THIS LINE. -->
+
+<!--
+<script src="bundle.js"></script>  -->
+
+<script src="lib/bootstrap.min.js"></script>
+
+<script src="lib/react.min.js"></script>
+<script src="lib/react-dom.min.js"></script>
+<script src="lib/create-react-class.min.js"></script>
+<script src="lib/shadow-widget.min.js"></script>
+
+</body>
+</html>

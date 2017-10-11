@@ -1,0 +1,252 @@
+4.1 Nav
+--------
+
+&nbsp;
+
+### Nav 导航列表
+
+在 `bs.Nav` 之下可设计若干 `bs.NavItem` 或 `bs.DropdownBtn`，形成导航列表，如下例。
+
+<div $='.rewgt.ui_demo' src='md/code/4_1_a.txt' input-height='{200}'></div>
+
+各导航项要求互斥，所以 `bs.Nav` 要放到 `bs.NavDiv` 之下。
+
+Nav 的 `duals.bsStyle` 用 `'pills'` 或 `'tabs'` 指示导航列表项按胶囊式或标签页式排列。 将 `duals.bsStyle` 设为 `'pills'`，并设 `duals.stacked` 为 `'1'`，导航列表将在垂直方向堆叠排列，如下。
+
+<div $='.rewgt.ui_demo' src='md/code/4_1_b.txt' input-height='{200}'></div>
+
+`duals.justified` 指示各导航项是否自动调整，即，平均分配 `bs.Nav` 的宽度，如下。
+
+<div $='.rewgt.ui_demo' src='md/code/4_1_c.txt' input-height='{200}'></div>
+
+### 切换 GroundDiv
+
+如果在导航项切换后需同步切换场景面板，应在 `bs.NavDiv` 之下增加若干 key 值与选项构件对应的 `bs.GroundDiv`，比如下面例子。
+
+<div $='.rewgt.ui_demo' src='md/code/4_1_d.txt' input-height='{290}'></div>
+
+这里，`bs.NavItem` 与 `bs.OptItem` 是选项构件，如果将 `bs.OptItem` 换成 `bs.MenuItem` 则不具备选项导航的功能。
+
+选项构件可联动切换 `bs.GroundDiv`，不过，是否放置 `bs.GroundDiv` 场景面板是可选的，因为 `bs.NavDiv` 提供 `duals.checkedId` 支持侦听，当导航项切换被侦测，设计者可借助编程，可让界面任意变化，并不一定要表现为 `bs.GroundDiv` 同步切换。
+
+### NavItem 导航项
+
+`bs.NavItem` 用 `duals['data-checked']` 指示当前项是否激活；用 `duals.disabled` 指示当前项是否禁用；如果导航项指定了 `href` 属性，点击该项，页面将跳转至指定 URL。见下面例子。
+
+<div $='.rewgt.ui_demo' src='md/code/4_1_e.txt' input-height='{200}'></div>
+
+用 `duals.icon` 或 `duals.glyph` 设置导航项的图标，如下：
+
+<div $='.rewgt.ui_demo' src='md/code/4_1_f.txt' input-height='{120}'></div>
+
+### API 接口
+
+<a name="api_nav"></a>构件 `bs.Nav`（继承自 `bs.Ul`）：
+
+<div $=bs.Table responsive='1' striped='' bordered='1' condensed='1' hover='1'>
+  <div $=bs.Thead sty__='background:#e8e8e8'><div $=bs.Tr>
+    <div $=bs.Th width='{160}'>属性</div>
+    <div $=bs.Th width='{80}'>类型</div>
+    <div $=bs.Th width='{100}'>缺省值</div>
+    <div $=bs.Th>描述</div>
+  </div></div>
+  <div $=bs.Tbody><div $=bs.Tr>
+    <div $=bs.Td><code>props.bsClass</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>'nav'</div>
+    <div $=bs.Td></div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.bsStyle</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>'pills'</div>
+    <div $=bs.Td>指示其下各导航项以胶囊方式还是标签页方式显示，取值：'pills' 或 'tabs'</div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.justified</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td></div>
+    <div $=bs.Td>指示其下各导航项是否自动对齐，即平均分摊父构件的宽度，取值：'' 或 '1' </div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.stacked</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td></div>
+    <div $=bs.Td>指示导航项是否堆叠排列，取值：'' 或 '1' </div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.pullRight</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td></div>
+    <div $=bs.Td>指示本构件是否浮向右侧，仅在 Navbar 下有效，取值：'' 或 '1' </div>
+  </div></div>
+</div>
+
+<a name="api_navitem"></a>构件 `bs.NavItem`（继承自 `OptLi`）：
+
+<div $=bs.Table responsive='1' striped='' bordered='1' condensed='1' hover='1'>
+  <div $=bs.Thead sty__='background:#e8e8e8'><div $=bs.Tr>
+    <div $=bs.Th width='{160}'>属性</div>
+    <div $=bs.Th width='{80}'>类型</div>
+    <div $=bs.Th width='{100}'>缺省值</div>
+    <div $=bs.Th>描述</div>
+  </div></div>
+  <div $=bs.Tbody><div $=bs.Tr>
+    <div $=bs.Td><code>props.bsClass</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>'navitem'</div>
+    <div $=bs.Td></div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>props.noSelect</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td></div>
+    <div $=bs.Td>是否不允许选中，仅在 bs.Nav 下有效，可选值：'' 或 '1'，如果当前 bs.Nav 处在 bs.Navbar 下缺省取值 '1'，即 “不允许选中”，否则缺省取 ''，即 “允许选中” </div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals['data-checked']</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>''</div>
+    <div $=bs.Td>是否处于活动态，可选：'' 或 '1' </div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.disabled</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>''</div>
+    <div $=bs.Td>是否禁用，可选：'' 或 '1' </div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.icon</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td></div>
+    <div $=bs.Td>设置按钮图标，指示图标 URL 值</div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.glyph</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td></div>
+    <div $=bs.Td>设置按钮图标</div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.href</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td></div>
+    <div $=bs.Td>跳转 URL 的跳转路径</div>
+  </div></div>
+</div>
+
+<a name="api_navdiv"></a>构件 `bs.NavDiv`（继承自 `NavDiv`）：
+
+<div $=bs.Table responsive='1' striped='' bordered='1' condensed='1' hover='1'>
+  <div $=bs.Thead sty__='background:#e8e8e8'><div $=bs.Tr>
+    <div $=bs.Th width='{160}'>属性</div>
+    <div $=bs.Th width='{80}'>类型</div>
+    <div $=bs.Th width='{100}'>缺省值</div>
+    <div $=bs.Th>描述</div>
+  </div></div>
+  <div $=bs.Tbody><div $=bs.Tr>
+    <div $=bs.Td><code>props.bsClass</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>'navdiv'</div>
+    <div $=bs.Td></div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.width</code></div>
+    <div $=bs.Td>number</div>
+    <div $=bs.Td>null</div>
+    <div $=bs.Td></div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.height</code></div>
+    <div $=bs.Td>number</div>
+    <div $=bs.Td>null</div>
+    <div $=bs.Td></div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.left</code></div>
+    <div $=bs.Td>number</div>
+    <div $=bs.Td>null</div>
+    <div $=bs.Td></div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.top</code></div>
+    <div $=bs.Td>number</div>
+    <div $=bs.Td>null</div>
+    <div $=bs.Td></div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.minWidth</code></div>
+    <div $=bs.Td>number</div>
+    <div $=bs.Td>0</div>
+    <div $=bs.Td></div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.minHeight</code></div>
+    <div $=bs.Td>number</div>
+    <div $=bs.Td>0</div>
+    <div $=bs.Td></div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.margin</code></div>
+    <div $=bs.Td>array</div>
+    <div $=bs.Td>[null,null,null,null]</div>
+    <div $=bs.Td></div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.padding</code></div>
+    <div $=bs.Td>array</div>
+    <div $=bs.Td>[null,null,null,null]</div>
+    <div $=bs.Td></div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.borderWidth</code></div>
+    <div $=bs.Td>array</div>
+    <div $=bs.Td>[null,null,null,null]</div>
+    <div $=bs.Td></div>
+  </div></div>
+</div>
+
+<a name="api_grounddiv"></a>构件 `bs.GroundDiv`（继承自 `GroundDiv`）：
+
+<div $=bs.Table responsive='1' striped='' bordered='1' condensed='1' hover='1'>
+  <div $=bs.Thead sty__='background:#e8e8e8'><div $=bs.Tr>
+    <div $=bs.Th width='{160}'>属性</div>
+    <div $=bs.Th width='{80}'>类型</div>
+    <div $=bs.Th width='{100}'>缺省值</div>
+    <div $=bs.Th>描述</div>
+  </div></div>
+  <div $=bs.Tbody><div $=bs.Tr>
+    <div $=bs.Td><code>props.bsClass</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>'grounddiv'</div>
+    <div $=bs.Td></div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.width</code></div>
+    <div $=bs.Td>number</div>
+    <div $=bs.Td>null</div>
+    <div $=bs.Td></div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.height</code></div>
+    <div $=bs.Td>number</div>
+    <div $=bs.Td>null</div>
+    <div $=bs.Td></div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.left</code></div>
+    <div $=bs.Td>number</div>
+    <div $=bs.Td>null</div>
+    <div $=bs.Td></div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.top</code></div>
+    <div $=bs.Td>number</div>
+    <div $=bs.Td>null</div>
+    <div $=bs.Td></div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.minWidth</code></div>
+    <div $=bs.Td>number</div>
+    <div $=bs.Td>0</div>
+    <div $=bs.Td></div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.minHeight</code></div>
+    <div $=bs.Td>number</div>
+    <div $=bs.Td>0</div>
+    <div $=bs.Td></div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.margin</code></div>
+    <div $=bs.Td>array</div>
+    <div $=bs.Td>[null,null,null,null]</div>
+    <div $=bs.Td></div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.padding</code></div>
+    <div $=bs.Td>array</div>
+    <div $=bs.Td>[null,null,null,null]</div>
+    <div $=bs.Td></div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.borderWidth</code></div>
+    <div $=bs.Td>array</div>
+    <div $=bs.Td>[null,null,null,null]</div>
+    <div $=bs.Td></div>
+  </div></div>
+</div>
+
+&nbsp;

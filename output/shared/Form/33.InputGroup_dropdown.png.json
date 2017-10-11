@@ -1,0 +1,12 @@
+{
+  "name": "bs.InputGroup",
+  "widget": [ ["bs.InputGroup",{"bsSize":"","minWidth":20,"minHeight":20}],
+    ["bs.DropdownBtn",{"bsSize":"","desc":"Action","pullRight":"",
+      "html.":"<div $=bs.MenuItem key='m1'>Item 1</div>\n<div $=bs.MenuItem key='m2'>Item 2</div>"
+    }],
+    ["bs.FormCtrl",{"type":"text","placeholder":""}],
+    ["bs.DropdownBtn",{"bsSize":"","desc":"Action","pullRight":"1",
+      "html.":"<div $=bs.MenuItem key='m1'>Item 1</div>\n<div $=bs.MenuItem key='m2'>Item 2</div>"
+    }]
+  ]
+}

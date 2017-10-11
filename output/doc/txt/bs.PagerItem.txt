@@ -1,0 +1,11 @@
+bs.PagerItem
+4.5.!api_pageritem
+[ props ]
+  bsClass: 'pager-item'
+[ duals ]
+  prev
+  next
+  itemSpace
+  disabled
+  icon
+  glyph

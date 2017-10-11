@@ -1,0 +1,25 @@
+bs.Col
+1.2.!api_col
+[ props ]
+  bsClass: 'col'
+[ duals ]
+  xs
+  sm
+  md
+  lg
+  xsHidden
+  smHidden
+  mdHidden
+  lgHidden
+  xsOffset
+  smOffset
+  mdOffset
+  lgOffset
+  xsPush
+  smPush
+  mdPush
+  lgPush
+  xsPull
+  smPull
+  mdPull
+  lgPull

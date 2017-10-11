@@ -1,0 +1,4 @@
+bs.Ol
+9.3.!api_ol
+[ props ]
+  bsClass: 'ol'

@@ -1,0 +1,92 @@
+3.3 BtnGroup
+----------
+
+&nbsp;
+
+### BtnGroup 与 BtnToolbar
+
+前面已介绍了 3 种按钮：`bs.Btn`，`bs.DropdownBtn`，`bs.SplitBtn`，接下来我们介绍一个可归拢这 3 种按钮的构件，按钮组 `bs.BtnGroup`。
+
+先举一个简单例子。
+
+<div $='.rewgt.ui_demo' src='md/code/3_3_a.txt' input-height='{200}'></div>
+
+这里定义了两组按钮，由于 `bs.BtnGroup` 按 `inline-block` 显示，实际用作 inline 构件，所以要将它装入 `bs.BtnToolbar` 工具条，`bs.BtnToolbar` 是 P 类构件。
+
+### BtnGroup 用法
+
+BtnGroup 可容纳 Btn、DropdownBtn、SplitBtn 三种按钮，如下。
+
+<div $='.rewgt.ui_demo' src='md/code/3_3_b.txt' input-height='{300}'></div>
+
+多个 BtnGroup 组之间缺省有间隙，但也可用 `duals.itemSpace` 指定指定像素值，像上面 `item-space='{16}'`。
+
+用 `duals.bsSize` 指示本组按钮大小，如下。
+
+<div $='.rewgt.ui_demo' src='md/code/3_3_c.txt' input-height='{130}'></div>
+
+用 `duals.justified` 指示本组按钮是否自动对齐，即，将自身宽度平分到其下各按钮，如下。
+
+<div $='.rewgt.ui_demo' src='md/code/3_3_d.txt' input-height='{130}'></div>
+
+用 `duals.vertical` 指示本组按钮是否在垂直方向展开，如下。
+
+<div $='.rewgt.ui_demo' src='md/code/3_3_e.txt' input-height='{190}'></div>
+
+### API 接口
+
+<a name="api_btngroup"></a>构件 `bs.BtnGroup`（继承自 `bs.Div2`）：
+
+<div $=bs.Table responsive='1' striped='' bordered='1' condensed='1' hover='1'>
+  <div $=bs.Thead sty__='background:#e8e8e8'><div $=bs.Tr>
+    <div $=bs.Th width='{160}'>属性</div>
+    <div $=bs.Th width='{80}'>类型</div>
+    <div $=bs.Th width='{100}'>缺省值</div>
+    <div $=bs.Th>描述</div>
+  </div></div>
+  <div $=bs.Tbody><div $=bs.Tr>
+    <div $=bs.Td><code>props.bsClass</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>'btn-group'</div>
+    <div $=bs.Td></div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.bsSize</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td></div>
+    <div $=bs.Td>指定其下按钮大小，可选项有：'', 'large', 'medium', 'small', 'xsmall' </div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.justified</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>''</div>
+    <div $=bs.Td>是否自动对齐其下按钮，各按钮平分总宽度，可选：'' 或 '1'</div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.vertical</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>''</div>
+    <div $=bs.Td>本组按钮是否在垂直方向展开，可选：'' 或 '1'</div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.itemSpace</code></div>
+    <div $=bs.Td>number</div>
+    <div $=bs.Td></div>
+    <div $=bs.Td>可选设置左、右侧 margin 像素值</div>
+  </div></div>
+</div>
+
+<a name="api_btntoolbar"></a>构件 `bs.BtnToolbar`（继承自 `bs.Div2`）：
+
+<div $=bs.Table responsive='1' striped='' bordered='1' condensed='1' hover='1'>
+  <div $=bs.Thead sty__='background:#e8e8e8'><div $=bs.Tr>
+    <div $=bs.Th width='{160}'>属性</div>
+    <div $=bs.Th width='{80}'>类型</div>
+    <div $=bs.Th width='{100}'>缺省值</div>
+    <div $=bs.Th>描述</div>
+  </div></div>
+  <div $=bs.Tbody><div $=bs.Tr>
+    <div $=bs.Td><code>props.bsClass</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>'btn-toolbar'</div>
+    <div $=bs.Td></div>
+  </div></div>
+</div>
+
+&nbsp;

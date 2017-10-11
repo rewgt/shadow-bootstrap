@@ -1,0 +1,10 @@
+<div $=bs.PanelGroup accordion='1' active-key='a'
+     $$for='item in duals.data' dual-data='{["a","b","c"]}'>
+  <div $=bs.Panel $key='item'>
+    <div $=bs.PanelHeader $html='"Heading: "+item'></div>
+    <div $=bs.PanelCollapse>
+      <div $=bs.PanelBody $html='"PanelBody: " + item'></div>
+    </div>
+    <div $=bs.PanelFooter>It is footer</div>
+  </div>
+</div>

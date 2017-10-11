@@ -1,0 +1,6 @@
+{
+  "name": "bs.FormCtrl",
+  "widget": ["bs.FormCtrl",{
+    "type":"textarea", "bsSize":"", "placeholder":""
+  }]
+}

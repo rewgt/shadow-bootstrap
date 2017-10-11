@@ -1,0 +1,11 @@
+<div $=bs.Div2>
+  <div $=bs.P>
+    <span $=Span>This is a star: </span>
+    <span $=bs.Glyphicon glyph='star' sty__='color:red'></span>
+  </div>
+  <div $=bs.Div2>
+    <span $=Span>You got 2 stars: </span>
+    <span $=bs.Glyphicon glyph='star'></span>
+    <span $=bs.Glyphicon glyph='star'></span>
+  </div>
+</div>

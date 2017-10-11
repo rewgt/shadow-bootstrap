@@ -1,0 +1,12 @@
+{
+  "name": "bs.InputGroup",
+  "widget": [ ["bs.InputGroup",{"bsSize":"","minWidth":20,"minHeight":20}],
+    [ ["bs.InputGroupBtn",{}],
+      ["bs.Btn",{"bsSize":"","html.":"Btn"}]
+    ],
+    ["bs.FormCtrl",{"type":"text","placeholder":""}],
+    [ ["bs.InputGroupBtn",{}],
+      ["bs.Btn",{"bsSize":"","html.":"Btn"}]
+    ]
+  ]
+}

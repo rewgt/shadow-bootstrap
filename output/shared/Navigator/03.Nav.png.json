@@ -1,0 +1,7 @@
+{
+  "name": "bs.Nav",
+  "widget": [ ["bs.Nav",{"minWidth":20,"minHeight":20,"bsStyle":"tabs"}],
+    ["bs.NavItem",{"data-checked":"1","html.":"Item 1"}],
+    ["bs.NavItem",{"html.":"Item 2"}]
+  ]
+}

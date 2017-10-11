@@ -1,0 +1,44 @@
+3.4 OptBtn
+-----------
+
+&nbsp;
+
+Shadow Widget 通过导航面板（`NavPanel` 与 `NavDiv`）、选项构件（`OptSpan`、`OptButton` 等）与场景面板（`GroundPanel` 与 `GroundDiv`）这 3 者，构造导航应用。这种应用对应到 shadow-bootstrap，就是 `bs.NavDiv`，`bs.OptBtn` 或 `bs.OptItem`，及 `bs.GroundDiv` 分别担当导航面板、选项构件与场景面板的组合应用，也对等的实现导航功能。
+
+因为 shadow-bootstrap 不再提供 Panel 类构件，所以不会有 `bs.NavPanel` 与 `bs.GroundPanel` 这两种构件。
+
+### 按钮多选一
+
+构件 `bs.OptBtn` 拥有 `bs.Btn` 所有功能，但它继承自 `OptButton`，属于 “选项构件”，在 `bs.NavDiv` 中的多个 `bs.OptBtn` 具有互斥选中的功能。
+
+<div $='.rewgt.ui_demo' src='md/code/3_4_a.txt' input-height='{270}'></div>
+
+即使分散在多个 BtnGroup 中，只要各 `OptBtn` 处在同一 `NavDiv` 下，它们就具备互斥选中的功能。
+
+### 选项导航
+
+一个 NavDiv 下放置多个 OptBtn 与多个 GroundDiv，OptBtn 与 GroundDiv 以相同 key 值建立联系，这样，选中一个 OptBtn 时，相应的 GroundDiv 将切入显示，如下例子。
+
+<div $='.rewgt.ui_demo' src='md/code/3_4_b.txt' input-height='{190}'></div>
+
+把 DropdownBtn 中的 MenuItem 改为 OptItem，也支持选项导航。
+
+<div $='.rewgt.ui_demo' src='md/code/3_4_c.txt' input-height='{280}'></div>
+
+`bs.OptItem` 也是一种菜单项，功能与 `bs.MenuItem` 相同，仅增加选项导航功能，详情参见 [“下一节”](#3.5.!opt_item)。
+
+### 选项按钮
+
+`bs.OptBtn` 具备 `OptButton` 选项构件各种功能，除了上述选项导航外，还能充当 `$trigger` 触发器。
+
+如下举例。
+
+<div $='.rewgt.ui_demo' src='md/code/3_4_d.txt' input-height='{100}'></div>
+
+说明：`bs.OptBtn` 的基类 `OptButton` 具有如下特征（Shadow Widget 用户手册有介绍），当它的 `duals.recheckable` 取真时，每次选中它 `duals['data-checked']` 变为 `'1'` 时，系统随即将它复位回到 `''`，但如果 `duals.recheckable` 非真，就不自动复位 `data-checked`。如果未指定 recheckable，但使用了 `$trigger` 定义，其 `duals.recheckable` 将自动取 `'1'` 值。
+
+### API 接口
+
+<a name="api_optbtn"></a>构件 `bs.OptBtn`（继承自 `OptButton`），具有与 `bs.Btn` 相同的 API，[请参考这里](#3.1.!api_btn)。
+
+&nbsp;

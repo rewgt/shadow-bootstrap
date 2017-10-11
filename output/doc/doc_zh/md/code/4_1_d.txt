@@ -1,0 +1,16 @@
+<div $=bs.NavDiv>
+  <div $=bs.Nav bs-style='tabs'>
+    <div $=bs.NavItem key='item1'>NavItem 1</div>
+    <div $=bs.NavItem key='item2'>NavItem 2</div>
+    <div $=bs.NavItem key='item3'>NavItem 3</div>
+    <pre $=bs.DropdownBtn key='drop' desc='Others'>
+<div $=bs.OptItem key='item4' data-checked='1'>Menu 1</div>
+<div $=bs.OptItem key='item5'>Menu 2</div>
+</pre>
+  </div>
+  <div $=bs.GroundDiv key='item1'>&nbsp; Item 1</div>
+  <div $=bs.GroundDiv key='item2'>&nbsp; Item 2</div>
+  <div $=bs.GroundDiv key='item3'>&nbsp; Item 3</div>
+  <div $=bs.GroundDiv key='item4'>&nbsp; Item 4</div>
+  <div $=bs.GroundDiv key='item5'>&nbsp; Item 5</div>
+</div>

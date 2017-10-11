@@ -1,0 +1,4 @@
+bs.ModalFooter
+6.1.!api_modalfooter
+[ props ]
+  bsClass: 'modal-footer'

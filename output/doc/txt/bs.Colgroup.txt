@@ -1,0 +1,4 @@
+bs.Colgroup
+9.3.!api_colgroup
+[ props ]
+  bsClass: 'colgroup'

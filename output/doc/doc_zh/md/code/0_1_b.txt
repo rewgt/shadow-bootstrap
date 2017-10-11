@@ -1,0 +1,3 @@
+<div $=bs.P key='p'>
+  <span $=bs.Btn key='btn'>Test</span>
+</div>

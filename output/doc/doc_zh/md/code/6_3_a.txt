@@ -1,0 +1,3 @@
+<pre $=bs.Popover desc='Title' left='{100}' arrow-position='{0.6}'>
+**Holy guacamole!** Check this info.
+</pre>

@@ -1,0 +1,7 @@
+{
+  "name": "bs.BtnGroup",
+  "widget": [ ["bs.BtnGroup",{"minWidth":20,"minHeight":20}],
+    ["bs.Btn",{"html.":"Test 1"}],
+    ["bs.Btn",{"html.":"Test 2"}]
+  ]
+}

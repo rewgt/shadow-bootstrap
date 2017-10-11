@@ -1,0 +1,18 @@
+<div $=bs.P>
+  <span $=Span>Label </span><span $=bs.Label>New</span>
+</div>
+<div $=bs.H1>
+  <span $=Span>Label </span><span $=bs.Label>New</span>
+</div>
+<div $=bs.H2>
+  <span $=Span>Label </span><span $=bs.Label>New</span>
+</div>
+<div $=bs.H3>
+  <span $=Span>Label </span><span $=bs.Label>New</span>
+</div>
+<div $=bs.H4>
+  <span $=Span>Label </span><span $=bs.Label>New</span>
+</div>
+<div $=bs.H5>
+  <span $=Span>Label </span><span $=bs.Label>New</span>
+</div>

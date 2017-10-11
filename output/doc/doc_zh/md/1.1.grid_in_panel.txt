@@ -1,0 +1,72 @@
+1.1 面板中的栅格
+-------------------
+
+&nbsp;
+
+### 在根节点挂入 Bootstrap 构件
+
+由于 Bootstrap 的所有构件分属于 P 类与 Span 类，它们如果不是绝对定位，就只能挂 Panel 面板之下。因为 Shadow Widget 要求在 `.body` 节点下，只能放 flex 布局的面板，或者放置按 `position:absolute` 绝对定位的非行内构件，所以，**我们通常在 `.body` 节点放一个布满全屏的面板，然后在这个面板下再摆放各种 shadow-bootstrap 构件**。
+
+例如，定义如下界面：
+
+``` html
+01 <div $=BodyPanel key='body'>
+~~   <div $=Panel key='top' klass='auto-hidden-visible'>
+~~   </div>
+04 </div>
+```
+
+这里，key 值为 `top` 的面板，宽高均占满屏（因为它的 `width` 与 `height` 缺省值均为 `0.9999`）。面板对其内容按 flex 方式布局，现在，各种 P 类 shadow-bootstrap 构件都可以往这个 `top` 面板上摆了。
+
+### 两种布局的差异
+
+请注意下面两种布局方式的差异：
+
+``` html
+01 <div $=BodyPanel key='body'>
+02   <div $=Panel key='top' klass='auto-hidden-visible'>
+~~     <div $=bs.P>Demo 1</div>
+~~     <div $=bs.P>Demo 2</div>
+05   </div>
+06 </div>
+```
+
+``` html
+01 <div $=BodyPanel key='body'>
+02   <div $=Panel key='top' klass='auto-hidden-visible'>
+~~     <div $=bs.Div2>
+~~       <div $=bs.P>Demo 1</div>
+~~       <div $=bs.P>Demo 2</div>
+~~     </div>
+07   </div>
+08 </div>
+```
+
+前一界面因 `top` 面板对其内容按 flex 布局，段落 `"Demo 1"` 与 `"Demo 2"` 将紧挨着排成一行，而后一界面因 `bs.Div2` 以 block 流方式输出内容，所以，`"Demo 1"` 与 `"Demo 2"` 有两个段落，先后各占一行。
+
+说明：在使用 shadow-bootstrap 构件的界面设计中，**如果需要避开面板 flex 布局的影响，我们习惯在面板下加一层 `bs.Div2` 做隔离**。
+
+### 面板下的栅格布局
+
+按 flex 布局的面板要靠近 `.body` 根节点摆放，Panel 类构件可容纳其它类构件，而其它类不能容纳 Panel 类，所以，按 Bootstrap 栅格布局的构件可以放入面板中，反过来，用栅格包住面板则不行。
+
+Bootstrap 栅格布局按总屏宽划分 4 个档位，对应 4 类设备：手机、平板、桌面显示器、大桌面显示器。各档栅格除最小档用 `100%`，其它使用固定宽度，即：`750px`，`970px`，`1170px`，这意味着，可使用栅格布局的构件，要求占用总屏宽。如果不是这样，由总屏宽变化导致 4 个档位切换的时机可能与预期不一致。所以，受这个特性限制，**我们通常要在 “占满屏宽” 的面板下使用栅格**，比如：
+
+``` html
+01 <div $=BodyPanel key='body'>
+02   <div $=Panel key='top' klass='auto-hidden-visible'>
+~~     <div $=Panel key='panel_1' height='{null}'>
+04       <div $=bs.Grid>
+05         <div $=bs.Row>
+06           <div $=bs.Col xs='{12}' md='{8}'>xs=12 md=8</div>
+07           <div $=bs.Col xs='{6}' md='{4}'>xs=6 md=4</div>
+08         </div>
+09       </div>
+10     </div>
+11   </div>
+12 </div>
+```
+
+一般情况下，一个面板如果未占满屏幕宽度，就不适合容纳栅格布局，比如横向一行摆 3 块等宽面板（各占 1/3 宽度），这 3 块面板下不适合摆放按 “栅格布局” 的构件。注意，这里所提为 “一般情况”，特殊情况下未占满屏宽的面板，经特殊配置后仍可容纳栅格布局，详见下一节介绍。
+
+&nbsp;

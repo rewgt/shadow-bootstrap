@@ -1,0 +1,4 @@
+bs.BtnToolbar
+3.3.!api_btntoolbar
+[ props ]
+  bsClass: 'btn-toolbar'

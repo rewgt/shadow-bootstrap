@@ -1,0 +1,6 @@
+<div $=bs.Div2>
+  <div $=bs.Pager>
+    <div $=bs.PagerItem href='#4.5.'>Previous</div>
+    <div $=bs.PagerItem href='#4.5.'>Next</div>
+  </div>
+</div>

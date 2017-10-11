@@ -1,0 +1,15 @@
+<div $=bs.Div2 width='{0.9999}' $for=''>
+  <div $=bs.NavDiv key='nav'>
+    <div $=bs.BtnToolbar>
+      <div $=bs.BtnGroup>
+        <span $=bs.OptBtn key='page1' data-checked='1'>Page 1</span>
+        <span $=bs.OptBtn key='page2'>Page 2</span>
+      </div>
+      <div $=bs.BtnGroup>
+        <span $=bs.OptBtn key='page3'>Page 3</span>
+        <span $=bs.OptBtn key='page4'>Page 4</span>
+      </div>
+    </div>
+  </div>
+  <div $=bs.P $html='"Selected: " + duals("nav").checkedId'></div>
+</div>

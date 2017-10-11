@@ -1,0 +1,4 @@
+bs.Td
+9.3.!api_td
+[ props ]
+  bsClass: 'td'

@@ -1,0 +1,4 @@
+{
+  "name": "bs.Checkbox",
+  "widget": ["bs.Checkbox",{"defaultChecked":"","html.":"Checkbox"}]
+}

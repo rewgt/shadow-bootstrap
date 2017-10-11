@@ -1,0 +1,4 @@
+bs.CarouselCaption
+8.3.!api_carouselcaption
+[ props ]
+  bsClass: 'carousel-caption'

@@ -1,0 +1,4 @@
+bs.Thead
+9.3.!api_thead
+[ props ]
+  bsClass: 'thead'

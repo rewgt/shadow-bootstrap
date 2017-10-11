@@ -1,0 +1,4 @@
+bs.Jumbotron
+5.1.!api_jumbotron
+[ props ]
+  bsClass: 'jumbotron'

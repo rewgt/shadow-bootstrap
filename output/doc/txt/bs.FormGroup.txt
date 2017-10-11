@@ -1,0 +1,8 @@
+bs.FormGroup
+7.2.!api_formgroup
+[ props ]
+  bsClass: 'form-group'
+[ duals ]
+  bsSize
+  validation: ''
+  controlId

@@ -1,0 +1,9 @@
+{
+  "name": "bs.ListGroup",
+  "widget": [ ["bs.ListGroup",{}],
+    ["bs.ListItem",{"data-checked":"1","href":"","html.":"Cras justo odio"}],
+    ["bs.ListItem",{"header":"Item heading","href":"","html.":"Dapibus ac facilisis in"}],
+    ["bs.ListItem",{"href":"","html.":"Porta ac consectetur ac"}],
+    ["bs.ListItem",{"href":"","html.":"Vestibulum at eros"}]
+  ]
+}

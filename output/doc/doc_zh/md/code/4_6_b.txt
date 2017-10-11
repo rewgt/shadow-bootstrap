@@ -1,0 +1,5 @@
+<div $=bs.Progress margin='{10}' width='{400}'>
+  <div $=bs.ProgressBar bs-style='warning' now='{20}'>20%</div>
+  <div $=bs.ProgressBar bs-style='info' now='{10}' striped='1'></div>
+  <div $=bs.ProgressBar bs-style='danger' now='{30}' striped='1' active='1'></div>
+</div>

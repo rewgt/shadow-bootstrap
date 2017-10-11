@@ -1,0 +1,8 @@
+{
+  "name": "bs.FormCtrl",
+  "widget": [ ["bs.FormCtrl",{"type":"select", "multiple":"1", "bsSize":""}],
+    ["OptOption",{"value":"volvo","html.":"Volvo"}],
+    ["OptOption",{"value":"saab","html.":"Saab"}],
+    ["OptOption",{"value":"opel","html.":"Opel"}]
+  ]
+}

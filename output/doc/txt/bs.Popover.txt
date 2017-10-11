@@ -1,0 +1,10 @@
+bs.Popover
+6.3.!api_popover
+[ props ]
+  bsClass: 'popover'
+[ duals ]
+  role: 'tooltip'
+  placement: 'right'
+  desc
+  arrowPosition: 0.5
+  offset: [0,0,0,2]

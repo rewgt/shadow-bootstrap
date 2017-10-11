@@ -1,0 +1,5 @@
+<div $=bs.Div2>
+  <div $=bs.Pagination prev='1' next='1' first='1' last='1' ellipsis='1' boundary='1'
+       items='{20}' max-buttons='{5}' active-page='{1}'>
+  </div>
+</div>

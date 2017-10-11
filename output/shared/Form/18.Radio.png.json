@@ -1,0 +1,4 @@
+{
+  "name": "bs.Radio",
+  "widget": ["bs.Radio",{"defaultChecked":"","html.":"Radio"}]
+}

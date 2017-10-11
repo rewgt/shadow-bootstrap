@@ -1,0 +1,10 @@
+bs.Navbar
+4.2.!api_navbar
+[ props ]
+  bsClass: 'navbar'
+[ duals ]
+  bsStyle: 'default'
+  staticTop
+  fixedTop
+  fixedBottom
+  fluid

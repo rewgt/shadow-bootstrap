@@ -1,0 +1,6 @@
+<div $=bs.P>
+  <span $=bs.Btn bs-size='large' item-space='{2}'>Large</span>
+  <span $=bs.Btn item-space='{2}'>Default</span>
+  <span $=bs.Btn bs-size='small' item-space='{2}'>Small</span>
+  <span $=bs.Btn bs-size='xsmall' item-space='{2}'>Extra Small</span>
+</div>

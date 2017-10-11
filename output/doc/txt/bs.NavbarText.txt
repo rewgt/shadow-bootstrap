@@ -1,0 +1,6 @@
+bs.NavbarText
+4.2.!api_navbartext
+[ props ]
+  bsClass: 'navbar-text'
+[ duals ]
+  pullRight

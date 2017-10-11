@@ -1,0 +1,6 @@
+{
+  "name": "bs.Popover",
+  "widget": ["bs.Popover", { "left":0, "top":0, "placement":"right",
+    "desc":"Title", "html.":"**Holy guacamole!** Check this info."
+  }]
+}

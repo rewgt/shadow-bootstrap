@@ -1,0 +1,7 @@
+<div $=bs.Grid>
+  <div $=bs.Row $for='item in [1,2,3]'>
+    <div $=bs.Col $key='"a"+index' xs='{6}' md='{3}'>
+      <div $=bs.Thumbnail src='md/res/thumbnail.png' href='#8.1.' alt='171x180'></div>
+    </div>
+  </div>
+</div>

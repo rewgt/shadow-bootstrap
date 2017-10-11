@@ -1,0 +1,31 @@
+5.1 Jumbotron
+-----------
+
+&nbsp;
+
+### Jumbotron 巨幕
+
+`bs.Jumbotron` 用来展示网站关键内容，我们通常把它放在 `bs.Grid` 节点下。
+
+<div $='.rewgt.ui_demo' src='md/code/5_1_a.txt' input-height='{200}'></div>
+
+### API 接口
+
+<a name="api_jumbotron"></a>构件 `bs.Jumbotron`（继承自 `bs.Div2`）：
+
+<div $=bs.Table responsive='1' striped='' bordered='1' condensed='1' hover='1'>
+  <div $=bs.Thead sty__='background:#e8e8e8'><div $=bs.Tr>
+    <div $=bs.Th width='{160}'>属性</div>
+    <div $=bs.Th width='{80}'>类型</div>
+    <div $=bs.Th width='{100}'>缺省值</div>
+    <div $=bs.Th>描述</div>
+  </div></div>
+  <div $=bs.Tbody><div $=bs.Tr>
+    <div $=bs.Td><code>props.bsClass</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>'jumbotron'</div>
+    <div $=bs.Td></div>
+  </div></div>
+</div>
+
+&nbsp;

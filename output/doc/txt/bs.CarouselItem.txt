@@ -1,0 +1,6 @@
+bs.CarouselItem
+8.3.!api_carouselitem
+[ props ]
+  bsClass: 'carousel-item'
+[ duals ]
+  active

@@ -1,0 +1,4 @@
+bs.Fieldset
+9.3.!api_fieldset
+[ props ]
+  bsClass: 'fieldset'

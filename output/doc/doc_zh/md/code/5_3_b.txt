@@ -1,0 +1,6 @@
+<div $=bs.ListGroup klass='align_center-right-default' width='{160}'>
+  <div $=bs.ListItem>Item 1</div>
+  <div $=bs.ListItem>Item 2</div>
+  <div $=bs.ListItem>Item 3</div>
+  <div $=bs.ListItem>Item 4</div>
+</div>

@@ -1,0 +1,5 @@
+{
+  "name": "bs.NavDiv",
+  "widget": ["bs.NavDiv",{"minWidth":20,"minHeight":20}],
+  "scene": ["bs.NavDiv",{"width":300,"minWidth":20,"minHeight":20}]
+}

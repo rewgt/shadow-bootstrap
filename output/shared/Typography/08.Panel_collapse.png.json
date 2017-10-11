@@ -1,0 +1,10 @@
+{
+  "name": "bs.Panel",
+  "widget": [ ["bs.Panel",{}],
+    ["bs.PanelHeader",{"html.":"Heading"}],
+    [ ["bs.PanelCollapse",{"animation":"1","defaultExpanded":"1"}],
+      ["bs.PanelBody",{"html.":"Basic panel example"}]
+    ],
+    ["bs.PanelFooter",{"html.":"It is footer"}]
+  ]
+}

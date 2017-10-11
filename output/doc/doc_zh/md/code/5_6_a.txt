@@ -1,0 +1,6 @@
+<div $=bs.Div2>
+  <div $=bs.Alert bs-style='warning'>
+    <span $=Strong>Holy guacamole! </span>
+    <span $=Span>Best check yo self, you're not looking too good.</span>
+  </div>
+</div>

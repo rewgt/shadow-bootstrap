@@ -1,0 +1,60 @@
+5.4 Table
+-----------
+
+&nbsp;
+
+### Table 表格
+
+<div $='.rewgt.ui_demo' src='md/code/5_4_a.txt' input-height='{450}'></div>
+
+`bs.Table` 用 `duals.striped` 指示是否以背景色区分奇偶行，用 `duals.bordered` 指示是否显示网格线，用 `duals.condensed` 指示是否紧凑排列，用 `duals.hover` 指示表格行在鼠标悬停时，是否高亮显示。
+
+在特定单元格或特定行，用 `duals.klass` 指定 `'active', 'success', 'warning', 'danger', 'info'` 之一，可设置内容风格。
+
+另外，`bs.Table` 还用 `duals.responsive` 指示是否使用响应式表格，以便在小屏幕设备（小于 `768px`）可水平滚动，当屏幕大于 `768px` 宽度时，水平滚动条消失。
+
+### API 接口
+
+<a name="api_table"></a>构件 `bs.Table`（继承自 `bs.Div2`）：
+
+<div $=bs.Table responsive='1' striped='' bordered='1' condensed='1' hover='1'>
+  <div $=bs.Thead sty__='background:#e8e8e8'><div $=bs.Tr>
+    <div $=bs.Th width='{160}'>属性</div>
+    <div $=bs.Th width='{80}'>类型</div>
+    <div $=bs.Th width='{100}'>缺省值</div>
+    <div $=bs.Th>描述</div>
+  </div></div>
+  <div $=bs.Tbody><div $=bs.Tr>
+    <div $=bs.Td><code>props.bsClass</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>'table'</div>
+    <div $=bs.Td></div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.striped</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td></div>
+    <div $=bs.Td>是否以背景色区分奇偶行，取值：'' 或 '1' </div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.bordered</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td></div>
+    <div $=bs.Td>是否显示网格线，取值：'' 或 '1' </div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.condensed</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td></div>
+    <div $=bs.Td>是否紧凑显示，取值：'' 或 '1' </div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.hover</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td></div>
+    <div $=bs.Td>鼠标悬停是否高亮表格行，取值：'' 或 '1' </div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.responsive</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>''</div>
+    <div $=bs.Td>是否使用响应式表格，取值：'' 或 '1' </div>
+  </div></div>
+</div>
+
+&nbsp;

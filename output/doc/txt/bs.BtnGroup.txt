@@ -1,0 +1,9 @@
+bs.BtnGroup
+3.3.!api_btngroup
+[ props ]
+  bsClass: 'btn-group'
+[ duals ]
+  size
+  justified: ''
+  vertical: ''
+  itemSpace

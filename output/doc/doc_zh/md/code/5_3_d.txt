@@ -1,0 +1,6 @@
+<div $=bs.ListGroup width='{300}'>
+  <div $=bs.ListItem data-checked='1'>Cras justo odio</div>
+  <div $=bs.ListItem header='Item heading' href='#5.3.'>Dapibus ac facilisis in</div>
+  <div $=bs.ListItem href='#5.3.'>Porta ac consectetur ac</div>
+  <div $=bs.ListItem href='#5.3.'>Vestibulum at eros</div>
+</div>

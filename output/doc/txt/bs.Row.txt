@@ -1,0 +1,4 @@
+bs.Row
+1.2.!api_row
+[ props ]
+  bsClass: 'row'

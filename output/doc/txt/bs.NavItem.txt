@@ -1,0 +1,11 @@
+bs.NavItem
+4.1.!api_navitem
+[ props ]
+  bsClass: 'navitem'
+  noSelect
+[ duals ]
+  data-checked: ''
+  disabled: ''
+  icon
+  glyph
+  href

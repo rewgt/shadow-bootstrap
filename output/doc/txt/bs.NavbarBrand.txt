@@ -1,0 +1,7 @@
+bs.NavbarBrand
+4.2.!api_navbarbrand
+[ props ]
+  bsClass: 'navbar-brand'
+[ duals ]
+  icon
+  glyph

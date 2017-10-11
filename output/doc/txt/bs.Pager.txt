@@ -1,0 +1,4 @@
+bs.Pager
+4.5.!api_pager
+[ props ]
+  bsClass: 'pager'

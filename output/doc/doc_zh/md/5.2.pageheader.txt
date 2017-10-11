@@ -1,0 +1,35 @@
+5.2 PageHeader
+-----------
+
+&nbsp;
+
+### PageHeader 页头
+
+`bs.PageHeader` 页头能够为 H1 ～ H6 标签增加适当的空间，并且与页面的其他部分形成一定的分隔。
+
+<div $='.rewgt.ui_demo' src='md/code/5_2_a.txt' input-height='{130}'></div>
+
+PageHeader 支持 H1 ~ H6 标签内嵌 Small 元素的默认效果，它还支持其它大部分 P 类构件，如：P、Pre 等。
+
+<div $='.rewgt.ui_demo' src='md/code/5_2_b.txt' input-height='{80}'></div>
+
+### API 接口
+
+<a name="api_pageheader"></a>构件 `bs.PageHeader`（继承自 `bs.Div2`）：
+
+<div $=bs.Table responsive='1' striped='' bordered='1' condensed='1' hover='1'>
+  <div $=bs.Thead sty__='background:#e8e8e8'><div $=bs.Tr>
+    <div $=bs.Th width='{160}'>属性</div>
+    <div $=bs.Th width='{80}'>类型</div>
+    <div $=bs.Th width='{100}'>缺省值</div>
+    <div $=bs.Th>描述</div>
+  </div></div>
+  <div $=bs.Tbody><div $=bs.Tr>
+    <div $=bs.Td><code>props.bsClass</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>'page-header'</div>
+    <div $=bs.Td></div>
+  </div></div>
+</div>
+
+&nbsp;

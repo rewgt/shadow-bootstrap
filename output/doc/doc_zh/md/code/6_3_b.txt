@@ -1,0 +1,12 @@
+<div $=bs.Div2>
+  <pre $=bs.Popover key='tip' placement='right' desc='Tooltip'
+       sty__='visibility:hidden; position:absolute'>
+**Holy guacamole!** Check this info.
+</pre>
+
+  <div $=bs.P>
+    <div $=bs.OverlayTrigger placement='right' path='////tip'>
+      <span $=Span>test</span>
+    </div>
+  </div>
+</div>

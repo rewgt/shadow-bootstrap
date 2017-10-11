@@ -1,0 +1,6 @@
+bs.Blockquote
+5.7.!api_blockquote
+[ props ]
+  bsClass: 'blockquote'
+[ duals ]
+  reverse: ''

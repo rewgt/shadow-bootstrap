@@ -1,0 +1,6 @@
+bs.MediaLeft
+8.4.!api_medialeft
+[ props ]
+  bsClass: 'media-left'
+[ duals ]
+  alignTo

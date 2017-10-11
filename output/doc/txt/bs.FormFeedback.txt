@@ -1,0 +1,6 @@
+bs.FormFeedback
+7.2.!api_formfeedback
+[ props ]
+  bsClass: 'form-control-feedback'
+[ duals ]
+  validation

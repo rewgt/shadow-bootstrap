@@ -1,0 +1,13 @@
+bs.OverlayTrigger
+6.2.!api_overlaytrigger
+[ props ]
+  bsClass: 'overlay-trigger'
+[ duals ]
+  placement: 'right'
+  desc
+  arrowPosition: 0.5
+  delay
+  firedBy: 'hover,focus'
+  path
+  onEnter()
+  onExit()

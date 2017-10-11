@@ -1,0 +1,131 @@
+1.2 Grid
+------------
+
+&nbsp;
+
+### 栅格组成
+
+栅格布局使用 `bs.Grid, bs.Row, bs.Col` 三种构件，`bs.Grid` 表示整个栅格，`bs.Row` 表示一个 block 行，`bs.Col` 表示一列，一个 `bs.Grid` 下有一个或多个 `bs.Row`，一个 `bs.Row` 下有一个或多个 `bs.Col`。
+
+下面例子演示了一个 `bs.Grid` 下有一行，一行中有两列的栅格布局。
+
+<div $='.rewgt.ui_demo' src='md/code/1_2_a.txt' input-height='{140}'></div>
+
+### 在未占满屏宽的构件下摆放栅格
+
+栅格 `bs.Grid` 未给定宽度时，系统用 css 自适应定义宽度，也即在 4 种屏宽（`100%`，`750px`，`970px`，`1170px`）之间跳变。对于栅格可用宽度小于总屏宽时，我们不妨用 `$width` 表达式动态计算栅格实际可用宽度。比如上面例子，页面左侧目录栏（`".body.book.summary"`）已占掉一些宽度，表达式 `duals(".body").innerSize[0]` 取当前屏宽，`duals(".body.book.summary").width+94` 是本栅格之外应扣除的宽度。
+
+Bootstrap 的 4 类屏宽配置为：“超小屏幕（小于 768px）”、“小屏幕（小于 992px）”、“中等屏幕（小于 1200px）”、“大屏幕”。当我们用 `$width` 表达式指定 Grid 宽度后，栅格总宽不再跳变，而是渐变，但 `xs=n, sm=n, md=n, lg=n` 的配置仍以当前屏宽（而非栅格宽度）为准进行跳变。您不妨拿上例做实验，拉宽或缩小当前浏览器的宽度，看看这两列是否能在 “超小屏幕” 与 “中等屏幕” 之间自动切换。
+
+<a name="important"></a>重要提醒：**我们一般只在 Panel 面板下放置 `bs.Grid`，只需设置该面板占用全部屏宽，栅格即正常表现功能**。而且，可视设计器也正常支持此栅格设计，尽管可见设计区并未占据全部屏宽。
+
+### 列宽指示
+
+`bs.Col` 构件的双源属性 `xs, sm, md, lg` 分别指示 4 类屏幕配置下占用 12 等份中的多少份。如上例中两列，`md='{8}'` 与 `md='{4}'` 表示在 “中等屏幕” 配置下，两列各占 8 份与 4 份，合起来满一行，而对于 `xs='{12}'` 与 `xs='{6}'` 表示在 “超小屏幕” 时，两列各占 12 份与 6 份，即第 1 列占满一行，第二列要排到下一行，占一半宽度。
+
+四种 `xs, sm, md, lg` 列宽指示，若有不同屏幕尺寸并用时，大尺寸的配置将覆盖小尺寸配置。
+
+### 指定偏移
+
+下面例子中，`bs.Col` 构件用 `xs-offset='{6}'` 指示其前插入 6 份宽度，即，一半宽度。
+
+<div $='.rewgt.ui_demo' src='md/code/1_2_b.txt' input-height='{130}'></div>
+
+下面例子用 `xs-push='{6}'` 指示第 1 个构件的偏移后推半宽，用 `xs-pull='{6}'` 指示第 2 个构件的偏移前拉半宽，结果这两个构件位置正好对调。
+
+<div $='.rewgt.ui_demo' src='md/code/1_2_c.txt' input-height='{160}'></div>
+
+说明：上面 3 种指定偏移的方法存在差别，第一种用 `offset` 插入指定宽度，所在构件总占宽变大，后两种用 `push` 与 `pull` 只是相对移位，不改宽度，而且不影响后续构件布局。
+
+### 隐藏
+
+`bs.Col` 构件的 `xsHidden, smHidden, mdHidden, lgHidden` 双源属性，用来指示在某种屏幕配置下隐藏当前构件。
+
+比如下面例子，在 “超小屏幕” 下，`xs-hidden='1'` 的构件将被隐藏，在 “小屏幕” 下，`sm-hidden='1'` 的构件将被隐藏，其它类推。
+
+<div $='.rewgt.ui_demo' src='md/code/1_2_d.txt' input-height='{180}'></div>
+
+### API 接口
+
+<a name="api_grid"></a>构件 `bs.Grid`（继承自 `bs.Div2`）：
+
+<div $=bs.Table responsive='1' striped='' bordered='1' condensed='1' hover='1'>
+  <div $=bs.Thead sty__='background:#e8e8e8'><div $=bs.Tr>
+    <div $=bs.Th width='{160}'>属性</div>
+    <div $=bs.Th width='{80}'>类型</div>
+    <div $=bs.Th width='{100}'>缺省值</div>
+    <div $=bs.Th>描述</div>
+  </div></div>
+  <div $=bs.Tbody><div $=bs.Tr>
+    <div $=bs.Td><code>props.bsClass</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>'container'</div>
+    <div $=bs.Td></div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.fluid</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>''</div>
+    <div $=bs.Td>是否从 'container' 类改到 'container-fluid'，取值：'' 或 '1' </div>
+  </div></div>
+</div>
+
+<a name="api_row"></a>构件 `bs.Row`（继承自 `bs.Div2`）：
+
+<div $=bs.Table responsive='1' striped='' bordered='1' condensed='1' hover='1'>
+  <div $=bs.Thead sty__='background:#e8e8e8'><div $=bs.Tr>
+    <div $=bs.Th width='{160}'>属性</div>
+    <div $=bs.Th width='{80}'>类型</div>
+    <div $=bs.Th width='{100}'>缺省值</div>
+    <div $=bs.Th>描述</div>
+  </div></div>
+  <div $=bs.Tbody><div $=bs.Tr>
+    <div $=bs.Td><code>props.bsClass</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>'row'</div>
+    <div $=bs.Td></div>
+  </div></div>
+</div>
+
+<a name="api_col"></a>构件 `bs.Col`（继承自 `bs.Div2`）：
+
+<div $=bs.Table responsive='1' striped='' bordered='1' condensed='1' hover='1'>
+  <div $=bs.Thead sty__='background:#e8e8e8'><div $=bs.Tr>
+    <div $=bs.Th width='{160}'>属性</div>
+    <div $=bs.Th width='{80}'>类型</div>
+    <div $=bs.Th width='{100}'>缺省值</div>
+    <div $=bs.Th>描述</div>
+  </div></div>
+  <div $=bs.Tbody><div $=bs.Tr>
+    <div $=bs.Td><code>props.bsClass</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>'col'</div>
+    <div $=bs.Td></div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.xs/sm/md/lg</code></div>
+    <div $=bs.Td>number</div>
+    <div $=bs.Td></div>
+    <div $=bs.Td>指定占宽，取值：1 ~ 12</div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.xsHidden/smHidden/mdHidden/lgHidden</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td></div>
+    <div $=bs.Td>是否隐藏构件，取值：'' 或 '1'</div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.xsOffset/smOffset/mdOffset/lgOffset</code></div>
+    <div $=bs.Td>number</div>
+    <div $=bs.Td></div>
+    <div $=bs.Td>插入占宽，取值：1 ~ 12</div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.xsPush/smPush/mdPush/lgPush</code></div>
+    <div $=bs.Td>number</div>
+    <div $=bs.Td></div>
+    <div $=bs.Td>后推偏移，取值：1 ~ 12</div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.xsPull/smPull/mdPull/lgPull</code></div>
+    <div $=bs.Td>number</div>
+    <div $=bs.Td></div>
+    <div $=bs.Td>前拉偏移，取值：1 ~ 12</div>
+  </div></div>
+</div>
+
+&nbsp;

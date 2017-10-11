@@ -1,0 +1,4 @@
+bs.H5
+9.3.!api_h5
+[ props ]
+  bsClass: 'h5'

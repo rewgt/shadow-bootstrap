@@ -1,0 +1,62 @@
+6.3 Popover
+-----------
+
+&nbsp;
+
+### Popover 信息浮框
+
+`bs.Tooltip` 用来显示简短提示信息，`bs.Popover` 可简单看成大号的 Tooltip，显示的信息要多一些。
+
+<div $='.rewgt.ui_demo' src='md/code/6_3_a.txt' input-height='{70}'></div>
+
+Popover 属性设置与 Tooltip 近似，我们着重介绍这两者的差异。Popover 用 `duals.desc` 指定信息框的标题，信息内容用 Markdown 书写，因标签内容是 Markdown 文本，所以上面转义标签要用 `<pre>` 标签。
+
+Popover 其它属性，如 `duals.placement, duals.arrowPosition, props.offset` 等，与 Tooltip 用法相同。甚至，预置 Popover 构件，再用 OverlayTrigger 触发弹出的用法也是相同的，如下举例。
+
+<div $='.rewgt.ui_demo' src='md/code/6_3_b.txt' input-height='{230}'></div>
+
+### API 接口
+
+<a name="api_popover"></a>构件 `bs.Popover`（继承自 `bs.Div2`）：
+
+<div $=bs.Table responsive='1' striped='' bordered='1' condensed='1' hover='1'>
+  <div $=bs.Thead sty__='background:#e8e8e8'><div $=bs.Tr>
+    <div $=bs.Th width='{160}'>属性</div>
+    <div $=bs.Th width='{80}'>类型</div>
+    <div $=bs.Th width='{100}'>缺省值</div>
+    <div $=bs.Th>描述</div>
+  </div></div>
+  <div $=bs.Tbody><div $=bs.Tr>
+    <div $=bs.Td><code>props.bsClass</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>'popover'</div>
+    <div $=bs.Td></div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.role</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>'tooltip'</div>
+    <div $=bs.Td></div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.placement</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>'right'</div>
+    <div $=bs.Td>指示提示信息要在目标构件的哪个方位显示，可选：'top', 'right', 'bottom', 'left' </div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.desc</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td></div>
+    <div $=bs.Td>信息框的标题</div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.arrowPosition</code></div>
+    <div $=bs.Td>number</div>
+    <div $=bs.Td>0.5</div>
+    <div $=bs.Td>箭头所处位置，以百分比表示，取值：0~1 </div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>props.offset</code></div>
+    <div $=bs.Td>array</div>
+    <div $=bs.Td>[0,0,0,2]</div>
+    <div $=bs.Td>被 bs.OverlayTrigger 触发显示本提示框时，本属性指示在上、右、下、左 4 个方位的偏移量，以像素为单位</div>
+  </div></div>
+</div>
+
+&nbsp;

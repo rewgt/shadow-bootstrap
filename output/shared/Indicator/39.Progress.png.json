@@ -1,0 +1,8 @@
+{
+  "name": "bs.Progress",
+  "widget": [ ["bs.Progress",{"width":300}],
+    ["bs.ProgressBar",{"now":30,"bsStyle":"warning","html.":"30%"}],
+    ["bs.ProgressBar",{"now":20,"bsStyle":"info","striped":"1"}],
+    ["bs.ProgressBar",{"now":25,"bsStyle":"danger","striped":"1","active":"1"}]
+  ]
+}

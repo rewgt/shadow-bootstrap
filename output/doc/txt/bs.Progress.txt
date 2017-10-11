@@ -1,0 +1,4 @@
+bs.Progress
+4.6.!api_progress
+[ props ]
+  bsClass: 'progress'

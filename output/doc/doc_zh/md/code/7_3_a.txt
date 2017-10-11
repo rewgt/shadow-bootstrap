@@ -1,0 +1,8 @@
+<div $=bs.Form>
+  <div $=bs.Checkbox block='1'>Checkbox</div>
+  <div $=bs.FormGroup>
+    <span $=bs.Checkbox disabled='1'>Checkbox1</span>
+    <span $=bs.Checkbox checked='1' >Checkbox2</span>
+    <span $=bs.Checkbox>Checkbox3</span>
+  </div>
+</div>

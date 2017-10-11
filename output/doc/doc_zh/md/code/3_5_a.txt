@@ -1,0 +1,12 @@
+<div $=bs.Div2 height='{230}'>
+  <pre $=bs.MenuList default-open='1'>
+<div $=bs.MenuItem key='m1' header='1'>Menu group 1</div>
+<div $=bs.MenuItem key='m2' data-checked='1'>Menu item</div>
+<div $=bs.MenuItem key='m3' divider='1'></div>
+<div $=bs.MenuItem key='m4' header='1'>Menu group 2</div>
+<div $=bs.MenuItem key='m5' >Menu item2</div>
+<div $=bs.MenuItem key='m6' disabled='1'>Disabled item</div>
+<div $=bs.MenuItem key='m7' title="See? I have a title.">Link with title</div>
+<div $=bs.MenuItem key='m8' href="#">It is a link</div>
+</pre>
+</div>

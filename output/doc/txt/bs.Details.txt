@@ -1,0 +1,4 @@
+bs.Details
+9.3.!api_details
+[ props ]
+  bsClass: 'details'

@@ -1,0 +1,4 @@
+{
+  "name": "bs.Tooltip",
+  "widget": ["bs.Tooltip",{"left":0,"top":0,"placement":"right","html.":"tips ..."}]
+}

@@ -1,0 +1,4 @@
+<div $=bs.Blockquote reverse='1'>
+  <div $=bs.P>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</div>
+  <span $=Small>Someone famous in Source Title</span>
+</div>

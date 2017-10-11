@@ -1,0 +1,4 @@
+bs.InputGroupBtn
+7.4.!api_inputgroupbtn
+[ props ]
+  bsClass: 'input-group-btn'

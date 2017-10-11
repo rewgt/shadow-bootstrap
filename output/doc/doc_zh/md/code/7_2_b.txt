@@ -1,0 +1,13 @@
+<div $=bs.Form inline='1'>
+  <div $=bs.FormGroup validation='success'>
+    <span $=bs.CtrlLabel>Name&nbsp;</span>
+    <span $=bs.FormCtrl placeholder='Jane Doe'></span>
+    <span $=bs.FormFeedback></span>
+  </div>
+  <div $=bs.FormGroup>
+    <span $=bs.CtrlLabel>&nbsp; Email&nbsp;</span>
+    <span $=bs.FormCtrl type='email' placeholder='jane.doe@example.com'></span>
+  </div>
+  <span $=Span>&nbsp;&nbsp;&nbsp; </span>
+  <span $=bs.Btn type='submit'>Send invitation</span>
+</div>

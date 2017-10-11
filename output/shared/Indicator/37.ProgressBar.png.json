@@ -1,0 +1,8 @@
+{
+  "name": "bs.ProgressBar",
+  "widget": ["bs.ProgressBar", {
+    "minWidth": 100,
+    "now": 60,
+    "html.": "60%"
+  }]
+}

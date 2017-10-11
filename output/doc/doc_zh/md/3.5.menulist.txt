@@ -1,0 +1,135 @@
+3.5 MenuList
+-------------
+
+&nbsp;
+
+### MenuList
+
+前面已介绍一种将按钮与菜单结合的构件：`bs.DropdownBtn`，与之类似，`bs.MenuList` 提供直接的菜单列表。
+
+举例如下。
+
+<div $='.rewgt.ui_demo' src='md/code/3_5_a.txt' input-height='{220}'></div>
+
+`bs.MenuList` 继承自 `MarkedDiv`，在 markdown 文本中用 `bs.MenuItem` 或 `bs.OptItem` 定义菜单项。
+
+MenuList 用 `duals.defaultOpen` 指示菜单是否缺省打开，如上例 `default-open='1'` 表示缺省打开。另外，`duals.open` 指示菜单当前是否打开，对它赋值还可控制菜单打开或隐藏。
+
+MenuList 支持回调函数 `onSelect(sKey,event)`，用于在菜单项选中时自动回调，参数 `sKey` 指示被选菜单项的 key 值，`event` 是触发动作的事件（自来相关事件函数的 `event` 参数）。
+
+### MenuItem
+
+菜单项 `bs.MenuItem` 有几种类型，包括，指定 `header='1'` 让它用作标题信息栏，指定 `divider='1'` 让它用作分割线。MenuItem 还用 `duals['data-checked']` 指示本项是否处于活动态，用 `duals.disabled` 指示当前是否禁用。这些功能上面例子都有演示。
+
+如果想让 MenuItem 点选后跳到指定 URL，只需设置一个 `href` 属性，另外，MenuItem 还支持用 `duals.icon` 或 `duals.glyph` 指定一个图标，举例如下。
+
+<div $='.rewgt.ui_demo' src='md/code/3_5_b.txt' input-height='{140}'></div>
+
+### <a name="opt_item"></a>OptItem
+
+菜单项 `bs.OptItem` 继承自 `bs.MenuItem`，具有 MenuItem 全部功能，唯一差别是，它实际用作选项构件，与导航面板（`bs.NavDiv`）及场景面板（`bs.GroundDiv`）配合用于导航，如上一节介绍。
+
+### API 接口
+
+<a name="api_menulist"></a>构件 `bs.MenuList`（继承自 `MarkedDiv`）：
+
+<div $=bs.Table responsive='1' striped='' bordered='1' condensed='1' hover='1'>
+  <div $=bs.Thead sty__='background:#e8e8e8'><div $=bs.Tr>
+    <div $=bs.Th width='{160}'>属性</div>
+    <div $=bs.Th width='{80}'>类型</div>
+    <div $=bs.Th width='{100}'>缺省值</div>
+    <div $=bs.Th>描述</div>
+  </div></div>
+  <div $=bs.Tbody><div $=bs.Tr>
+    <div $=bs.Td><code>props.bsClass</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>'dropdown-menu'</div>
+    <div $=bs.Td></div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.defaultOpen</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td></div>
+    <div $=bs.Td>指示是否缺省打开菜单，取值：'' 或 '1'</div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.open</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td></div>
+    <div $=bs.Td>指示菜单是否打开，取值：'' 或 '1'</div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>onSelect(sKey,event)</code></div>
+    <div $=bs.Td>function</div>
+    <div $=bs.Td></div>
+    <div $=bs.Td>菜单项选中时的回调函数，参数 sKey 指示选中菜单项的 key 值，参数 event 是触发选中动作的事件（自来相关事件函数的 event 参数）</div>
+  </div></div>
+</div>
+
+<a name="api_menuitem"></a>构件 `bs.MenuItem`（继承自 `bs.Li`）：
+
+<div $=bs.Table responsive='1' striped='' bordered='1' condensed='1' hover='1'>
+  <div $=bs.Thead sty__='background:#e8e8e8'><div $=bs.Tr>
+    <div $=bs.Th width='{160}'>属性</div>
+    <div $=bs.Th width='{80}'>类型</div>
+    <div $=bs.Th width='{100}'>缺省值</div>
+    <div $=bs.Th>描述</div>
+  </div></div>
+  <div $=bs.Tbody><div $=bs.Tr>
+    <div $=bs.Td><code>props.bsClass</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>'menuitem'</div>
+    <div $=bs.Td></div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.header</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td></div>
+    <div $=bs.Td>指示菜单项是否用作标题栏（仅显示提示信息），可选：'' 或 '1'</div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.divider</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td></div>
+    <div $=bs.Td>指示菜单项是否用作分割线，可选：'' 或 '1'</div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.role</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td></div>
+    <div $=bs.Td>当菜单项用作标题栏时，自动取 'heading'，当菜单项用作分割线时，自动取 'separator'，其它情况取 'presentation' </div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals['data-checked']</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td></div>
+    <div $=bs.Td>是否处于活动态，可选：'' 或 '1' </div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.disabled</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>''</div>
+    <div $=bs.Td>是否禁用，可选：'' 或 '1' </div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.icon</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td></div>
+    <div $=bs.Td>设置菜单项图标，指示图标 URL 值</div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.glyph</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td></div>
+    <div $=bs.Td>设置 Glyphicon 菜单项图标</div>
+  </div></div>
+</div>
+
+<a name="api_optitem"></a>构件 `bs.OptItem`（继承自 `bs.MenuItem`）：
+
+<div $=bs.Table responsive='1' striped='' bordered='1' condensed='1' hover='1'>
+  <div $=bs.Thead sty__='background:#e8e8e8'><div $=bs.Tr>
+    <div $=bs.Th width='{160}'>属性</div>
+    <div $=bs.Th width='{80}'>类型</div>
+    <div $=bs.Th width='{100}'>缺省值</div>
+    <div $=bs.Th>描述</div>
+  </div></div>
+  <div $=bs.Tbody><div $=bs.Tr>
+    <div $=bs.Td><code>props.bsClass</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>'menuitem'</div>
+    <div $=bs.Td></div>
+  </div></div>
+</div>
+
+&nbsp;

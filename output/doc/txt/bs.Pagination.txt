@@ -1,0 +1,16 @@
+bs.Pagination
+4.4.!api_pagination
+[ props ]
+  bsClass: 'pagination'
+[ duals ]
+  bsSize
+  activePage: 1
+  items
+  maxButtons: 0
+  first
+  last
+  prev
+  next
+  ellipsis: '1'
+  boundary
+  onSelect(iPageNo)

@@ -1,0 +1,12 @@
+<div $=bs.Div2>
+  <div $=bs.Alert bs-style='danger' dismissable='1' $for=''>
+    <div $=bs.H4>Oh snap! You got an error!</div>
+    <div $=bs.P>Change this and that and try again. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum.</div>
+    <div $=bs.P>
+      <span $=bs.Btn bs-style='danger'>Take this action</span>
+      <span $=Span> or </span>
+      <span $=bs.OptBtn fire-type='onsite' 
+        $trigger='["////",{$set:"1"},"dismissed"]'>Hide Alert</span>
+    </div>
+  </div>
+</div>

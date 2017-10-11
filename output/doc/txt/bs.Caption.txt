@@ -1,0 +1,4 @@
+bs.Caption
+9.3.!api_caption
+[ props ]
+  bsClass: 'caption'

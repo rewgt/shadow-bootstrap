@@ -1,0 +1,7 @@
+{
+  "name": "bs.Row",
+  "widget": [ ["bs.Row",{"minHeight":20}],
+    ["bs.Col",{"sm":6,"md":4,"minHeight":20}],
+    ["bs.Col",{"sm":6,"md":4,"minHeight":20}]
+  ]
+}

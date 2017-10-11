@@ -1,0 +1,11 @@
+bs.ModalDialog
+6.1.!api_modaldialog
+[ props ]
+  bsClass: 'modal'
+[ duals ]
+  role: 'dialog'
+  manualClose
+  canEsc
+  hasClose: '1'
+  dialogWidth
+  showModal

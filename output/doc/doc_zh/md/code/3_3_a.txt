@@ -1,0 +1,11 @@
+<div $=bs.BtnToolbar>
+  <div $=bs.BtnGroup>
+    <span $=bs.Btn>Test 1</span>
+    <span $=bs.Btn>Test 2</span>
+  </div>
+  <div $=bs.BtnGroup>
+    <span $=bs.Btn>Test 3</span>
+    <span $=bs.Btn>Test 4</span>
+    <span $=bs.Btn>Test 5</span>
+  </div>
+</div>

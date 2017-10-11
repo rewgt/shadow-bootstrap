@@ -1,0 +1,88 @@
+9.1 渐显与渐消
+-----------
+
+&nbsp;
+
+### Collapse 构件
+
+如果想让一个构件在显示或隐藏时，展示下拉或收缩的动画效果，不妨在它外层套用一个 `bs.Collapse`，同时指定 `duals.animation='1'`，如下例。
+
+<div $='.rewgt.ui_demo' src='md/code/9_1_a.txt' input-height='{190}'></div>
+
+`duals.expanded` 指示当前构件是否已展开显示，我们既用它标识状态，对它赋值还触发下拉展开与收缩隐藏的动作。
+
+因为 `bs.NavbarCollapse` 与 `bs.PanelCollapse` 继承了 `bs.Collapse`，这两者也都支持 `duals.animation` 属性。
+
+### Fade 构件
+
+`bs.Fade` 与 `bs.Collapse` 类似，它用来让一个构件逐渐显现与逐渐消失。如下例。
+
+<div $='.rewgt.ui_demo' src='md/code/9_1_b.txt' input-height='{190}'></div>
+
+### API 接口
+
+<a name="api_collapse"></a>构件 `bs.Collapse`（继承自 `bs.Div2`）：
+
+<div $=bs.Table responsive='1' striped='' bordered='1' condensed='1' hover='1'>
+  <div $=bs.Thead sty__='background:#e8e8e8'><div $=bs.Tr>
+    <div $=bs.Th width='{160}'>属性</div>
+    <div $=bs.Th width='{80}'>类型</div>
+    <div $=bs.Th width='{100}'>缺省值</div>
+    <div $=bs.Th>描述</div>
+  </div></div>
+  <div $=bs.Tbody><div $=bs.Tr>
+    <div $=bs.Td><code>props.bsClass</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>'collapse'</div>
+    <div $=bs.Td></div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>props.defaultExpanded</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td></div>
+    <div $=bs.Td>是否缺省展开显示，取值：'' 或 '1' </div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.role</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>'collapsible'</div>
+    <div $=bs.Td></div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.anamation</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td></div>
+    <div $=bs.Td>展开或收缩时是否使用动画，缺省不使用动画，取值：'' 或 '1' </div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.expanded</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>''</div>
+    <div $=bs.Td>是否已展开显示，取值：'' 或 '1' </div>
+  </div></div>
+</div>
+
+<a name="api_fade"></a>构件 `bs.Fade`（继承自 `bs.Div2`）：
+
+<div $=bs.Table responsive='1' striped='' bordered='1' condensed='1' hover='1'>
+  <div $=bs.Thead sty__='background:#e8e8e8'><div $=bs.Tr>
+    <div $=bs.Th width='{160}'>属性</div>
+    <div $=bs.Th width='{80}'>类型</div>
+    <div $=bs.Th width='{100}'>缺省值</div>
+    <div $=bs.Th>描述</div>
+  </div></div>
+  <div $=bs.Tbody><div $=bs.Tr>
+    <div $=bs.Td><code>props.bsClass</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>'fade'</div>
+    <div $=bs.Td></div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>props.defaultExpanded</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td></div>
+    <div $=bs.Td>是否缺省显示，取值：'' 或 '1' </div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.expanded</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>''</div>
+    <div $=bs.Td>是否在显示，取值：'' 或 '1' </div>
+  </div></div>
+</div>
+
+&nbsp;

@@ -1,0 +1,4 @@
+bs.MediaBody
+8.4.!api_mediabody
+[ props ]
+  bsClass: 'media-body'

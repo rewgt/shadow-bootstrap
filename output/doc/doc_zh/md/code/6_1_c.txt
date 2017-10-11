@@ -1,0 +1,18 @@
+<div $=bs.ModalDialog key='dia' manual-close='1' sty__='background-color:rgba(0,0,0,1)'>
+  <div $=bs.ModalHeader>
+    <div $=bs.ModalTitle>
+      <span $=bs.OptBtn bs-size='small' fire-type='onsite'
+        $trigger='["//////",{$set:""},"showModal"]'>Close</span>
+      <span $=Span sty__='float:right'>Modal title</span>
+    </div>
+  </div>
+  <div $=bs.ModalBody>example...</div>
+  <div $=bs.ModalFooter>
+    <span $=bs.Btn>Reset</span>
+    <span $=bs.Btn bs-style='primary'>Save changes</span>
+  </div>
+</div>
+<div $=bs.P>
+  <span $=bs.OptBtn fire-type='onsite'
+    $trigger='["////dia",{$set:"1"},"showModal"]'>Show dialog</span>
+</div>

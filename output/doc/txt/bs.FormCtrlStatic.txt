@@ -1,0 +1,4 @@
+bs.FormCtrlStatic
+7.2.!api_formctrlstatic
+[ props ]
+  bsClass: 'form-control-static'

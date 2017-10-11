@@ -1,0 +1,10 @@
+bs.Thumbnail
+8.1.!api_thumbnail
+[ props ]
+  bsClass: 'thumbnail'
+[ duals ]
+  src
+  alt
+  href
+  onLoad(event)
+  onError(event)

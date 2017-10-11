@@ -1,0 +1,14 @@
+<div $=bs.Grid>
+  <div $=bs.Row $for='item in [1,2,3]'>
+    <div $=bs.Col $key='"a"+index' xs='{6}' md='{3}'>
+      <div $=bs.Thumbnail src='md/res/thumbnail_div.png' alt='242x200'>
+        <div $=bs.H3>Thumbnail label</div>
+        <div $=bs.P>Description</div>
+        <div $=bs.P>
+          <span $=bs.Btn bs-style='primary'>Button</span>
+          <span $=bs.Btn item-space='{4}'>Button</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

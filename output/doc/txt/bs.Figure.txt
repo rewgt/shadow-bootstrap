@@ -1,0 +1,4 @@
+bs.Figure
+9.3.!api_figure
+[ props ]
+  bsClass: 'figure'

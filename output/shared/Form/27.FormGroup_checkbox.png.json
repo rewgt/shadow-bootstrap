@@ -1,0 +1,7 @@
+{
+  "name": "bs.FormGroup",
+  "widget": [ ["bs.FormGroup",{"bsSize":""}],
+    ["bs.Checkbox",{"defaultChecked":"","html.":"Checkbox1"}],
+    ["bs.Checkbox",{"defaultChecked":"","html.":"Checkbox2"}]
+  ]
+}

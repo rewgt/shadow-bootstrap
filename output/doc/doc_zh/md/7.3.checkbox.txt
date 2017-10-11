@@ -1,0 +1,88 @@
+7.3 Checkbox
+-----------
+
+&nbsp;
+
+### Checkbox
+
+为了更易用，Shadow Bootstrap 对 `<input type='checkbox'>` 与 `<input type='radio'>` 做了封装，分别提供 `bs.Checkbox` 与 `bs.Radio` 两种构件。
+
+`bs.Checkbox` 缺省用作行内构件，显式指定 `block='1'` 时用作 block 行构件，举例如下：
+
+<div $='.rewgt.ui_demo' src='md/code/7_3_a.txt' input-height='{160}'></div>
+
+`duals.disabled` 指示是否禁用，`duals.checked` 指示选中状态。
+
+### Radio
+
+`bs.Radio` 继承自 `bs.Checkbox`，用法与 `bs.Checkbox` 相同。
+
+<div $='.rewgt.ui_demo' src='md/code/7_3_b.txt' input-height='{160}'></div>
+
+同一 `bs.Form` 下，如果指定同一 `duals.name` 给多个 `bs.Radio`，让它们构成一组，同组 Radio 具备选中互斥的特性，如本例 Radio2 与 Radio3。
+
+### 常用表单项
+
+常用表单项举例如下。
+
+<div $='.rewgt.ui_demo' src='md/code/7_3_c.txt' input-height='{870}'></div>
+
+为方便对齐，我们通常不用 `bs.FormCtrl` 的 `checkbox` 与 `radio`，而改用 `bs.Checkbox` 与 `bs.Raido` 代替。
+
+### API 接口
+
+<a name="api_checkbox"></a>构件 `bs.Checkbox`（继承自 `Label`）：
+
+<div $=bs.Table responsive='1' striped='' bordered='1' condensed='1' hover='1'>
+  <div $=bs.Thead sty__='background:#e8e8e8'><div $=bs.Tr>
+    <div $=bs.Th width='{160}'>属性</div>
+    <div $=bs.Th width='{80}'>类型</div>
+    <div $=bs.Th width='{100}'>缺省值</div>
+    <div $=bs.Th>描述</div>
+  </div></div>
+  <div $=bs.Tbody><div $=bs.Tr>
+    <div $=bs.Td><code>props.bsClass</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>'checkbox'</div>
+    <div $=bs.Td></div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.block</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>''</div>
+    <div $=bs.Td>是否输出 block 行构件（用 div 标签），缺省为行内构件（用 label 标签），取值：'' 或 '1' </div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>props.defaultChecked</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td></div>
+    <div $=bs.Td>缺省是否选中，取值：'' 或 '1' </div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.checked</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td></div>
+    <div $=bs.Td>当前是否选中，取值：'' 或 '1' </div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.disabled</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td></div>
+    <div $=bs.Td>是否禁用，取值：'' 或 '1' </div>
+  </div></div>
+</div>
+
+<a name="api_radio"></a>构件 `bs.Radio`（继承自 `bs.Checkbox`）：
+
+<div $=bs.Table responsive='1' striped='' bordered='1' condensed='1' hover='1'>
+  <div $=bs.Thead sty__='background:#e8e8e8'><div $=bs.Tr>
+    <div $=bs.Th width='{160}'>属性</div>
+    <div $=bs.Th width='{80}'>类型</div>
+    <div $=bs.Th width='{100}'>缺省值</div>
+    <div $=bs.Th>描述</div>
+  </div></div>
+  <div $=bs.Tbody><div $=bs.Tr>
+    <div $=bs.Td><code>props.bsClass</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>'radio'</div>
+    <div $=bs.Td></div>
+  </div></div>
+</div>
+
+&nbsp;

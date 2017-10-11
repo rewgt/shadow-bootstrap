@@ -1,0 +1,379 @@
+2.1 Glyphicon
+------------
+
+&nbsp;
+
+### 字体图标
+
+Bootstrap 的 Glyphicon 是一种字体图标，各种图形由一个网络字体文件（见 shadow-bootstrap 工程 fonts 子目录下 `*.woff2`）定义，图标大小与颜色通过设置字体大小与颜色实现。
+
+构件 `bs.Glyphicon` 在许多地方有应用，比如按钮、工具栏、导航栏等，它也可在段落文本中任意使用。
+
+如下例子：
+
+<div $='.rewgt.ui_demo' src='md/code/2_1_a.txt' input-height='{200}'></div>
+
+### Bootstrap 缺省提供的图标
+
+Bootstrap 提供 250 多个常用图标，罗列如下：
+
+<div $=Div klass='align_center-right-default' min-width='{640}' height='{74}'
+  dual-data='{["asterisk","plus","euro","eur","minus","cloud","envelope","pencil"]}'
+  sty__='clear:both; line-height:1' $$for='item in duals.data'>
+  <div $=bs.Div2 sty__='float:left; background:#f8f8f8' margin='{1}' 
+    width='{74}' height='{74}' $key='"a" + index'>
+    <span $=bs.Glyphicon $glyph='item' sty__='margin:10px 0 5px; font-size:24px'></span>
+    <span $=Br></span><span $=Span $html='item' sty__='font-size:12px'></span>
+  </div>
+</div>
+
+<div $=Div klass='align_center-right-default' min-width='{640}' height='{74}'
+  dual-data='{["glass","music","search","heart","star","star-empty","user","film"]}'
+  sty__='clear:both; line-height:1' $$for='item in duals.data'>
+  <div $=bs.Div2 sty__='float:left; background:#f8f8f8' margin='{1}' 
+    width='{74}' height='{74}' $key='"a" + index'>
+    <span $=bs.Glyphicon $glyph='item' sty__='margin:10px 0 5px; font-size:24px'></span>
+    <span $=Br></span><span $=Span $html='item' sty__='font-size:12px'></span>
+  </div>
+</div>
+
+<div $=Div klass='align_center-right-default' min-width='{640}' height='{74}'
+  dual-data='{["th-large","th","th-list","ok","remove","zoom-in","zoom-out","off"]}'
+  sty__='clear:both; line-height:1' $$for='item in duals.data'>
+  <div $=bs.Div2 sty__='float:left; background:#f8f8f8' margin='{1}' 
+    width='{74}' height='{74}' $key='"a" + index'>
+    <span $=bs.Glyphicon $glyph='item' sty__='margin:10px 0 5px; font-size:24px'></span>
+    <span $=Br></span><span $=Span $html='item' sty__='font-size:12px'></span>
+  </div>
+</div>
+
+<div $=Div klass='align_center-right-default' min-width='{640}' height='{74}'
+  dual-data='{["signal","cog","trash","home","file","time","road","download-alt"]}'
+  sty__='clear:both; line-height:1' $$for='item in duals.data'>
+  <div $=bs.Div2 sty__='float:left; background:#f8f8f8' margin='{1}' 
+    width='{74}' height='{74}' $key='"a" + index'>
+    <span $=bs.Glyphicon $glyph='item' sty__='margin:10px 0 5px; font-size:24px'></span>
+    <span $=Br></span><span $=Span $html='item' sty__='font-size:12px'></span>
+  </div>
+</div>
+
+<div $=Div klass='align_center-right-default' min-width='{640}' height='{74}'
+  dual-data='{["download","upload","inbox","play-circle","repeat","refresh","list-alt","lock"]}'
+  sty__='clear:both; line-height:1' $$for='item in duals.data'>
+  <div $=bs.Div2 sty__='float:left; background:#f8f8f8' margin='{1}' 
+    width='{74}' height='{74}' $key='"a" + index'>
+    <span $=bs.Glyphicon $glyph='item' sty__='margin:10px 0 5px; font-size:24px'></span>
+    <span $=Br></span><span $=Span $html='item' sty__='font-size:12px'></span>
+  </div>
+</div>
+
+<div $=Div klass='align_center-right-default' min-width='{640}' height='{74}'
+  dual-data='{["flag","headphones","volume-off","volume-down","volume-up","qrcode","barcode","tag"]}'
+  sty__='clear:both; line-height:1' $$for='item in duals.data'>
+  <div $=bs.Div2 sty__='float:left; background:#f8f8f8' margin='{1}' 
+    width='{74}' height='{74}' $key='"a" + index'>
+    <span $=bs.Glyphicon $glyph='item' sty__='margin:10px 0 5px; font-size:24px'></span>
+    <span $=Br></span><span $=Span $html='item' sty__='font-size:12px'></span>
+  </div>
+</div>
+
+<div $=Div klass='align_center-right-default' min-width='{640}' height='{74}'
+  dual-data='{["tags","book","bookmark","print","camera","font","bold","italic"]}'
+  sty__='clear:both; line-height:1' $$for='item in duals.data'>
+  <div $=bs.Div2 sty__='float:left; background:#f8f8f8' margin='{1}' 
+    width='{74}' height='{74}' $key='"a" + index'>
+    <span $=bs.Glyphicon $glyph='item' sty__='margin:10px 0 5px; font-size:24px'></span>
+    <span $=Br></span><span $=Span $html='item' sty__='font-size:12px'></span>
+  </div>
+</div>
+
+<div $=Div klass='align_center-right-default' min-width='{640}' height='{74}'
+  dual-data='{["text-height","text-width","align-left","align-center","align-right","align-justify","list","indent-left"]}'
+  sty__='clear:both; line-height:1' $$for='item in duals.data'>
+  <div $=bs.Div2 sty__='float:left; background:#f8f8f8' margin='{1}' 
+    width='{74}' height='{74}' $key='"a" + index'>
+    <span $=bs.Glyphicon $glyph='item' sty__='margin:10px 0 5px; font-size:24px'></span>
+    <span $=Br></span><span $=Span $html='item' sty__='font-size:12px'></span>
+  </div>
+</div>
+
+<div $=Div klass='align_center-right-default' min-width='{640}' height='{74}'
+  dual-data='{["indent-right","facetime-video","picture","map-marker","adjust","tint","edit","share"]}'
+  sty__='clear:both; line-height:1' $$for='item in duals.data'>
+  <div $=bs.Div2 sty__='float:left; background:#f8f8f8' margin='{1}' 
+    width='{74}' height='{74}' $key='"a" + index'>
+    <span $=bs.Glyphicon $glyph='item' sty__='margin:10px 0 5px; font-size:24px'></span>
+    <span $=Br></span><span $=Span $html='item' sty__='font-size:12px'></span>
+  </div>
+</div>
+
+<div $=Div klass='align_center-right-default' min-width='{640}' height='{74}'
+  dual-data='{["check","move","step-backward","fast-backward","backward","play","pause","stop"]}'
+  sty__='clear:both; line-height:1' $$for='item in duals.data'>
+  <div $=bs.Div2 sty__='float:left; background:#f8f8f8' margin='{1}' 
+    width='{74}' height='{74}' $key='"a" + index'>
+    <span $=bs.Glyphicon $glyph='item' sty__='margin:10px 0 5px; font-size:24px'></span>
+    <span $=Br></span><span $=Span $html='item' sty__='font-size:12px'></span>
+  </div>
+</div>
+
+<div $=Div klass='align_center-right-default' min-width='{640}' height='{74}'
+  dual-data='{["forward","fast-forward","step-forward","eject","chevron-left","chevron-right","plus-sign","minus-sign"]}'
+  sty__='clear:both; line-height:1' $$for='item in duals.data'>
+  <div $=bs.Div2 sty__='float:left; background:#f8f8f8' margin='{1}' 
+    width='{74}' height='{74}' $key='"a" + index'>
+    <span $=bs.Glyphicon $glyph='item' sty__='margin:10px 0 5px; font-size:24px'></span>
+    <span $=Br></span><span $=Span $html='item' sty__='font-size:12px'></span>
+  </div>
+</div>
+
+<div $=Div klass='align_center-right-default' min-width='{640}' height='{74}'
+  dual-data='{["remove-sign","ok-sign","question-sign","info-sign","screenshot","remove-circle","ok-circle","ban-circle"]}'
+  sty__='clear:both; line-height:1' $$for='item in duals.data'>
+  <div $=bs.Div2 sty__='float:left; background:#f8f8f8' margin='{1}' 
+    width='{74}' height='{74}' $key='"a" + index'>
+    <span $=bs.Glyphicon $glyph='item' sty__='margin:10px 0 5px; font-size:24px'></span>
+    <span $=Br></span><span $=Span $html='item' sty__='font-size:12px'></span>
+  </div>
+</div>
+
+<div $=Div klass='align_center-right-default' min-width='{640}' height='{74}'
+  dual-data='{["arrow-left","arrow-right","arrow-up","arrow-down","share-alt","resize-full","resize-small","exclamation-sign"]}'
+  sty__='clear:both; line-height:1' $$for='item in duals.data'>
+  <div $=bs.Div2 sty__='float:left; background:#f8f8f8' margin='{1}' 
+    width='{74}' height='{74}' $key='"a" + index'>
+    <span $=bs.Glyphicon $glyph='item' sty__='margin:10px 0 5px; font-size:24px'></span>
+    <span $=Br></span><span $=Span $html='item' sty__='font-size:12px'></span>
+  </div>
+</div>
+
+<div $=Div klass='align_center-right-default' min-width='{640}' height='{74}'
+  dual-data='{["gift","leaf","fire","eye-open","eye-close","warning-sign","plane","calendar"]}'
+  sty__='clear:both; line-height:1' $$for='item in duals.data'>
+  <div $=bs.Div2 sty__='float:left; background:#f8f8f8' margin='{1}' 
+    width='{74}' height='{74}' $key='"a" + index'>
+    <span $=bs.Glyphicon $glyph='item' sty__='margin:10px 0 5px; font-size:24px'></span>
+    <span $=Br></span><span $=Span $html='item' sty__='font-size:12px'></span>
+  </div>
+</div>
+
+<div $=Div klass='align_center-right-default' min-width='{640}' height='{74}'
+  dual-data='{["random","comment","magnet","chevron-up","chevron-down","retweet","shopping-cart","folder-close"]}'
+  sty__='clear:both; line-height:1' $$for='item in duals.data'>
+  <div $=bs.Div2 sty__='float:left; background:#f8f8f8' margin='{1}' 
+    width='{74}' height='{74}' $key='"a" + index'>
+    <span $=bs.Glyphicon $glyph='item' sty__='margin:10px 0 5px; font-size:24px'></span>
+    <span $=Br></span><span $=Span $html='item' sty__='font-size:12px'></span>
+  </div>
+</div>
+
+<div $=Div klass='align_center-right-default' min-width='{640}' height='{74}'
+  dual-data='{["folder-open","resize-vertical","resize-horizontal","hdd","bullhorn","bell","certificate","thumbs-up"]}'
+  sty__='clear:both; line-height:1' $$for='item in duals.data'>
+  <div $=bs.Div2 sty__='float:left; background:#f8f8f8' margin='{1}' 
+    width='{74}' height='{74}' $key='"a" + index'>
+    <span $=bs.Glyphicon $glyph='item' sty__='margin:10px 0 5px; font-size:24px'></span>
+    <span $=Br></span><span $=Span $html='item' sty__='font-size:12px'></span>
+  </div>
+</div>
+
+<div $=Div klass='align_center-right-default' min-width='{640}' height='{74}'
+  dual-data='{["thumbs-down","hand-right","hand-left","hand-up","hand-down","circle-arrow-right","circle-arrow-left","circle-arrow-up"]}'
+  sty__='clear:both; line-height:1' $$for='item in duals.data'>
+  <div $=bs.Div2 sty__='float:left; background:#f8f8f8' margin='{1}' 
+    width='{74}' height='{74}' $key='"a" + index'>
+    <span $=bs.Glyphicon $glyph='item' sty__='margin:10px 0 5px; font-size:24px'></span>
+    <span $=Br></span><span $=Span $html='item' sty__='font-size:12px'></span>
+  </div>
+</div>
+
+<div $=Div klass='align_center-right-default' min-width='{640}' height='{74}'
+  dual-data='{["circle-arrow-down","globe","wrench","tasks","filter","briefcase","fullscreen","dashboard"]}'
+  sty__='clear:both; line-height:1' $$for='item in duals.data'>
+  <div $=bs.Div2 sty__='float:left; background:#f8f8f8' margin='{1}' 
+    width='{74}' height='{74}' $key='"a" + index'>
+    <span $=bs.Glyphicon $glyph='item' sty__='margin:10px 0 5px; font-size:24px'></span>
+    <span $=Br></span><span $=Span $html='item' sty__='font-size:12px'></span>
+  </div>
+</div>
+
+<div $=Div klass='align_center-right-default' min-width='{640}' height='{74}'
+  dual-data='{["paperclip","heart-empty","link","phone","pushpin","usd","gbp","sort"]}'
+  sty__='clear:both; line-height:1' $$for='item in duals.data'>
+  <div $=bs.Div2 sty__='float:left; background:#f8f8f8' margin='{1}' 
+    width='{74}' height='{74}' $key='"a" + index'>
+    <span $=bs.Glyphicon $glyph='item' sty__='margin:10px 0 5px; font-size:24px'></span>
+    <span $=Br></span><span $=Span $html='item' sty__='font-size:12px'></span>
+  </div>
+</div>
+
+<div $=Div klass='align_center-right-default' min-width='{640}' height='{74}'
+  dual-data='{["sort-by-alphabet","sort-by-alphabet-alt","sort-by-order","sort-by-order-alt","sort-by-attributes","sort-by-attributes-alt","unchecked","expand"]}'
+  sty__='clear:both; line-height:1' $$for='item in duals.data'>
+  <div $=bs.Div2 sty__='float:left; background:#f8f8f8' margin='{1}' 
+    width='{74}' height='{74}' $key='"a" + index'>
+    <span $=bs.Glyphicon $glyph='item' sty__='margin:10px 0 5px; font-size:24px'></span>
+    <span $=Br></span><span $=Span $html='item' sty__='font-size:12px'></span>
+  </div>
+</div>
+
+<div $=Div klass='align_center-right-default' min-width='{640}' height='{74}'
+  dual-data='{["collapse-down","collapse-up","log-in","flash","log-out","new-window","record","save"]}'
+  sty__='clear:both; line-height:1' $$for='item in duals.data'>
+  <div $=bs.Div2 sty__='float:left; background:#f8f8f8' margin='{1}' 
+    width='{74}' height='{74}' $key='"a" + index'>
+    <span $=bs.Glyphicon $glyph='item' sty__='margin:10px 0 5px; font-size:24px'></span>
+    <span $=Br></span><span $=Span $html='item' sty__='font-size:12px'></span>
+  </div>
+</div>
+
+<div $=Div klass='align_center-right-default' min-width='{640}' height='{74}'
+  dual-data='{["open","saved","import","export","send","floppy-disk","floppy-saved","floppy-remove"]}'
+  sty__='clear:both; line-height:1' $$for='item in duals.data'>
+  <div $=bs.Div2 sty__='float:left; background:#f8f8f8' margin='{1}' 
+    width='{74}' height='{74}' $key='"a" + index'>
+    <span $=bs.Glyphicon $glyph='item' sty__='margin:10px 0 5px; font-size:24px'></span>
+    <span $=Br></span><span $=Span $html='item' sty__='font-size:12px'></span>
+  </div>
+</div>
+
+<div $=Div klass='align_center-right-default' min-width='{640}' height='{74}'
+  dual-data='{["floppy-save","floppy-open","credit-card","transfer","cutlery","header","compressed","earphone"]}'
+  sty__='clear:both; line-height:1' $$for='item in duals.data'>
+  <div $=bs.Div2 sty__='float:left; background:#f8f8f8' margin='{1}' 
+    width='{74}' height='{74}' $key='"a" + index'>
+    <span $=bs.Glyphicon $glyph='item' sty__='margin:10px 0 5px; font-size:24px'></span>
+    <span $=Br></span><span $=Span $html='item' sty__='font-size:12px'></span>
+  </div>
+</div>
+
+<div $=Div klass='align_center-right-default' min-width='{640}' height='{74}'
+  dual-data='{["phone-alt","tower","stats","sd-video","hd-video","subtitles","sound-stereo","sound-dolby"]}'
+  sty__='clear:both; line-height:1' $$for='item in duals.data'>
+  <div $=bs.Div2 sty__='float:left; background:#f8f8f8' margin='{1}' 
+    width='{74}' height='{74}' $key='"a" + index'>
+    <span $=bs.Glyphicon $glyph='item' sty__='margin:10px 0 5px; font-size:24px'></span>
+    <span $=Br></span><span $=Span $html='item' sty__='font-size:12px'></span>
+  </div>
+</div>
+
+<div $=Div klass='align_center-right-default' min-width='{640}' height='{74}'
+  dual-data='{["sound-5-1","sound-6-1","sound-7-1","copyright-mark","registration-mark","cloud-download","cloud-upload","tree-conifer"]}'
+  sty__='clear:both; line-height:1' $$for='item in duals.data'>
+  <div $=bs.Div2 sty__='float:left; background:#f8f8f8' margin='{1}' 
+    width='{74}' height='{74}' $key='"a" + index'>
+    <span $=bs.Glyphicon $glyph='item' sty__='margin:10px 0 5px; font-size:24px'></span>
+    <span $=Br></span><span $=Span $html='item' sty__='font-size:12px'></span>
+  </div>
+</div>
+
+<div $=Div klass='align_center-right-default' min-width='{640}' height='{74}'
+  dual-data='{["tree-deciduous","cd","save-file","open-file","level-up","copy","paste","alert"]}'
+  sty__='clear:both; line-height:1' $$for='item in duals.data'>
+  <div $=bs.Div2 sty__='float:left; background:#f8f8f8' margin='{1}' 
+    width='{74}' height='{74}' $key='"a" + index'>
+    <span $=bs.Glyphicon $glyph='item' sty__='margin:10px 0 5px; font-size:24px'></span>
+    <span $=Br></span><span $=Span $html='item' sty__='font-size:12px'></span>
+  </div>
+</div>
+
+<div $=Div klass='align_center-right-default' min-width='{640}' height='{74}'
+  dual-data='{["equalizer","king","queen","pawn","bishop","knight","baby-formula","tent"]}'
+  sty__='clear:both; line-height:1' $$for='item in duals.data'>
+  <div $=bs.Div2 sty__='float:left; background:#f8f8f8' margin='{1}' 
+    width='{74}' height='{74}' $key='"a" + index'>
+    <span $=bs.Glyphicon $glyph='item' sty__='margin:10px 0 5px; font-size:24px'></span>
+    <span $=Br></span><span $=Span $html='item' sty__='font-size:12px'></span>
+  </div>
+</div>
+
+<div $=Div klass='align_center-right-default' min-width='{640}' height='{74}'
+  dual-data='{["blackboard","bed","apple","erase","hourglass","lamp","duplicate","piggy-bank"]}'
+  sty__='clear:both; line-height:1' $$for='item in duals.data'>
+  <div $=bs.Div2 sty__='float:left; background:#f8f8f8' margin='{1}' 
+    width='{74}' height='{74}' $key='"a" + index'>
+    <span $=bs.Glyphicon $glyph='item' sty__='margin:10px 0 5px; font-size:24px'></span>
+    <span $=Br></span><span $=Span $html='item' sty__='font-size:12px'></span>
+  </div>
+</div>
+
+<div $=Div klass='align_center-right-default' min-width='{640}' height='{74}'
+  dual-data='{["scissors","bitcoin","btc","xbt","yen","jpy","ruble","rub"]}'
+  sty__='clear:both; line-height:1' $$for='item in duals.data'>
+  <div $=bs.Div2 sty__='float:left; background:#f8f8f8' margin='{1}' 
+    width='{74}' height='{74}' $key='"a" + index'>
+    <span $=bs.Glyphicon $glyph='item' sty__='margin:10px 0 5px; font-size:24px'></span>
+    <span $=Br></span><span $=Span $html='item' sty__='font-size:12px'></span>
+  </div>
+</div>
+
+<div $=Div klass='align_center-right-default' min-width='{640}' height='{74}'
+  dual-data='{["scale","ice-lolly","ice-lolly-tasted","education","option-horizontal","option-vertical","menu-hamburger","modal-window"]}'
+  sty__='clear:both; line-height:1' $$for='item in duals.data'>
+  <div $=bs.Div2 sty__='float:left; background:#f8f8f8' margin='{1}' 
+    width='{74}' height='{74}' $key='"a" + index'>
+    <span $=bs.Glyphicon $glyph='item' sty__='margin:10px 0 5px; font-size:24px'></span>
+    <span $=Br></span><span $=Span $html='item' sty__='font-size:12px'></span>
+  </div>
+</div>
+
+<div $=Div klass='align_center-right-default' min-width='{640}' height='{74}'
+  dual-data='{["oil","grain","sunglasses","text-size","text-color","text-background","object-align-top","object-align-bottom"]}'
+  sty__='clear:both; line-height:1' $$for='item in duals.data'>
+  <div $=bs.Div2 sty__='float:left; background:#f8f8f8' margin='{1}' 
+    width='{74}' height='{74}' $key='"a" + index'>
+    <span $=bs.Glyphicon $glyph='item' sty__='margin:10px 0 5px; font-size:24px'></span>
+    <span $=Br></span><span $=Span $html='item' sty__='font-size:12px'></span>
+  </div>
+</div>
+
+<div $=Div klass='align_center-right-default' min-width='{640}' height='{74}'
+  dual-data='{["object-align-horizontal","object-align-left","object-align-vertical","object-align-right","triangle-right","triangle-left","triangle-bottom","triangle-top"]}'
+  sty__='clear:both; line-height:1' $$for='item in duals.data'>
+  <div $=bs.Div2 sty__='float:left; background:#f8f8f8' margin='{1}' 
+    width='{74}' height='{74}' $key='"a" + index'>
+    <span $=bs.Glyphicon $glyph='item' sty__='margin:10px 0 5px; font-size:24px'></span>
+    <span $=Br></span><span $=Span $html='item' sty__='font-size:12px'></span>
+  </div>
+</div>
+
+<div $=Div klass='align_center-right-default' min-width='{640}' height='{74}'
+  dual-data='{["console","superscript","subscript","menu-left","menu-right","menu-down","menu-up"]}'
+  sty__='clear:both; line-height:1' $$for='item in duals.data'>
+  <div $=bs.Div2 sty__='float:left; background:#f8f8f8' margin='{1}' 
+    width='{74}' height='{74}' $key='"a" + index'>
+    <span $=bs.Glyphicon $glyph='item' sty__='margin:10px 0 5px; font-size:24px'></span>
+    <span $=Br></span><span $=Span $html='item' sty__='font-size:12px'></span>
+  </div>
+</div>
+
+### API 接口
+
+<a name="api_glyphicon"></a>构件 `bs.Glyphicon`（继承自 `Span`）：
+
+<div $=bs.Table responsive='1' striped='' bordered='1' condensed='1' hover='1'>
+  <div $=bs.Thead sty__='background:#e8e8e8'><div $=bs.Tr>
+    <div $=bs.Th width='{160}'>属性</div>
+    <div $=bs.Th width='{80}'>类型</div>
+    <div $=bs.Th width='{100}'>缺省值</div>
+    <div $=bs.Th>描述</div>
+  </div></div>
+  <div $=bs.Tbody><div $=bs.Tr>
+    <div $=bs.Td><code>props.bsClass</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>'glyphicon'</div>
+    <div $=bs.Td></div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.glyph</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td></div>
+    <div $=bs.Td>指示用哪种图标</div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.itemSpace</code></div>
+    <div $=bs.Td>number</div>
+    <div $=bs.Td></div>
+    <div $=bs.Td>可选设置按钮左、右侧 margin 像素值，取 undefined 值表示不设置</div>
+  </div></div>
+</div>
+
+&nbsp;

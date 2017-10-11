@@ -1,0 +1,4 @@
+{
+  "name": "bs.Label",
+  "widget": ["bs.Label",{"html.":"Label","itemSpace":0}]
+}

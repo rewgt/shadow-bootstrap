@@ -1,0 +1,7 @@
+<div $=bs.Div2>
+  <div $=bs.Pager>
+    <div $=bs.PagerItem href='#4.5.' glyph='film'> Page A</div>
+    <div $=bs.PagerItem href='#4.5.' item-space='{10}'>Page B</div>
+    <div $=bs.PagerItem href='#4.5.' disabled='1'>Page C</div>
+  </div>
+</div>

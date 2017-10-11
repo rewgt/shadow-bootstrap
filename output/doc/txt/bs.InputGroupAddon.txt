@@ -1,0 +1,4 @@
+bs.InputGroupAddon
+7.4.!api_inputgroupaddon
+[ props ]
+  bsClass: 'input-group-addon'

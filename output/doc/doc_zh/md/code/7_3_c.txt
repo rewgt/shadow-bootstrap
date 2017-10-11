@@ -1,0 +1,54 @@
+<div $=bs.Form horizontal='1'>
+  <div $=bs.FormGroup validation='success'>
+    <div $=bs.Col sm='{2}'>
+      <span $=bs.CtrlLabel>Text</span>
+    </div><div $=bs.Col sm='{10}'>
+      <span $=bs.FormCtrl></span>
+    </div>
+    <span $=bs.FormFeedback></span>
+  </div><div $=bs.FormGroup validation='success'>
+    <div $=bs.Col sm='{2}'>
+      <span $=bs.CtrlLabel>Password</span>
+    </div><div $=bs.Col sm='{10}'>
+      <span $=bs.FormCtrl type='password'></span>
+    </div>
+    <span $=bs.FormFeedback></span>
+  </div><div $=bs.FormGroup validation='error'>
+    <div $=bs.Col sm='{2}'>
+      <span $=bs.CtrlLabel>Textarea</span>
+    </div><div $=bs.Col sm='{10}'>
+      <span $=bs.FormCtrl type='textarea'></span>
+    </div>
+    <span $=bs.FormFeedback></span>
+  </div><div $=bs.FormGroup>
+    <div $=bs.Col sm='{2}'>
+      <span $=bs.CtrlLabel>Select</span>
+    </div><div $=bs.Col sm='{10}'>
+      <span $=bs.FormCtrl type='select'>
+        <span $=Option value='a'>A</span>
+        <span $=Option value='b'>B</span>
+      </span>
+    </div>
+  </div><div $=bs.FormGroup>
+    <div $=bs.Col sm='{2}'>
+      <span $=bs.CtrlLabel>Multiple select</span>
+    </div><div $=bs.Col sm='{10}'>
+      <span $=bs.FormCtrl type='select' multiple='1'>
+        <span $=Option value='a'>A</span>
+        <span $=Option value='b'>B</span>
+        <span $=Option value='c'>C</span>
+      </span>
+    </div>
+  </div><div $=bs.FormGroup validation='warning'>
+    <div $=bs.Col sm='{10}' sm-offset='{2}'>
+      <span $=bs.Checkbox>Remember me</span>
+    </div>
+    <span $=bs.FormFeedback></span>
+  </div><div $=bs.FormGroup validation='warning'>
+    <div $=bs.Col sm='{10}' sm-offset='{2}'>
+      <span $=bs.Radio name='grp1'>Male &nbsp;</span>
+      <span $=bs.Radio name='grp1'>Female</span>
+    </div>
+    <span $=bs.FormFeedback></span>
+  </div>
+</div>

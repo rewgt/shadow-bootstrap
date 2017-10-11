@@ -1,0 +1,7 @@
+<div $=bs.Panel>
+  <div $=bs.PanelHeader>Heading</div>
+  <div $=bs.PanelCollapse default-expanded='1'>
+    <div $=bs.PanelBody>example</div>
+  </div>
+  <div $=bs.PanelFooter>It is footer</div>
+</div>

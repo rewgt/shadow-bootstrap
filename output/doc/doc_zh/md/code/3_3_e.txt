@@ -1,0 +1,10 @@
+<div $=bs.BtnToolbar>
+  <div $=bs.BtnGroup vertical='1' width='{120}'>
+    <span $=bs.Btn>Test 1</span>
+    <pre $=bs.DropdownBtn desc='Test 2'>
+<div $=bs.MenuItem key='m1'>Menu 1</div>
+<div $=bs.MenuItem key='m2'>Menu 2</div>
+</pre>
+    <span $=bs.Btn>Test 3</span>
+  </div>
+</div>

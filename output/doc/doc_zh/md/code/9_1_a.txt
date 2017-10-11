@@ -1,0 +1,9 @@
+<div $=bs.Div2 $for='' dual-data=''>
+  <div $=bs.P><span $=bs.OptBtn fire-type='onsite'
+       $trigger='["////",{$set:(duals.data?"":"1")}]'
+       $html='duals.data?"Close":"Open"'></span>
+  </div>
+  <div $=bs.Collapse animation='1' $expanded='duals.data'>
+    <div $=bs.Well>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.</div>
+  </div>
+</div>

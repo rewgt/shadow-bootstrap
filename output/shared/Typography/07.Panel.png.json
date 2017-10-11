@@ -1,0 +1,8 @@
+{
+  "name": "bs.Panel",
+  "widget": [ ["bs.Panel",{}],
+    ["bs.PanelHeader",{"html.":"Heading"}],
+    ["bs.PanelBody",{"html.":"Basic panel example"}],
+    ["bs.PanelFooter",{"html.":"It is footer"}]
+  ]
+}

@@ -1,0 +1,7 @@
+<div $=bs.BtnToolbar>
+  <div $=bs.BtnGroup bs-size='xsmall'>
+    <span $=bs.Btn>Test 1</span>
+    <span $=bs.Btn>Test 2</span>
+    <span $=bs.Btn>Test 3</span>
+  </div>
+</div>

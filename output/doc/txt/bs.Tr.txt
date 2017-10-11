@@ -1,0 +1,4 @@
+bs.Tr
+9.3.!api_tr
+[ props ]
+  bsClass: 'tr'

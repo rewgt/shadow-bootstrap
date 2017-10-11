@@ -1,0 +1,45 @@
+{
+  "name": "bs.Navbar",
+  "widget": [ ["bs.Navbar",{"minWidth":20,"minHeight":20,"fixedTop":""}],
+    [ ["bs.NavbarHeader",{}],
+      ["bs.NavbarBrand",{"href":"https://github.com/twbs/bootstrap","html.":"Bootstrap"}],
+      ["bs.NavbarToggle",{}]
+    ],
+    [ ["bs.NavbarCollapse",{"defaultExpanded":""}],
+      ["bs.NavbarText",{"pullRight":"1","html.":"Great day!","margin":[15,0,15,15]}],
+      [ ["bs.Nav",{}],
+        ["bs.NavItem",{"html.":"Product"}],
+        ["bs.DropdownBtn",{"desc":"Help","html.":"<div $=bs.MenuItem key='item1'>Chapter 1</div>\n<div $=bs.MenuItem key='item2'>Chapter 2</div>\n"}],
+        [ ["bs.NavbarText",{"pullRight":"1"}],
+          ["Span",{"html.":"Login: "}],
+          ["bs.NavbarLink",{"html.":"wayne","href":"#"}]
+        ]
+      ],
+      [ ["bs.NavbarForm",{"pullRight":"1"}],
+        ["bs.FormGroup",{}],
+        ["bs.FormCtrl",{"type":"text","placeholder":"Search"}]
+      ]
+    ]
+  ],
+  "scene": [ ["bs.Navbar",{"width":600,"minWidth":20,"minHeight":20,"fixedTop":""}],
+    [ ["bs.NavbarHeader",{}],
+      ["bs.NavbarBrand",{"href":"https://github.com/twbs/bootstrap","html.":"Bootstrap"}],
+      ["bs.NavbarToggle",{}]
+    ],
+    [ ["bs.NavbarCollapse",{"defaultExpanded":"1"}],
+      ["bs.NavbarText",{"pullRight":"1","html.":"Great day!","margin":[15,0,15,15]}],
+      [ ["bs.Nav",{}],
+        ["bs.NavItem",{"html.":"Product"}],
+        ["bs.DropdownBtn",{"desc":"Help","html.":"<div $=bs.MenuItem key='item1'>Chapter 1</div>\n<div $=bs.MenuItem key='item2'>Chapter 2</div>\n"}],
+        [ ["bs.NavbarText",{"pullRight":"1"}],
+          ["Span",{"html.":"Login: "}],
+          ["bs.NavbarLink",{"html.":"wayne","href":"#"}]
+        ]
+      ],
+      [ ["bs.NavbarForm",{"pullRight":"1"}],
+        ["bs.FormGroup",{}],
+        ["bs.FormCtrl",{"type":"text","placeholder":"Search"}]
+      ]
+    ]
+  ]
+}

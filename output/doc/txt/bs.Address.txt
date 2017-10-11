@@ -1,0 +1,4 @@
+bs.Address
+9.3.!api_address
+[ props ]
+  bsClass: 'address'

@@ -1,0 +1,40 @@
+1.3 Clearfix
+------------
+
+&nbsp;
+
+### Clearfix 构件
+
+在 Bootstrap 中，class 类 `'clearfix'` 用来控制 block 换行，构件 `bs.Clearfix` 用来指示是否应用 `clearfix`。比如下面例子，添加 `bs.Clearfix` 强制换行。
+
+<div $='.rewgt.ui_demo' src='md/code/1_3_a.txt' input-height='{180}'></div>
+
+构件 `bs.Clearfix` 还提供 `xsBlock, smBlock, mdBlock, lgBlock` 双源属性，用来指示在特定屏幕配置下要换行。
+
+<div $='.rewgt.ui_demo' src='md/code/1_3_b.txt' input-height='{180}'></div>
+
+### API 接口
+
+<a name="api_clearfix"></a>构件 `bs.Clearfix`（继承自 `bs.Div2`）：
+
+<div $=bs.Table responsive='1' striped='' bordered='1' condensed='1' hover='1'>
+  <div $=bs.Thead sty__='background:#e8e8e8'><div $=bs.Tr>
+    <div $=bs.Th width='{160}'>属性</div>
+    <div $=bs.Th width='{80}'>类型</div>
+    <div $=bs.Th width='{100}'>缺省值</div>
+    <div $=bs.Th>描述</div>
+  </div></div>
+  <div $=bs.Tbody><div $=bs.Tr>
+    <div $=bs.Td><code>props.bsClass</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>'clearfix'</div>
+    <div $=bs.Td></div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.xsBlock/smBlock/mdBlock/lgBlock</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td></div>
+    <div $=bs.Td>是否在指定屏幕配置下应用 clearfix，取值：'' 或 '1'</div>
+  </div></div>
+</div>
+
+&nbsp;

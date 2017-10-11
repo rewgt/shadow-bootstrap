@@ -1,0 +1,7 @@
+<div $=bs.Grid>
+  <div $=bs.Row>
+    <div $=bs.Col xs='{3}' md='{2}'>
+      <span $=bs.Image src='md/res/thumbnail.png' rounded='1' responsive='1'></span>
+    </div>
+  </div>
+</div>

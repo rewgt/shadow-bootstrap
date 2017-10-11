@@ -1,0 +1,9 @@
+bs.Image
+8.1.!api_image
+[ props ]
+  bsClass: 'img'
+[ duals ]
+  circle
+  rounded
+  thumbnail
+  responsive

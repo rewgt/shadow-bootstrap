@@ -1,0 +1,17 @@
+{
+  "name": "bs.Form",
+  "widget": [ ["bs.Form",{"inline":"1","minWidth":20,"minHeight":20}],
+    [ ["bs.FormGroup",{"validation":"success","bsSize":""}],
+      ["bs.CtrlLabel",{"html.":"Name\u00a0"}],
+      ["bs.FormCtrl",{"type":"text","placeholder":"Jane Doe"}],
+      ["bs.FormFeedback",{}]
+    ],
+    [ ["bs.FormGroup",{"validation":"warning","bsSize":""}],
+      ["bs.CtrlLabel",{"html.":"\u00a0\u00a0Email\u00a0"}],
+      ["bs.FormCtrl",{"type":"email","placeholder":"jane.doe@example.com"}],
+      ["bs.FormFeedback",{}]
+    ],
+    ["Span",{"html.":"\u00a0\u00a0"}],
+    ["bs.Btn",{"type":"submit","itemSpace":0,"html.":"Send invitation"}]
+  ]
+}

@@ -1,0 +1,6 @@
+bs.InputGroup
+7.4.!api_inputgroup
+[ props ]
+  bsClass: 'input-group'
+[ duals ]
+  bsSize

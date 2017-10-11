@@ -1,0 +1,126 @@
+5.3 ListGroup
+-----------
+
+&nbsp;
+
+### ListGroup 列表组
+
+`bs.ListGroup` 与 `bs.MarkedItem` 组合使用，可提供列表组功能。因为 MarkedItem 从 MarkedDiv 继承而来，我们常用 Markdown 定义列表项的文本内容。
+
+<div $='.rewgt.ui_demo' src='md/code/5_3_a.txt' input-height='{170}'></div>
+
+除了 `bs.MarkedItem` 能用作列表项，`bs.ListItem` 也可与 ListGroup 配合使用，比如：
+
+<div $='.rewgt.ui_demo' src='md/code/5_3_b.txt' input-height='{120}'></div>
+
+### MarkedItem 与 ListItem 的通用功能
+
+这两者均支持用 `duals['data-checked']` 指示当前项是否在活动态；用 `duals.disabled` 指示是否禁用；用 `duals.bsStyle` 指示表现风格，有 `'success', 'warning', 'danger', 'info'` 可选。
+
+<div $='.rewgt.ui_demo' src='md/code/5_3_c.txt' input-height='{120}'></div>
+
+### 使用 href 与 header
+
+`bs.ListItem` 还支持用 `duals.href` 定义跳转的 URL，用 `duals.header` 指定一行标题，比如。
+
+<div $='.rewgt.ui_demo' src='md/code/5_3_d.txt' input-height='{120}'></div>
+
+### API 接口
+
+<a name="api_listgroup"></a>构件 `bs.ListGroup`（继承自 `bs.Div2`）：
+
+<div $=bs.Table responsive='1' striped='' bordered='1' condensed='1' hover='1'>
+  <div $=bs.Thead sty__='background:#e8e8e8'><div $=bs.Tr>
+    <div $=bs.Th width='{160}'>属性</div>
+    <div $=bs.Th width='{80}'>类型</div>
+    <div $=bs.Th width='{100}'>缺省值</div>
+    <div $=bs.Th>描述</div>
+  </div></div>
+  <div $=bs.Tbody><div $=bs.Tr>
+    <div $=bs.Td><code>props.bsClass</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>'list-group'</div>
+    <div $=bs.Td></div>
+  </div></div>
+</div>
+
+<a name="api_markeditem"></a>构件 `bs.MarkedItem`（继承自 `bs.MarkedDiv`）：
+
+<div $=bs.Table responsive='1' striped='' bordered='1' condensed='1' hover='1'>
+  <div $=bs.Thead sty__='background:#e8e8e8'><div $=bs.Tr>
+    <div $=bs.Th width='{160}'>属性</div>
+    <div $=bs.Th width='{80}'>类型</div>
+    <div $=bs.Th width='{100}'>缺省值</div>
+    <div $=bs.Th>描述</div>
+  </div></div>
+  <div $=bs.Tbody><div $=bs.Tr>
+    <div $=bs.Td><code>props.bsClass</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>'list-group-item'</div>
+    <div $=bs.Td></div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.padding</code></div>
+    <div $=bs.Td>array</div>
+    <div $=bs.Td>[0,null,0,null]</div>
+    <div $=bs.Td></div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.bsStyle</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>''</div>
+    <div $=bs.Td>列表项风格，取值：'', 'success', 'warning', 'danger', 'info' </div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals['data-checked']</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td></div>
+    <div $=bs.Td>是否处于活动态，可选：'' 或 '1'</div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.disabled</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td></div>
+    <div $=bs.Td>是否禁用，可选：'' 或 '1' </div>
+  </div></div>
+</div>
+
+<a name="api_listitem"></a>构件 `bs.ListItem`（继承自 `bs.Div2`）：
+
+<div $=bs.Table responsive='1' striped='' bordered='1' condensed='1' hover='1'>
+  <div $=bs.Thead sty__='background:#e8e8e8'><div $=bs.Tr>
+    <div $=bs.Th width='{160}'>属性</div>
+    <div $=bs.Th width='{80}'>类型</div>
+    <div $=bs.Th width='{100}'>缺省值</div>
+    <div $=bs.Th>描述</div>
+  </div></div>
+  <div $=bs.Tbody><div $=bs.Tr>
+    <div $=bs.Td><code>props.bsClass</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>'list-group-item'</div>
+    <div $=bs.Td></div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.bsStyle</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>''</div>
+    <div $=bs.Td>列表项风格，取值：'', 'success', 'warning', 'danger', 'info' </div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals['data-checked']</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td></div>
+    <div $=bs.Td>是否处于活动态，可选：'' 或 '1'</div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.disabled</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td></div>
+    <div $=bs.Td>是否禁用，可选：'' 或 '1' </div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.href</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td></div>
+    <div $=bs.Td>本属性缺省未定义，若指定，表示当前节点用作超链接，取值为跳转目标 URL</div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.header</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td></div>
+    <div $=bs.Td>设置当前列表项的标题</div>
+  </div></div>
+</div>
+
+&nbsp;

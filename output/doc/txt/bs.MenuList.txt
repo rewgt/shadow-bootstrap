@@ -1,0 +1,8 @@
+bs.MenuList
+3.5.!api_menulist
+[ props ]
+  bsClass: 'dropdown-menu'
+[ duals ]
+  defaultOpen
+  open
+  onSelect(sKey,event)

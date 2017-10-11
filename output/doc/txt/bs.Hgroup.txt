@@ -1,0 +1,4 @@
+bs.Hgroup
+9.3.!api_hgroup
+[ props ]
+  bsClass: 'hgroup'

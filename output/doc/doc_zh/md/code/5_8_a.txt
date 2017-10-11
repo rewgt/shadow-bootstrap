@@ -1,0 +1,1 @@
+<div $=bs.Well bs-size='small'>Look, I'm in a well!</div>

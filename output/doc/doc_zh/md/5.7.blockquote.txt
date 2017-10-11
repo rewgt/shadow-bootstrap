@@ -1,0 +1,40 @@
+5.7 Blockquote
+--------
+
+&nbsp;
+
+### Blockquote
+
+`bs.Blockquote` 用来表达缩进文本，它可以嵌套使用。
+
+<div $='.rewgt.ui_demo' src='md/code/5_7_a.txt' input-height='{140}'></div>
+
+`duals.reverse` 指示缩进文本是否靠向右侧，如下例。
+
+<div $='.rewgt.ui_demo' src='md/code/5_7_b.txt' input-height='{100}'></div>
+
+### API 接口
+
+<a name="api_blockquote"></a>构件 `bs.Blockquote`（继承自 `bs.Div2`）：
+
+<div $=bs.Table responsive='1' striped='' bordered='1' condensed='1' hover='1'>
+  <div $=bs.Thead sty__='background:#e8e8e8'><div $=bs.Tr>
+    <div $=bs.Th width='{160}'>属性</div>
+    <div $=bs.Th width='{80}'>类型</div>
+    <div $=bs.Th width='{100}'>缺省值</div>
+    <div $=bs.Th>描述</div>
+  </div></div>
+  <div $=bs.Tbody><div $=bs.Tr>
+    <div $=bs.Td><code>props.bsClass</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>'blockquote'</div>
+    <div $=bs.Td></div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.reverse</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>''</div>
+    <div $=bs.Td>是否靠向右侧，可选：'' 或 '1'</div>
+  </div></div>
+</div>
+
+&nbsp;

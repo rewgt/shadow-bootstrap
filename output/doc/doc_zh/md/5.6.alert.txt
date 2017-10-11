@@ -1,0 +1,54 @@
+5.6 Alert
+--------
+
+&nbsp;
+
+### Alert 告警框
+
+`bs.Alert` 用来显示特定的提示信息。
+
+<div $='.rewgt.ui_demo' src='md/code/5_6_a.txt' input-height='{120}'></div>
+
+`duals.bsStyle` 指示告警框风格，取值 `'success', 'warning', 'danger', 'info'`。
+
+Alert 还支持动态隐藏，`duals.dismissable` 指示告警框是否带 “关闭” 按钮（在右上角），`duals.dismissed` 指示告警框是否已关闭，对该双源属性赋值可打开或关闭告警框。
+
+下面例子中，点击 “Hide Alert” 按钮可关闭告警框。
+
+<div $='.rewgt.ui_demo' src='md/code/5_6_b.txt' input-height='{240}'></div>
+
+### API 接口
+
+<a name="api_alert"></a>构件 `bs.Alert`（继承自 `bs.Div2`）：
+
+<div $=bs.Table responsive='1' striped='' bordered='1' condensed='1' hover='1'>
+  <div $=bs.Thead sty__='background:#e8e8e8'><div $=bs.Tr>
+    <div $=bs.Th width='{160}'>属性</div>
+    <div $=bs.Th width='{80}'>类型</div>
+    <div $=bs.Th width='{100}'>缺省值</div>
+    <div $=bs.Th>描述</div>
+  </div></div>
+  <div $=bs.Tbody><div $=bs.Tr>
+    <div $=bs.Td><code>props.bsClass</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>'alert'</div>
+    <div $=bs.Td></div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.bsStyle</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>'info'</div>
+    <div $=bs.Td>指示告警框风格，可选：'success', 'warning', 'danger', 'info' </div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.dismissable</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td></div>
+    <div $=bs.Td>是否带 “关闭” 按钮，取值：'' 或 '1' </div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.dismissed</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td></div>
+    <div $=bs.Td>是否已关闭，取值：'' 或 '1' </div>
+  </div></div>
+</div>
+
+&nbsp;

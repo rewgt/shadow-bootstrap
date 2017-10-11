@@ -1,0 +1,4 @@
+bs.NavbarLink
+4.2.!api_navbarlink
+[ props ]
+  bsClass: 'navbar-link'

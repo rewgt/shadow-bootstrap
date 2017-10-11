@@ -1,0 +1,8 @@
+<div $=bs.Div2>
+  <pre $=Style>
+.btn-custom {
+  background-color: purple;
+  color: white;
+}</pre>
+  <span $=bs.Btn klass='btn-custom'>Custom</span>
+</div>

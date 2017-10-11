@@ -1,0 +1,13 @@
+{
+  "name": "bs.BtnToolbar",
+  "widget": [ ["bs.BtnToolbar",{"minWidth":20,"minHeight":20}],
+    [ ["bs.BtnGroup",{}],
+      ["bs.Btn",{"html.":"Test 1"}],
+      ["bs.Btn",{"html.":"Test 2"}]
+    ],
+    [ ["bs.BtnGroup",{}],
+      ["bs.Btn",{"html.":"Test 3"}],
+      ["bs.Btn",{"html.":"Test 4"}]
+    ]
+  ]
+}

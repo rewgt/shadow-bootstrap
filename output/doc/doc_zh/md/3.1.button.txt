@@ -1,0 +1,120 @@
+3.1 Btn
+--------
+
+&nbsp;
+
+### 按钮风格
+
+用 `duals.bsStyle` 指定按钮风格，如：
+
+<div $='.rewgt.ui_demo' src='md/code/3_1_a.txt' input-height='{170}'></div>
+
+多个按钮并列时，既可以用 `style.margin` 指定按钮前后间隙，也可以用 `duals.itemSpace` 指定，两者效果等同。
+
+### 按钮大小
+
+用 `duals.bsSize` 指定按钮大小。
+
+<div $='.rewgt.ui_demo' src='md/code/3_1_b.txt' input-height='{120}'></div>
+
+用 `duals.block` 指定按钮是否 “块级显示”，块级显示让按钮宽度与父构件对齐。
+
+<div $='.rewgt.ui_demo' src='md/code/3_1_c.txt' input-height='{90}'></div>
+
+### 按钮状态
+
+用 `duals['data-checked']` 指示按钮是否处于活态，用 `duals.disabled` 指示是否禁用。
+
+<div $='.rewgt.ui_demo' src='md/code/3_1_d.txt' input-height='{170}'></div>
+
+### 使用 href
+
+一个按钮如果没指定 `bsStyle`，但传入了 `props.href`，系统将自动设它的 `bsStyle` 为 `'link'`。
+
+<div $='.rewgt.ui_demo' src='md/code/3_1_e.txt' input-height='{80}'></div>
+
+如果将按钮指定 `bsStyle='link'`，一般还须用 `href` 给出目标 URL。
+
+### 使用图标
+
+用 `duals.icon` 或 `duals.glyph` 给按钮指定一个图标。
+
+<div $='.rewgt.ui_demo' src='md/code/3_1_f.txt' input-height='{220}'></div>
+ 
+如果不用这两个属性指定图标，也可以在定义 `bs.Btn` 内容时，用 `Img` 或 `bs.Glyphicon` 设置图标。
+
+### API 接口
+
+<a name="api_btn"></a>构件 `bs.Btn`（继承自 `Button`）：
+
+<div $=bs.Table responsive='1' striped='' bordered='1' condensed='1' hover='1'>
+  <div $=bs.Thead sty__='background:#e8e8e8'><div $=bs.Tr>
+    <div $=bs.Th width='{160}'>属性</div>
+    <div $=bs.Th width='{80}'>类型</div>
+    <div $=bs.Th width='{100}'>缺省值</div>
+    <div $=bs.Th>描述</div>
+  </div></div>
+  <div $=bs.Tbody><div $=bs.Tr>
+    <div $=bs.Td><code>props.bsClass</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>'btn'</div>
+    <div $=bs.Td></div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.role</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>'button'</div>
+    <div $=bs.Td></div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.type</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>'button'</div>
+    <div $=bs.Td>可选：'button', 'reset', 'submit' </div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.bsStyle</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>'default'</div>
+    <div $=bs.Td>选择按钮风格，可选项有：'default', 'primary', 'success', 'info', 'warning', 'danger', 'link' </div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.bsSize</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td></div>
+    <div $=bs.Td>按钮大小，可选项有：'', 'large', 'medium', 'small', 'xsmall' </div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.block</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>''</div>
+    <div $=bs.Td>是否块级显示，可选：'' 或 '1' </div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals['data-checked']</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>''</div>
+    <div $=bs.Td>是否处于活动态，可选：'' 或 '1' </div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.disabled</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>''</div>
+    <div $=bs.Td>是否禁用，可选：'' 或 '1' </div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.icon</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td></div>
+    <div $=bs.Td>设置按钮图标，指示图标 URL 值</div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.glyph</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td></div>
+    <div $=bs.Td>设置 Glyphicon 按钮图标</div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.itemSpace</code></div>
+    <div $=bs.Td>number</div>
+    <div $=bs.Td></div>
+    <div $=bs.Td>可选设置按钮左、右侧 margin 像素值，取 undefined 值表示不设置</div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.href</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td></div>
+    <div $=bs.Td>与 bsStyle='link' 配合使用，给出跳转目标 URL 路径</div>
+  </div></div>
+</div>
+
+&nbsp;

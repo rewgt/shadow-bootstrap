@@ -1,0 +1,4 @@
+bs.Iframe
+9.3.!api_iframe
+[ props ]
+  bsClass: 'iframe'

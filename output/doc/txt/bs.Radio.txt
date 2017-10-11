@@ -1,0 +1,4 @@
+bs.Radio
+7.3.!api_radio
+[ props ]
+  bsClass: 'radio'

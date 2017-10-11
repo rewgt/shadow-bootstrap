@@ -1,0 +1,4 @@
+<div $=bs.P width='{300}'>
+  <span $=bs.Btn block='1'>Default</span>
+  <span $=bs.Btn bs-style='primary' block='1'>Primary</span>
+</div>

@@ -1,0 +1,4 @@
+bs.Figcaption
+9.3.!api_figcaption
+[ props ]
+  bsClass: 'figcaption'

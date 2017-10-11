@@ -1,0 +1,38 @@
+5.8 Well
+--------
+
+&nbsp;
+
+### Well 构件
+
+`bs.Well` 构件有嵌入（inset）界面效果。
+
+<div $='.rewgt.ui_demo' src='md/code/5_8_a.txt' input-height='{50}'></div>
+
+可用 `duals.bsSize` 指定 Well 大小，取值：`'', 'large', 'small'`。
+
+### API 接口
+
+<a name="api_well"></a>构件 `bs.Well`（继承自 `bs.Div2`）：
+
+<div $=bs.Table responsive='1' striped='' bordered='1' condensed='1' hover='1'>
+  <div $=bs.Thead sty__='background:#e8e8e8'><div $=bs.Tr>
+    <div $=bs.Th width='{160}'>属性</div>
+    <div $=bs.Th width='{80}'>类型</div>
+    <div $=bs.Th width='{100}'>缺省值</div>
+    <div $=bs.Th>描述</div>
+  </div></div>
+  <div $=bs.Tbody><div $=bs.Tr>
+    <div $=bs.Td><code>props.bsClass</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>'well'</div>
+    <div $=bs.Td></div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.bsSize</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td></div>
+    <div $=bs.Td>指定构件大小，可选：'', 'large', 'small' </div>
+  </div></div>
+</div>
+
+&nbsp;

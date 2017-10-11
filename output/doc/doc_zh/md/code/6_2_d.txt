@@ -1,0 +1,18 @@
+<div $=bs.Div2>
+  <div $=bs.Tooltip key='tip' placement='right'
+       sty__='visibility:hidden; position:absolute'>Tooltip</div>
+  <div $=bs.Div2 sty__='visibility:hidden; position:absolute; color:red'
+       left='{0}' top='{0}' offset='{[0,0,0,20]}'
+       key='tip2'>&rarr; information ...</div>
+
+  <div $=bs.P>
+    <div $=bs.OverlayTrigger placement='right' path='////tip'>
+      <span $=Span>test</span>
+    </div>
+  </div>
+  <div $=bs.P>
+    <div $=bs.OverlayTrigger placement='right' path='////tip2'>
+      <span $=Span>test2</span>
+    </div>
+  </div>
+</div>

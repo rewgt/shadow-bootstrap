@@ -1,0 +1,6 @@
+<div $=bs.Div2 width='{660}'>
+  <div $=bs.ResponsiveEmbed a16by9='1'>
+    <span $=Embed klass='embed-responsive-item' type='image/svg+xml' 
+       src='md/res/theresa_knott.svg'></span>
+  </div>
+</div>

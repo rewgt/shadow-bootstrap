@@ -1,0 +1,14 @@
+{
+  "name": "bs.Pagination",
+  "widget": ["bs.Pagination", {
+    "prev":"1",
+    "next":"1",
+    "first":"1",
+    "last":"1",
+    "ellipsis":"1",
+    "boundary":"1",
+    "items":20,
+    "maxButtons":5,
+    "activePage":1
+  }]
+}

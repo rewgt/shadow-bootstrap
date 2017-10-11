@@ -1,0 +1,6 @@
+bs.Well
+5.8.!api_well
+[ props ]
+  bsClass: 'well'
+[ duals ]
+  bsSize

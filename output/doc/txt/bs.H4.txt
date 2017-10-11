@@ -1,0 +1,4 @@
+bs.H4
+9.3.!api_h4
+[ props ]
+  bsClass: 'h4'

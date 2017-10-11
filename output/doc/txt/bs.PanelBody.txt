@@ -1,0 +1,4 @@
+bs.PanelBody
+5.5.!api_panelbody
+[ props ]
+  bsClass: 'panel-body'

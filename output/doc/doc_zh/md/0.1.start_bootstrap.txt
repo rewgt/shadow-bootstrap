@@ -1,0 +1,115 @@
+快速入门
+---------
+
+&nbsp;
+
+学习 Bootstrap v3 请阅读 <a target="_blank" href="https://getbootstrap.com/docs/3.3/getting-started/">Bootstrap 官方资料</a>（<a target="_blank" href="http://v3.bootcss.com/getting-started/">中文资料在这里</a>），学习 Shadow Widget 请阅读 <a target="_blank" href="https://rewgt.github.io/shadow-server/public/static/files/rewgt/doc/doc_zh/github_doc.html">官方提供的用户手册</a>。
+
+请在入门 Bootstrap v3 与 Shadow Widget 后，再学习本手册。本手册在介绍过程中，若涉及 Bootstrap 与 Shadow Widget 自有概念或相关内在知识，不展开说明。
+
+### 一个极简例子
+
+本库将 Bootstrap 的 WTC 登记在 `T.bs` 下，比如按钮 `T.bs.Btn`，用转义标签这么描述：
+
+``` html
+<span $=bs.Btn>Test</span>
+```
+
+Shadow Widget 将 W 树中的构件分成 4 大类：Panel 类、Div 类、P 类、Span 类，Bootstrap 所有构件可各自归到 P 与 Span 两类中，也就是说，Bootstrap 编程不涉及 Panel 类与 Div 类应用。所以，入门 shadow-bootstrap 编程的最简单方式便是：等价位替换构件。
+
+比如常规 Shadow Widget 设计这么一个界面。
+
+<div $='.rewgt.ui_demo' src='md/code/0_1_a.txt' input-height='{70}'></div>
+
+换用对等的 Bootstrap 构件，如下：
+
+<div $='.rewgt.ui_demo' src='md/code/0_1_b.txt' input-height='{70}'></div>
+
+### 网页配置
+
+要在网页导入 bootstrap.min.js 与 bootstrap.css 文件，我们才能使用 shadow-bootstrap 相关构件。如果把上面例子在网页文件写全，`<body>` 节点下这么定义：
+
+``` html
+01 <!-- BEGIN OF CONTAINER, DO NOT CHANGE THIS LINE. -->
+02 <div id="react-container" style="visibility:hidden; position:absolute; left:0px; top:0px">
+03 <div $=BodyPanel key='body' klass='S5'>
+04   <div $=Panel key='top' klass='auto-hidden-visible'>
+~~     <div $=bs.P key='p'>
+~~       <span $=bs.Btn key='btn'>Test</span>
+~~     </div>
+08   </div>
+09 </div>
+10 </div>
+11 <!-- END OF CONTAINER, DO NOT CHANGE THIS LINE. -->
+12 
+~~ <script src="lib/bootstrap.min.js"></script>
+14 
+15 <link rel="stylesheet" shared="true" href="lib/sw_base.css" />
+~~ <link rel="stylesheet" shared="true" href="lib/bootstrap.css" />
+17 
+18 <script src="lib/react.min.js"></script>
+19 <script src="lib/react-dom.min.js"></script>
+20 <script src="lib/create-react-class.min.js"></script>
+21 <script src="lib/shadow-widget.min.js"></script>
+```
+
+其中，bootstrap.min.js 与 bootstrap.css 文件可在 shadow-bootstrap 项目的 lib 子目录下找到。
+
+在 shadow-bootstrap 项目目录下有 `sample.html` 文件，给出了一个类似上述网页的简单样例。
+
+### shadow-bootstrap 都定义了哪些构件？
+
+本库在 `T.bs` 登记的 WTC 包括如下 3 类。
+
+1) Shadow Widget 所有内置的 P 类原生构件，如下：
+
+```
+  P  Noscript  Fieldset  Details  Ul  Ol  Li  Dl  Dd  Dt  Figure  Figcaption
+
+  Menu  Menuitem  Address  Form  Iframe  Blockquote  Table  Caption
+
+  Col  Colgroup  Td  Tbody  Thead  Tfoot  Th  Tr  Hgroup
+
+  H1  H2  H3  H4  H5  H6  Hr  Pre
+```
+
+2) Shadow Widget 内置的 P 类非原生构件，只一项：`Div2`
+
+3) Bootstrap 专有扩展的各种 P 类与 Span 类构件，本手册后续章节将逐一介绍。
+
+`Div` 与 `Div2` 分属于 Div 类与 P 类构件，shadow-bootstrap 没有定义 `bs.Div`，只有 `bs.Div2`。上面 3 类中，前两类构件如下 props 都这么取缺省值：
+
+``` js
+props.minWidth  = 0;
+props.maxWidth  = 0;
+props.minHeight = 0;
+props.maxHeight = 0;
+props.left      = null;
+props.top       = null;
+props.width     = null;
+props.height    = null;
+props.margin    = [null,null,null,null];
+props.padding   = [null,null,null,null];
+props.borderWidth = [null,null,null,null];
+```
+
+上述 `null` 值表示 “不显式指定相关 style 值”，留给特定 class 的 css 定义作决定。而且，不只前两类如此，所有 shadow-bootstrap 构件都遵循此风格，即：缺省情况下，让构件所用 class 的 css 定义决定宽高、间隙、边线厚等值。
+
+比如，`btn-sm` 的 css 定义如下：
+
+``` css
+.btn-sm {
+  padding: 5px 10px;
+  font-size: 12px;
+  line-height: 1.5;
+  border-radius: 3px;
+}
+```
+
+当我们创建一个 `bs.Button` 构件，并指定 `props.bsSize='small'` 时，`'btn-sm'` 自动添加到它的 `duals.klass` 属性，因为 `duals.padding` 缺省值是 `[null,null,null,null]`，刚才 css 定义 `padding: 5px 10px` 得以生效。
+
+特别声明，**shadow-bootstrap 并不在 `T.bs` 预置任何 Span 类原生构件，须从 Shadow Widget 内置位置取定义**。比如：`<span $=A href='#'>link</span>`，改用 `$=bs.A` 会报错。
+
+所有在 `T.bs` 注册的构件，都提供 `props.bsClass` 指示构件类别的名称，比如 `bs.Div2`，`props.bsClass` 为 `'div2'`。对于上面所提第 1 类构件，即内置的 P 类原生构件，`props.bsClass` 值为实际渲染到界面的 tag 名，比如 `bs.P` 的 `props.bsClass` 为 `'p'`。
+
+&nbsp;

@@ -1,0 +1,7 @@
+bs.BreadItem
+4.3.!api_breaditem
+[ props ]
+  bsClass: 'breadcrumb-item'
+[ duals ]
+  href
+  active

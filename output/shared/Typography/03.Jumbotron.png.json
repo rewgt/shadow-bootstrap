@@ -1,0 +1,12 @@
+{
+  "name": "bs.Jumbotron",
+  "widget": [ ["bs.Jumbotron",{}],
+    ["bs.H1",{"html.":"Shadow Widget + Bootstrap"}],
+    ["bs.P",{"html.":"\u00a0"}],
+    ["bs.P",{"html.":"Bootstrap framework for Shadow Widget, simple and powerful, WYSIWYG (what you see is what you get) UI design."}],
+    ["bs.P",{"html.":"\u00a0"}],
+    [ ["bs.P",{}],
+      ["bs.Btn",{"bsStyle":"primary","html.":"Learn more"}]
+    ]
+  ]
+}

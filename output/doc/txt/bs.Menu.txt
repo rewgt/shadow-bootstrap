@@ -1,0 +1,4 @@
+bs.Menu
+9.3.!api_menu
+[ props ]
+  bsClass: 'menu'

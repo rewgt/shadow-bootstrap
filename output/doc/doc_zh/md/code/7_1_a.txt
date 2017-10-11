@@ -1,0 +1,3 @@
+<div $=bs.P>
+  <span $=bs.FormCtrl type='text' bs-size='small' placeholder='Enter text'></span>
+</div>

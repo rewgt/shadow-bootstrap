@@ -1,0 +1,4 @@
+bs.H2
+9.3.!api_h2
+[ props ]
+  bsClass: 'h2'

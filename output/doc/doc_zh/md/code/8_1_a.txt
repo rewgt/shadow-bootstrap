@@ -1,0 +1,13 @@
+<div $=bs.Grid>
+  <div $=bs.Row>
+    <div $=bs.Col xs='{6}' md='{4}'>
+      <span $=bs.Image src='md/res/thumbnail.png' rounded='1'></span>
+    </div>
+    <div $=bs.Col xs='{6}' md='{4}'>
+      <span $=bs.Image src='md/res/thumbnail.png' circle='1'></span>
+    </div>
+    <div $=bs.Col xs='{6}' md='{4}'>
+      <span $=bs.Image src='md/res/thumbnail.png' thumbnail='1'></span>
+    </div>
+  </div>
+</div>

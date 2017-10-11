@@ -1,0 +1,4 @@
+bs.MediaList
+8.4.!api_medialist
+[ props ]
+  bsClass: 'media-list'

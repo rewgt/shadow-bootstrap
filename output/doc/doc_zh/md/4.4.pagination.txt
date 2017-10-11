@@ -1,0 +1,86 @@
+4.4 Pagination
+-----------
+
+&nbsp;
+
+### Pagination 分页
+
+<div $='.rewgt.ui_demo' src='md/code/4_4_a.txt' input-height='{110}'></div>
+
+Pagination 提供 `onSelect(iPageNo)` 回调函数，页码切换后自动回调，其中参数 `iPageNo` 指示新页码。
+
+### API 接口
+
+<a name="api_pagination"></a>构件 `bs.Pagination`（继承自 `bs.Ul`）：
+
+<div $=bs.Table responsive='1' striped='' bordered='1' condensed='1' hover='1'>
+  <div $=bs.Thead sty__='background:#e8e8e8'><div $=bs.Tr>
+    <div $=bs.Th width='{160}'>属性</div>
+    <div $=bs.Th width='{80}'>类型</div>
+    <div $=bs.Th width='{100}'>缺省值</div>
+    <div $=bs.Th>描述</div>
+  </div></div>
+  <div $=bs.Tbody><div $=bs.Tr>
+    <div $=bs.Td><code>props.bsClass</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>'pagination'</div>
+    <div $=bs.Td></div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.bsSize</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td></div>
+    <div $=bs.Td>指定按钮尺寸，可选：'', 'large', 'medium', 'small', 'xsmall' </div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.activePage</code></div>
+    <div $=bs.Td>number</div>
+    <div $=bs.Td>1</div>
+    <div $=bs.Td>指示当前页</div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.items</code></div>
+    <div $=bs.Td>number</div>
+    <div $=bs.Td></div>
+    <div $=bs.Td>页码数目</div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.maxButtons</code></div>
+    <div $=bs.Td>number</div>
+    <div $=bs.Td>0</div>
+    <div $=bs.Td>连续页码的最多显示按钮数，超出部分不显示，或用省略号表示，取 0 值表示列出全部</div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.first</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td></div>
+    <div $=bs.Td>是否显示 “跳至首页” 按钮，取值：'' 或 '1' </div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.last</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td></div>
+    <div $=bs.Td>是否显示 “跳至末页” 按钮，取值：'' 或 '1' </div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.prev</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td></div>
+    <div $=bs.Td>是否显示 “前一页” 按钮，取值：'' 或 '1' </div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.next</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td></div>
+    <div $=bs.Td>是否显示 “下一页” 按钮，取值：'' 或 '1' </div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.ellipsis</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>'1'</div>
+    <div $=bs.Td>待显示页码数超出 maxButtons 时，是否显示省略号，取值：'' 或 '1' </div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.boundary</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td></div>
+    <div $=bs.Td>当有省略号显示时，是否显示首页、末页的页码，取值：'' 或 '1' </div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>onSelect(iPageNo)</code></div>
+    <div $=bs.Td>function</div>
+    <div $=bs.Td></div>
+    <div $=bs.Td>回调函数，供页码切换后自动回调，参数 iPageNo 指示新页码。</div>
+  </div></div>
+</div>
+
+&nbsp;

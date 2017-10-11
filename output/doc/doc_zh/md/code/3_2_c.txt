@@ -1,0 +1,9 @@
+<div $=bs.P>
+  <pre $=bs.DropdownBtn desc='Default' no-caret='1'>
+<div $=bs.MenuItem key='m1'>Action</div>
+<div $=bs.MenuItem key='m2'>Another action</div>
+<div $=bs.MenuItem key='m3' data-checked='1' href='#'>Active Item</div>
+<div $=bs.MenuItem key='m4' divider='1'></div>
+<div $=bs.MenuItem key='m5'>Separated link</div>
+</pre>
+</div>

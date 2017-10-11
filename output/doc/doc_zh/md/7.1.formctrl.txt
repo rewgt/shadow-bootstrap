@@ -1,0 +1,45 @@
+7.1 FormCtrl
+-----------
+
+&nbsp;
+
+### FormCtrl 输入框
+
+`bs.FormCtrl` 将 `Input, Select, Textarea` 三种提供输入的标签合并一起，以统一规格提供输入。
+
+<div $='.rewgt.ui_demo' src='md/code/7_1_a.txt' input-height='{70}'></div>
+
+`duals.bsSize` 指示输入框大小，可取值：`'', 'large', 'small'`；`duals.type` 用来指定输入类型，其值为 `'select'` 表示用 `<select>` 下拉选择器，值为 `'textarea'` 表示选用 `<textarea>` 文本输入框，其它是 `'<input>'` 标签要求的 `type` 取值。
+
+<div $='.rewgt.ui_demo' src='md/code/7_1_b.txt' input-height='{190}'></div>
+
+### API 接口
+
+<a name="api_formctrl"></a>构件 `bs.FormCtrl`（继承自 `Input`）：
+
+<div $=bs.Table responsive='1' striped='' bordered='1' condensed='1' hover='1'>
+  <div $=bs.Thead sty__='background:#e8e8e8'><div $=bs.Tr>
+    <div $=bs.Th width='{160}'>属性</div>
+    <div $=bs.Th width='{80}'>类型</div>
+    <div $=bs.Th width='{100}'>缺省值</div>
+    <div $=bs.Th>描述</div>
+  </div></div>
+  <div $=bs.Tbody><div $=bs.Tr>
+    <div $=bs.Td><code>props.bsClass</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>'form-control'</div>
+    <div $=bs.Td></div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.type</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>'text'</div>
+    <div $=bs.Td>可选：'select', 'textarea', 'text', 'checkbox', 'radio', 'password', 'file', 'button', 'hidden', 'image', 'reset', 'submit' </div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.bsSize</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td></div>
+    <div $=bs.Td>指定输入框大小，可选：'', 'large', 'small' </div>
+  </div></div>
+</div>
+
+&nbsp;

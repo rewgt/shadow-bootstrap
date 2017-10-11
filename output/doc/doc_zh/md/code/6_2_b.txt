@@ -1,0 +1,20 @@
+<div $=bs.Div2 margin='{[0,0,0,100]}'>
+  <div $=bs.P>
+    <div $=bs.OverlayTrigger placement='right' delay='{0}' desc='At right'>
+      <span $=Span>test1</span>
+    </div>
+  </div>
+  <div $=bs.P>
+    <div $=bs.OverlayTrigger placement='bottom' delay='{1000}' desc='At bottom'>
+      <span $=Span>test2</span>
+    </div>
+  </div>
+  <div $=bs.P>
+    <div $=bs.OverlayTrigger placement='top' desc='At top'>
+      <span $=Span>test3</span>
+    </div>
+  </div>
+  <div $=bs.OverlayTrigger placement='left' desc='At left'>
+    <div $=bs.P width='{100}'>test4</div>
+  </div>
+</div>

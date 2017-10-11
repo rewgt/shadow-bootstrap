@@ -1,0 +1,7 @@
+bs.PanelGroup
+5.5.!api_panelgroup
+[ props ]
+  bsClass: 'panel-group'
+  accordion
+[ duals ]
+  activeKey: ''

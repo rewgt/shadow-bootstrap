@@ -1,0 +1,7 @@
+bs.Label
+2.2.!api_label
+[ props ]
+  bsClass: 'label'
+[ duals ]
+  bsStyle: 'default'
+  itemSpace

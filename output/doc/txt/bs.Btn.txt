@@ -1,0 +1,16 @@
+bs.Btn
+3.1.!api_btn
+[ props ]
+  bsClass: 'btn'
+[ duals ]
+  role: 'button'
+  type: 'button'
+  bsStyle: 'default'
+  bsSize
+  block: ''
+  data-checked: ''
+  disabled: ''
+  icon
+  glyph
+  itemSpace
+  href

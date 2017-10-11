@@ -1,0 +1,9 @@
+{
+  "name": "bs.ListGroup",
+  "widget": [ ["bs.ListGroup",{}],
+    ["bs.MarkedItem",{"klass":"default-large-small p1-p2-p3-p0","data-checked":"1","html.":"Cras justo odio"}],
+    ["bs.MarkedItem",{"klass":"default-large-small p1-p2-p3-p0","html.":"**Item heading**\n\nDapibus ac facilisis in"}],
+    ["bs.MarkedItem",{"klass":"default-large-small p1-p2-p3-p0","html.":"Porta ac consectetur ac"}],
+    ["bs.MarkedItem",{"klass":"default-large-small p1-p2-p3-p0","html.":"Vestibulum at eros"}]
+  ]
+}

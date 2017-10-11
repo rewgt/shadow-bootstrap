@@ -1,0 +1,35 @@
+{
+  "name": "bs.Form",
+  "widget": [ ["bs.Form",{"horizontal":"1","minWidth":20,"minHeight":20}],
+    [ ["bs.FormGroup",{"bsSize":"","validation":"success"}],
+      [ ["bs.Col",{"sm":2}],
+        ["bs.CtrlLabel",{"html.":"Name"}]
+      ],
+      [ ["bs.Col",{"sm":10}],
+        ["bs.FormCtrl",{"type":"text","placeholder":"Jane Doe"}],
+        ["bs.FormFeedback",{}]
+      ]
+    ],
+    [ ["bs.FormGroup",{"bsSize":""}],
+      [ ["bs.Col",{"sm":2}],
+        ["bs.CtrlLabel",{"html.":"Password"}]
+      ],
+      [ ["bs.Col",{"sm":10}],
+        ["bs.FormCtrl",{"type":"password","placeholder":""}]
+      ]
+    ],
+    [ ["bs.FormGroup",{"bsSize":""}],
+      [ ["bs.Col",{"sm":2}],
+        ["bs.CtrlLabel",{"html.":"Email"}]
+      ],
+      [ ["bs.Col",{"sm":10}],
+        ["bs.FormCtrlStatic",{"html.":"jane.doe@example.com"}]
+      ]
+    ],
+    [ ["bs.FormGroup",{"bsSize":""}],
+      [ ["bs.Col",{"smOffset":2,"sm":10}],
+        ["bs.Btn",{"type":"submit","html.":"Send invitation"}]
+      ]
+    ]
+  ]
+}

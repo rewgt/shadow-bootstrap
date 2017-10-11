@@ -1,0 +1,5 @@
+bs.NavbarCollapse
+4.2.!api_navbarcollapse
+[ props ]
+  bsClass: 'navbar-collapse'
+  collapseClass: 'navbar-collapse'

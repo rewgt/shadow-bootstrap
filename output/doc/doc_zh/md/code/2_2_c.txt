@@ -1,0 +1,8 @@
+<div $=bs.P>
+  <span $=Span>Badges </span>
+  <span $=bs.Badge>42</span>
+</div>
+<div $=bs.P>
+  <span $=Span>Badges </span>
+  <span $=bs.Badge pull-right='1'>42</span>
+</div>

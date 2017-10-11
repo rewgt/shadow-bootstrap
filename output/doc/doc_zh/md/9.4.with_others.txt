@@ -1,0 +1,135 @@
+9.4 可视化开发
+---------
+
+&nbsp;
+
+### 创建新工程
+
+比如我们想创建一个 `test1` 工程，请按如下步骤操作：
+
+1. 在浏览器打开 `http://localhost:3000/`，我们采用从现成 html 文件拷贝的方式创建新页面，即，在 “Create new project” 栏目下的 “Or, copy from exist file” 指定 `"/shadow-bootstrap/output/shared/pages/bootstrap.html"` 样板文件。在 “Project name” 一栏填写 `"test1"`。   
+![Create propject](md/res/create_prj.png)
+
+2. 点击 “Create HTML page” 按钮后，系统立即在当前 Shadow Widget 安装目录下创建 `test1` 工程目录，并自动生成一个 `index.html` 文件。这个 html 文件还无法正常使用，因为还缺少 shadow-widget 与 shadow-bootstrap 库文件，下一步拷贝这些依赖库。
+
+3. 将 shadow-bootstrap 工程下的 `lib` 与 `fonts` 两个目录拷贝到 `test1` 工程目录下。现在 `index.html` 完整可运行了，在浏览器打开 `http://localhost:3000/test1/index.html` 可查看效果，不过，该新建文件是空的，还没定义内容。
+
+4. 点击 “Open /test1/index.html” 按钮，浏览器将在新页打开可视化设计窗口。
+
+以上操作过程可参考《Shadow Widget 用户手册》的 “5.1.1 创建工程” 一节。
+
+### 样板文件内置的资源页
+
+如下图，在 bs 之后的 8 个资源页都是 bootstrap 提供的构件样板，为简便起见，下文将 bootstrap 封装的构件统称为 bs 构件。
+
+![Resource pages](md/res/res_page.png)
+
+各页主要构件介绍如下：
+
+1) bs 页
+
+:: 该页集中了 shadow-widget 内置的 P 类构件在 `bs` 下的映射物。比如 `bs.Div2` 对应 `Div2`，`bs.P` 对应 `P`，两者主要差别是 `props.width, props.height, props.margin, props.padding, props.borderWidth` 等属性的缺省取值不同，针对这些属性，shadow-widget 的 P 类构件通常指定一个缺省值，而与之对应的 bs 构件，缺省用 `null` 值表示未定义，改由 css 定义来决定各属性实际取值。
+
+:: 这是因为 bootstrap 系统的主体外观是借助 css 文件定义的，常用的 P 类构件在 bs 下均有定义。另外，对于 Span 类构件，因为 shadow-widget 未定义它们的外观属性，以 bootstrap 风格编程时，直接使用 shadow-widget 原有定义即可（在上图 `bs` 之前的 `Span` 分类下）。
+
+2) Grid 页
+
+:: 本页构件样板与 Grid 布局相关。
+
+3) Overlay 页
+
+:: 本页构件样板提供浮层弹窗功能。
+
+4) Navigator 页
+
+:: 本页构件样板与选项导航相关，Shadow Bootstrap 的多选一导航功能是借助 Shadow Widget 的 NavDiv 实现的，凡涉及多选一导航功能的构件，都应在 `bs.NavDiv` 之下创建，如果不这么创建，互斥选中（指选中一个，其它选项构件将自动取消选中）的功能将丧失。
+
+5) Form 页
+
+:: 本页构件样板与 Form 表单相关，一般要求先创建 `bs.Form`，然后在其下创建各种提供输入的构件。
+
+6) Typegraphy、Indicator、Inline 页
+
+:: 上面 5 类以 “专项功能” 作为划分依据，不属上述分类的，将归入 Typegraphy、Indicator、Inline 三类，其中行内构件划入 Inline 类。 
+
+:: Typegraphy 与 Indicator 都装 P 类构件的样板，这两者主要区别是：Typegraphy 关注 “大功能块” 布局，Indicator 则集合 “小功能” 构件。
+
+### 如何与面板构件对接
+
+shadow-bootstrap 按 shadow-widget 的开发要求封装构件，`bs` 下登记的 WTC 与其它 WTC 相比，没什么特殊的，差别只是 `bs` 下构件的属性缺省值要符合 bootstrap 编程风格。其中，最重要的风格是：要避免各项 `props.attr` 缺省值覆盖 `bootstrap.css` 中的定义，比如 `P` 构件的 `props.margin` 缺省值是 `[6,0,6,0]`，而 `bs.P` 的 `props.margin` 缺省值为 `[null,null,null,null]`。
+
+其它风格差异还包括：
+
+1. shadow-bootstrap 只定义 P 类与 Span 类构件，没有 Panel 类与 Div 类，所以，bs 构件如何挂到 Panel 面板或 Div 分区有特定要求。
+
+2. 用 shadow-bootstrap 做开发，应习惯于区分 bs 体系的构件（`bs.xxx` 及 Span 类构件）与其它构件，一般不将这两者混用。因为 bootstrap 的 css 定义，让 bs 构件与上下文环境产生关联，一个构件如何表现与它上层使用什么构件有关。
+
+3. 由于 shadow-bootstrap 封装并不修改 `bootstrap.css` 文件，bootstrap 的 class 命名全局生效，且不符合 Shadow Widget 要求的命名规格（参见《Shadow Widget 用户手册》中 “3.2 命名约束” 一节），出现命名冲突的概率会大些，大家在新定义 klass 类时要小心。
+
+从上面第 2 点出发，我们按 bootstrap 编程习惯，将 bs 体系的构件集中使用，形成 bs 功能块，若干 bs 功能块最终都要挂到 Shadow Widget 的 Panel 面板。如下两种是最常用的挂入方式： 
+
+其一，将 P 类 bs 构件直接放到 Panel 面板下，因 Panel 对其内容按 flex 方式布局，所以，Panel 下的 bs 构件通常要指定宽度，比如指定像素宽、用 0.9999 表示 `100%` 等。 
+
+其二，先在 Panel 下放置 `bs.Div2`，并设 `100%` 占宽，然后在该 Div2 下摆放各种 bs 构件。有了 `bs.Div2` 隔离，其下的各种 bs 构件不再受干扰，完全按 bootstrap 风格做设计即可。
+
+为清晰起见，我们将 bs 功能块与 Panel 面板的交汇点，作如下归类：
+
+1. Panel 下放置 `bs.Div2`
+2. Panel 下放置 `bs.Grid` 启用栅格布局，`bs.Grid`  下可放 `bs.Row, bs.Jumbotron` 等构件
+3. Panel 下放置 `bs.Navbar`
+4. Panel 下放置其它 P 类 bs 构件，如 `bs.P, bs.Ul, bs.Ol, bs.Table, bs.Blockquote` 等，并明确指定占宽。
+
+`bs.Grid` 与 `bs.Navbar` 都对 bootstrap 的 `container` 类做封装，一般要求其父级（即 Panel）占用全屏宽度。所有 bs 构件中，也只有 `bs.Grid` 与 `bs.Navbar` 定义 `container` 类，这两者也都支持用 `duals.fluid` 属性将 `container` 切换为 `container-fluid`。
+
+### 可视化设计的几项重要操作
+
+虽然可视化设计如何操作，在《Shadow Widget 用户手册》中的 “5. 可视化设计使用手册” 已介绍，本节仍再次说明若干操作如何进行的。不少用户急切上手 shadow-bootstrap，并不通盘学习 Shadow Widget 基础知识，如果有几项操作不清楚，立刻产生本体系很难用的错觉。
+
+1. 如何创建构件   
+从右侧资源页中，拖一个构件样板到主设计区，在 “+” 按钮 ![Insert button](md/res/insert_btn.png) 上松开鼠标，表示在当前构件中创建子构件，如果在 “+” 按钮之外松开鼠标，表示在插在当前构件之前创建新构件。
+
+2. 使用 “构件路径提示栏”   
+选中一个构件后，“构件路径提示栏” 会提示当前构件的类型与路径，此时，从资源页拖入的样板可往路径提示栏上扔来创建新构件，同样，在 “+” 按钮 ![Insert button](md/res/insert_btn.png) 上松开鼠标是创建子构件，在该按钮之外其它地方松开鼠标按键，则是插入。   
+![Path of widget](md/res/select_drag.png)
+
+3. 快速复制自身构件   
+选中一个构件，然后拖动浮动工具条上的 Drag to insert 按钮 ![Insert](md/res/copy_btn.png) 到 “构件路径提示栏”，新复制的构件就插入到当前选中的位置了，当然，如果扔在  “+” 按钮上，将在子级添加新复制的构件。   
+:: 说明：
+:: 1. 如果拖动浮动工具条上的 Drag to move 按钮 ![Move](md/res/move_btn.png)，就不是复制，而是移动当前构件了。
+:: 2. 快速复制还可以选中构件后，按 “Ctrl + C” 复制，然后选目标构件，按 “Ctrl + V” 粘贴。
+:: 3. 对于复杂情况，Shadow Widget 还提供 relay 操作方式，参见《Shadow Widget 用户手》中 “5.1.4 快速入门例3”
+
+shadow-bootstrap 内置各资源页的构件样板，并未全部列所有构件，比如没给出 `bs.Col` 样板。不妨这么操作，当创建一个 `bs.Row` 构件后，`bs.Row` 下级已带两个 `bs.Col`，选中一个，按上面提到方法复制即可。许多具有上下级类型约束的 bs 构件，我们均未在资源页列全样板，若列全，太多了会导致选择困难。同样，这些都要求用上述多种复制的手段来解决问题。
+
+### 界面设计与功能实现的分离
+
+借助可视设计器，我们用 bootstrap 构件样板能快速搭建网页界面。界面设计过程中，可视设计器并不涉及动态功能实现，相关的投影定义、idSetter 定义等将自动忽略。所以，基于 Shadow Widget 的实际开发中，界面设计与功能实现是截然分离的。
+
+我们推荐采用 idSetter 形式实现功能定义，这里简单举一个例子，设计如下界面：
+
+<div $='.rewgt.ui_demo' src='md/code/9_3_a.txt' input-height='{350}' default-hide='1'></div>
+
+点击 `Login` 要执行的动作，由 `$id__` 指示相应 idSetter 位置。
+
+``` html
+<div $=bs.NavItem key='item1' $id__='navbar.login'>Login</div>
+```
+
+然后在 `idSetter['navbar.login']` 实现具体功能：
+
+``` js
+idSetter['navbar.login'] = function(value,oldValue) {
+  if (value <= 2) {
+    if (value == 1) {  // init process
+      this.setEvent( {
+        $onClick: function(event) {
+          // perform login ...
+        },
+      });
+    }
+    return;
+  }
+};
+```
+
+&nbsp;

@@ -1,0 +1,16 @@
+<div $=bs.Div2>
+  <div $=bs.MediaList $for='item in [1,2,3,4]'>
+    <div $=bs.MediaItem $key='"a" + index'>
+      <div $=bs.MediaLeft>
+        <span $=Img src='md/res/64x64.svg'></span>
+      </div>
+      <div $=bs.MediaBody>
+        <div $=bs.MediaHeading>Media Heading</div>
+        <div $=bs.P>Cras sit amet nibh libero, in gravida nulla.</div>
+      </div>
+      <div $=bs.MediaRight>
+        <span $=Img src='md/res/64x64.svg'></span>
+      </div>
+    </div>
+  </div>
+</div>

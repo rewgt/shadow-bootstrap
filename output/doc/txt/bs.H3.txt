@@ -1,0 +1,4 @@
+bs.H3
+9.3.!api_h3
+[ props ]
+  bsClass: 'h3'

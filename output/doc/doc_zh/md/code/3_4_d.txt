@@ -1,0 +1,5 @@
+<div $=bs.P $for='' dual-data='black'>
+  <span $=bs.OptBtn bs-size='small' fire-type='onsite'
+        $trigger='["//",{$set:"red"}]'>Change color</span>
+  <span $=Span $style='{color:duals.data}'> Hello, world!</span>
+</div>

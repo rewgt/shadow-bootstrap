@@ -1,0 +1,15 @@
+{
+  "name": "bs.Thumbnail",
+  "widget": [ ["bs.Thumbnail", {
+      "width": 260,
+      "src": "/app/rewgt/shadow-bootstrap/web/output/thumbnail_large.png",
+      "alt": "242x200"
+    }],
+    ["bs.H4",{"klass":"default-large-small","html.":"Thumbnail label"}],
+    ["bs.P",{"klass":"default-large-small","html.":"Description"}],
+    [ ["bs.P",{}],
+      ["bs.Btn",{"bsStyle":"primary","html.":"Button"}],
+      ["bs.Btn",{"itemSpace":4,"html.":"Button"}]
+    ]
+  ]
+}

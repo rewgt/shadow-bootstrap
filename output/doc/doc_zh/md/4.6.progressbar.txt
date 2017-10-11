@@ -1,0 +1,89 @@
+4.6 ProgressBar
+------------
+
+&nbsp;
+
+### ProgressBar 进度条
+
+<div $='.rewgt.ui_demo' src='md/code/4_6_a.txt' input-height='{140}'></div>
+
+属性 `duals.bsStyle` 指示进度条的风格，可选 `'', 'success', 'warning', 'danger', 'info'`；`duals.min, duals.max, duals.now` 分别指定最小值、最大值与当前值；`duals.striped` 指示是否显示条纹效果；`duals.active` 指示条纹效果是否活动。
+
+### 堆叠效果
+
+把多个 `bs.ProgressBar` 放入 `bs.Progress` 可产生堆叠效果。
+
+<div $='.rewgt.ui_demo' src='md/code/4_6_b.txt' input-height='{110}'></div>
+
+### API 接口
+
+<a name="api_progressbar"></a>构件 `bs.ProgressBar`（继承自 `bs.Div2`）：
+
+<div $=bs.Table responsive='1' striped='' bordered='1' condensed='1' hover='1'>
+  <div $=bs.Thead sty__='background:#e8e8e8'><div $=bs.Tr>
+    <div $=bs.Th width='{160}'>属性</div>
+    <div $=bs.Th width='{80}'>类型</div>
+    <div $=bs.Th width='{100}'>缺省值</div>
+    <div $=bs.Th>描述</div>
+  </div></div>
+  <div $=bs.Tbody><div $=bs.Tr>
+    <div $=bs.Td><code>props.bsClass</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>'progress-bar'</div>
+    <div $=bs.Td></div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.bsStyle</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>''</div>
+    <div $=bs.Td>进度条的风格，可选：'', 'success', 'warning', 'danger', 'info' </div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals['html.']</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td></div>
+    <div $=bs.Td>进度条上的文本</div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.striped</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td></div>
+    <div $=bs.Td>是否显示条纹效果，取值：'' 或 '1' </div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.active</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td></div>
+    <div $=bs.Td>条纹效果是否活动，取值：'' 或 '1' </div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.min</code></div>
+    <div $=bs.Td>number</div>
+    <div $=bs.Td></div>
+    <div $=bs.Td>进度最小值，如果未指定，自动取 0</div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.max</code></div>
+    <div $=bs.Td>number</div>
+    <div $=bs.Td></div>
+    <div $=bs.Td>进度最大值，如果未指定，自动取 100</div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.now</code></div>
+    <div $=bs.Td>number</div>
+    <div $=bs.Td></div>
+    <div $=bs.Td>当前进度，应在允许的最小值与最大值之间取值</div>
+  </div></div>
+</div>
+
+<a name="api_progress"></a>构件 `bs.Progress`（继承自 `bs.Div2`）：
+
+<div $=bs.Table responsive='1' striped='' bordered='1' condensed='1' hover='1'>
+  <div $=bs.Thead sty__='background:#e8e8e8'><div $=bs.Tr>
+    <div $=bs.Th width='{160}'>属性</div>
+    <div $=bs.Th width='{80}'>类型</div>
+    <div $=bs.Th width='{100}'>缺省值</div>
+    <div $=bs.Th>描述</div>
+  </div></div>
+  <div $=bs.Tbody><div $=bs.Tr>
+    <div $=bs.Td><code>props.bsClass</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>'progress'</div>
+    <div $=bs.Td></div>
+  </div></div>
+</div>
+
+&nbsp;

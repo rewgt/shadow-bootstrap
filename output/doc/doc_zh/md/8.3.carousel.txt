@@ -1,0 +1,105 @@
+8.3 Carousel
+-----------
+
+&nbsp;
+
+### Carousel 旋转幻灯片
+
+<div $='.rewgt.ui_demo' src='md/code/8_3_a.txt' input-height='{260}'></div>
+
+本例在 `bs.Carouse` 之下设计多个 `bs.CarouselItem` 幻灯片页。`duals.activeIndex` 指示当前显示哪一页，`props.slide` 指定是否用作幻灯片演示，若是，启用翻页效果，并在导入后自动启动播放，`duals.pauseHover` 指示鼠标悬停时是否暂停播放，`duals.wrap` 指示是否循环播放。
+
+### API 接口
+
+<a name="api_carousel"></a>构件 `bs.Carousel`（继承自 `bs.Div2`）：
+
+<div $=bs.Table responsive='1' striped='' bordered='1' condensed='1' hover='1'>
+  <div $=bs.Thead sty__='background:#e8e8e8'><div $=bs.Tr>
+    <div $=bs.Th width='{160}'>属性</div>
+    <div $=bs.Th width='{80}'>类型</div>
+    <div $=bs.Th width='{100}'>缺省值</div>
+    <div $=bs.Th>描述</div>
+  </div></div>
+  <div $=bs.Tbody><div $=bs.Tr>
+    <div $=bs.Td><code>props.bsClass</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>'carousel'</div>
+    <div $=bs.Td></div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>props.slide</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>'1'</div>
+    <div $=bs.Td>是否用作幻灯片演示，取值：'' 或 '1' </div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.controls</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>'1'</div>
+    <div $=bs.Td>指示是否有 “向前” 与 “向后” 翻页器，取值：'' 或 '1' </div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.indicators</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>'1'</div>
+    <div $=bs.Td>指示是否显示页序指示器，取值：'' 或 '1' </div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.wrap</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>'1'</div>
+    <div $=bs.Td>指示是否循环播放，取值：'' 或 '1' </div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.activeIndex</code></div>
+    <div $=bs.Td>number</div>
+    <div $=bs.Td>0</div>
+    <div $=bs.Td>指示当前页号，从 0 开始编号</div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.interval</code></div>
+    <div $=bs.Td>number</div>
+    <div $=bs.Td></div>
+    <div $=bs.Td>各页自动播放的时间间隔，以毫秒为单位，如果未指定自动取 5000，即 5 秒</div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.pauseHover</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>'1'</div>
+    <div $=bs.Td>鼠标悬停时是否暂停播放，取值：'' 或 '1' </div>
+  </div></div>
+</div>
+
+<a name="api_carouselitem"></a>构件 `bs.CarouselItem`（继承自 `bs.Div2`）：
+
+<div $=bs.Table responsive='1' striped='' bordered='1' condensed='1' hover='1'>
+  <div $=bs.Thead sty__='background:#e8e8e8'><div $=bs.Tr>
+    <div $=bs.Th width='{160}'>属性</div>
+    <div $=bs.Th width='{80}'>类型</div>
+    <div $=bs.Th width='{100}'>缺省值</div>
+    <div $=bs.Th>描述</div>
+  </div></div>
+  <div $=bs.Tbody><div $=bs.Tr>
+    <div $=bs.Td><code>props.bsClass</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>'carousel-item'</div>
+    <div $=bs.Td></div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.active</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td></div>
+    <div $=bs.Td>指示本页是否当前在显示，取值：'' 或 '1' </div>
+  </div></div>
+</div>
+
+<a name="api_carouselcaption"></a>构件 `bs.CarouselCaption`（继承自 `bs.Div2`）：
+
+<div $=bs.Table responsive='1' striped='' bordered='1' condensed='1' hover='1'>
+  <div $=bs.Thead sty__='background:#e8e8e8'><div $=bs.Tr>
+    <div $=bs.Th width='{160}'>属性</div>
+    <div $=bs.Th width='{80}'>类型</div>
+    <div $=bs.Th width='{100}'>缺省值</div>
+    <div $=bs.Th>描述</div>
+  </div></div>
+  <div $=bs.Tbody><div $=bs.Tr>
+    <div $=bs.Td><code>props.bsClass</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>'carousel-caption'</div>
+    <div $=bs.Td></div>
+  </div></div>
+</div>
+
+&nbsp;

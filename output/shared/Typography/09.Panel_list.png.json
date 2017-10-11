@@ -1,0 +1,14 @@
+{
+  "name": "bs.Panel",
+  "widget": [ ["bs.Panel",{}],
+    ["bs.PanelHeader",{"html.":"Heading"}],
+    [ ["bs.PanelCollapse",{"defaultExpanded":"1"}],
+      [ ["bs.ListGroup",{"html.":"Basic panel example"}],
+        ["bs.ListItem",{"href":"javascript:void(0)","html.":"Item 1"}],
+        ["bs.ListItem",{"href":"javascript:void(0)","html.":"Item 2"}],
+        ["bs.ListItem",{"href":"javascript:void(0)","html.":"Item 3"}]
+      ]
+    ],
+    ["bs.PanelFooter",{"html.":"It is footer"}]
+  ]
+}

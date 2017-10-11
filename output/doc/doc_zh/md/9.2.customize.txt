@@ -1,0 +1,41 @@
+9.2 定制扩展
+----------
+
+&nbsp;
+
+### 动态定义 CSS
+
+开发中我们可以随时用 `Style` 构件定义 css 类，比如下面例子。
+
+<div $='.rewgt.ui_demo' src='md/code/9_2_a.txt' input-height='{160}'></div>
+
+说明：
+
+1) 因为 css 类定义与位置相关，应将 bootstrap.css 导入位置提到转义标签之前，才能保证动态定义的 css 能覆盖 bootstrap 的 css。
+
+``` html
+~~ <link rel="stylesheet" shared="true" href="lib/sw_base.css" />
+~~ <link rel="stylesheet" shared="true" href="lib/bootstrap.css" />
+03 
+04 <!-- BEGIN OF CONTAINER, DO NOT CHANGE THIS LINE. -->
+05 <div id="react-container" style="visibility:hidden; position:absolute; left:0px; top:0px">
+06 <div $=BodyPanel key='body' klass='S5'>
+07   <!-- // Escape tag definition ... -->
+08 </div>
+09 </div>
+10 <!-- END OF CONTAINER, DO NOT CHANGE THIS LINE. -->
+```
+
+2) css 定义具有全局生效的特点，所以尽量不要把 `Style` 节点定义在动态的、条件安装的节点下。
+
+### 直接使用 Bootstrap 定义的 class 类
+
+shadow-bootstrap 已将众多 Bootstrap 的 css 类使用规则打包到各种构件中，借助构件各种属性来控制 css 类如何选用。
+
+我们完全可以越过已封装的构件，直接用 `klass` 属性指定各种 css 类，举例如下。
+
+<div $='.rewgt.ui_demo' src='md/code/9_2_b.txt' input-height='{160}'></div>
+
+Bootstrap 提供的 css 类较丰富，shadow-bootstrap 只将常用配置封装成构件，还有少量应用没封装到，比如：某些简单、直接的定义（指定 css 类即可），还有一些需灵活组合。这时，上述用 `klass` 指定 css 的编程方式就派上用场了。
+
+&nbsp;

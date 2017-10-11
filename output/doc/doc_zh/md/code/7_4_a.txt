@@ -1,0 +1,44 @@
+<div $=bs.Form>
+  <div $=bs.FormGroup>
+    <div $=bs.InputGroup>
+      <span $=bs.InputGroupAddon>@</span>
+      <span $=bs.FormCtrl></span>
+    </div>
+  </div><div $=bs.FormGroup>
+    <div $=bs.InputGroup>
+      <span $=bs.FormCtrl></span>
+      <span $=bs.InputGroupAddon>.00</span>
+    </div>
+  </div><div $=bs.FormGroup>
+    <div $=bs.InputGroup>
+      <span $=bs.InputGroupAddon>http://example.com/</span>
+      <span $=bs.FormCtrl></span>
+      <span $=bs.InputGroupAddon>
+        <span $=bs.Glyphicon glyph='music'></span>
+      </span>
+    </div>
+  </div><div $=bs.FormGroup>
+    <div $=bs.InputGroup>
+      <span $=bs.InputGroupBtn><span $=bs.Btn>Before</span></span>
+      <span $=bs.FormCtrl></span>
+      <span $=bs.InputGroupBtn><span $=bs.Btn>After</span></span>
+    </div>
+  </div><div $=bs.FormGroup>
+    <div $=bs.InputGroup bs-size='small'>
+      <span $=bs.InputGroupAddon><span $=Input type='radio'></span></span>
+      <span $=bs.FormCtrl></span>
+      <pre $=bs.DropdownBtn bs-size='small' desc='Action' pull-right='1'>
+<div $=bs.MenuItem key='a1'>Item 1</div>
+<div $=bs.MenuItem key='a2'>Item 2</div>
+</pre>
+    </div>
+  </div><div $=bs.FormGroup>
+    <div $=bs.InputGroup>
+      <span $=bs.InputGroupAddon><span $=Input type='checkbox'></span></span>
+      <span $=bs.FormCtrl></span>
+      <span $=bs.InputGroupAddon>
+        <span $=bs.Glyphicon glyph='ok'></span>
+      </span>
+    </div>
+  </div>
+</div>

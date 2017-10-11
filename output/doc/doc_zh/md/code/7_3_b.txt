@@ -1,0 +1,8 @@
+<div $=bs.Form>
+  <div $=bs.Radio block='1'>Radio</div>
+  <div $=bs.FormGroup>
+    <span $=bs.Radio name='group' disabled='1'>Radio1</span>
+    <span $=bs.Radio name='group' checked='1'>Radio2</span>
+    <span $=bs.Radio name='group'>Radio3</span>
+  </div>
+</div>

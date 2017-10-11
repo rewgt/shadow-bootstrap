@@ -1,0 +1,9 @@
+bs.Checkbox
+7.3.!api_checkbox
+[ props ]
+  bsClass: 'checkbox'
+  defaultChecked
+[ duals ]
+  block: ''
+  checked
+  disabled

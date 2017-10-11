@@ -1,0 +1,4 @@
+bs.NavbarHeader
+4.2.!api_navbarheader
+[ props ]
+  bsClass: 'navbar-header'

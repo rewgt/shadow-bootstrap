@@ -1,0 +1,4 @@
+bs.ModalBody
+6.1.!api_modalbody
+[ props ]
+  bsClass: 'modal-body'

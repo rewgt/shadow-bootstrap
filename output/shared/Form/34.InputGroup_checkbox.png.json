@@ -1,0 +1,12 @@
+{
+  "name": "bs.InputGroup",
+  "widget": [ ["bs.InputGroup",{"bsSize":"","minWidth":20,"minHeight":20}],
+    [ ["bs.InputGroupAddon",{}],
+      ["Input",{"type":"checkbox"}]
+    ],
+    ["bs.FormCtrl",{"type":"text","placeholder":""}],
+    [ ["bs.InputGroupAddon",{}],
+      ["Input",{"type":"checkbox"}]
+    ]
+  ]
+}

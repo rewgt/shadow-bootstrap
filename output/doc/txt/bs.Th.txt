@@ -1,0 +1,4 @@
+bs.Th
+9.3.!api_th
+[ props ]
+  bsClass: 'th'

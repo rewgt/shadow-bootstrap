@@ -1,0 +1,10 @@
+{
+  "name": "bs.ResponsiveEmbed",
+  "widget": [ ["bs.ResponsiveEmbed",{"width":660, "a16by9":"1", "a4by3":""}],
+    ["Embed", {
+      "klass": "embed-responsive-item",
+      "type": "image/svg+xml",
+      "src": "/app/rewgt/shadow-bootstrap/web/output/theresa_knott.svg"
+    }]
+  ]
+}

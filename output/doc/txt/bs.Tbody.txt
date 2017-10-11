@@ -1,0 +1,4 @@
+bs.Tbody
+9.3.!api_tbody
+[ props ]
+  bsClass: 'tbody'

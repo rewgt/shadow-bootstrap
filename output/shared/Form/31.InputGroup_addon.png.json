@@ -1,0 +1,10 @@
+{
+  "name": "bs.InputGroup",
+  "widget": [ ["bs.InputGroup",{"bsSize":"","minWidth":20,"minHeight":20}],
+    ["bs.InputGroupAddon",{"html.":"http://example.com/"}],
+    ["bs.FormCtrl",{"type":"text","placeholder":""}],
+    [ ["bs.InputGroupAddon",{}],
+      ["bs.Glyphicon",{"glyph":"music"}]
+    ]
+  ]
+}

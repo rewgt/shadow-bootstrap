@@ -1,0 +1,4 @@
+bs.Media
+8.4.!api_media
+[ props ]
+  bsClass: 'media'

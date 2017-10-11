@@ -1,0 +1,9 @@
+<div $=bs.P>
+  <span $=bs.Btn sty__='margin:2px'>Default</span>
+  <span $=bs.Btn bs-style='primary' sty__='margin:2px'>Primary</span>
+  <span $=bs.Btn bs-style='success' sty__='margin:2px'>Success</span>
+  <span $=bs.Btn bs-style='info' item-space='{2}'>Info</span>
+  <span $=bs.Btn bs-style='warning' item-space='{2}'>Warning</span>
+  <span $=bs.Btn bs-style='danger' item-space='{2}'>Danger</span>
+  <span $=bs.Btn bs-style='link' item-space='{2}'>Link</span>
+</div>

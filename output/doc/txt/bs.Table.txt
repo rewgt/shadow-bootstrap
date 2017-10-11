@@ -1,0 +1,10 @@
+bs.Table
+5.4.!api_table
+[ props ]
+  bsClass: 'table'
+[ duals ]
+  striped
+  bordered
+  condensed
+  hover
+  responsive

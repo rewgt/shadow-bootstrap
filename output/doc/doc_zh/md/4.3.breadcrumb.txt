@@ -1,0 +1,65 @@
+4.3 Breadcrumb
+--------
+
+&nbsp;
+
+### Breadcrumb 与 BreadItem
+
+`bs.Breadcrumb` 与 `bs.BreadItem` 用来构造路径导航。
+
+<div $='.rewgt.ui_demo' src='md/code/4_3_a.txt' input-height='{140}'></div>
+
+其中 BreadItem 的 `duals.active` 指示当前项是否活动。
+
+### API 接口
+
+<a name="api_breadcrumb"></a>构件 `bs.Breadcrumb`（继承自 `bs.Ol`）：
+
+<div $=bs.Table responsive='1' striped='' bordered='1' condensed='1' hover='1'>
+  <div $=bs.Thead sty__='background:#e8e8e8'><div $=bs.Tr>
+    <div $=bs.Th width='{160}'>属性</div>
+    <div $=bs.Th width='{80}'>类型</div>
+    <div $=bs.Th width='{100}'>缺省值</div>
+    <div $=bs.Th>描述</div>
+  </div></div>
+  <div $=bs.Tbody><div $=bs.Tr>
+    <div $=bs.Td><code>props.bsClass</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>'breadcrumb'</div>
+    <div $=bs.Td></div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.role</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>'navigation'</div>
+    <div $=bs.Td></div>
+  </div></div>
+</div>
+
+<a name="api_breaditem"></a>构件 `bs.BreadItem`（继承自 `bs.Li`）：
+
+<div $=bs.Table responsive='1' striped='' bordered='1' condensed='1' hover='1'>
+  <div $=bs.Thead sty__='background:#e8e8e8'><div $=bs.Tr>
+    <div $=bs.Th width='{160}'>属性</div>
+    <div $=bs.Th width='{80}'>类型</div>
+    <div $=bs.Th width='{100}'>缺省值</div>
+    <div $=bs.Th>描述</div>
+  </div></div>
+  <div $=bs.Tbody><div $=bs.Tr>
+    <div $=bs.Td><code>props.bsClass</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>'breadcrumb-item'</div>
+    <div $=bs.Td></div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.href</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td></div>
+    <div $=bs.Td>跳转链接的 URL</div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.active</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td></div>
+    <div $=bs.Td>指示当前项是否活动，取值：'' 或 '1' </div>
+  </div></div>
+</div>
+
+&nbsp;

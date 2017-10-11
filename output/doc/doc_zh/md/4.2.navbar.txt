@@ -1,0 +1,232 @@
+4.2 Navbar
+--------
+
+&nbsp;
+
+### Navbar 导航条
+
+导航条 `bs.Navbar` 用来包装若干与导航相关的构件。一个导航条下通常可放一个 `bs.NavbarHead`，以及若干导航项目，包括：
+
+1. `bs.Nav` 导航列表
+2. `bs.NavbarForm` 导航表单
+3. `bs.NavbarText` 导航文本
+
+比如下面例子，导航条中有一个 NavbarHead，导航项目包括两个 Nav 与一个 NavbarForm，其中 `pull-right='1'` 指示的 Nav 与 NavbarForm  浮到右侧。
+
+<div $='.rewgt.ui_demo' src='md/code/4_2_a.txt' input-height='{350}'></div>
+
+导航条缺省宽度为总屏宽，本例用 `$width` 设置宽度。若不指定宽度，导航条一般要求放在 Panel 面板下，[就像 `bs.Grid` 那样处理](#1.2.!important)，由面板宽度决定导航条占宽。
+
+Navbar 用 `duals.bsStyle` 设置 `'default'` 或 `'inverse'` 显示风格，上例是 `'default'` 风格，下例是 `'inverse'` 反色风格。用 `duals.staticTop` 设置导航条静止放在顶部（可随页面滚动）。
+
+<div $='.rewgt.ui_demo' src='md/code/4_2_b.txt' input-height='{360}'></div>
+
+与 `duals.staticTop` 类似的还有 `duals.fixedTop` 与 `duals.fixedBottom`，分别用来设置导航条固定放在屏幕顶部与底部。
+
+另外，Navbar 还支持用 `duals.fluid='1'` 将所用的 `.container` 类，换成 `.container-fluid`，即，将动态响应式布局改为固定 `100%` 占用屏宽。
+
+### NavbarHead 与 NavbarToggle
+
+`bs.NavbarHead` 定义导航标题，只在 Navbar 下使用。NavbarHead 之下，常用 `bs.NavbarBrand` 定义厂商的 URL 链接，用法如上面举例。
+
+NavbarHead 下面还可额外定义一个 `bs.NavbarToggle`，以便在移动设备上，因屏幕尺寸过小而只显示一个图标 ![Collapse](md/res/collapse.png)，点击图标可展开或收缩各导航项。举例如下：
+
+<div $='.rewgt.ui_demo' src='md/code/4_2_c.txt' input-height='{390}'></div>
+
+各导航项要纳入到 `bs.NavbarCollapse` 中，才能切换显示。另外，NavbarCollapse 还支持以 `duals.animation='1'` 启用导航项展开或收缩的动画效果。
+
+### NavbarText
+
+在导航条中可以用 `bs.NavbarText` 定义一段文本，其下还可用 `bs.NavbarLink` 定义链接。
+
+<div $='.rewgt.ui_demo' src='md/code/4_2_d.txt' input-height='{190}'></div>
+
+### API 接口
+
+<a name="api_navbar"></a>构件 `bs.Navbar`（继承自 `bs.Div2`）：
+
+<div $=bs.Table responsive='1' striped='' bordered='1' condensed='1' hover='1'>
+  <div $=bs.Thead sty__='background:#e8e8e8'><div $=bs.Tr>
+    <div $=bs.Th width='{160}'>属性</div>
+    <div $=bs.Th width='{80}'>类型</div>
+    <div $=bs.Th width='{100}'>缺省值</div>
+    <div $=bs.Th>描述</div>
+  </div></div>
+  <div $=bs.Tbody><div $=bs.Tr>
+    <div $=bs.Td><code>props.bsClass</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>'navbar'</div>
+    <div $=bs.Td></div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.bsStyle</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>'default'</div>
+    <div $=bs.Td>导航条的显示风格，取值：'default' 或 'inverse'</div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.staticTop</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td></div>
+    <div $=bs.Td>是否静止放在顶部（可随上下文滚动），取值：'' 或 '1' </div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.fixedTop</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td></div>
+    <div $=bs.Td>是否固定在屏幕顶部，取值：'' 或 '1' </div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.fixedBottom</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td></div>
+    <div $=bs.Td>是否固定在屏幕底部，取值：'' 或 '1' </div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.fluid</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td></div>
+    <div $=bs.Td>是否从 'container' 类改到 'container-fluid'，取值：'' 或 '1' </div>
+  </div></div>
+</div>
+
+<a name="api_navbarhead"></a>构件 `bs.NavbarHead`（继承自 `bs.Div2`）：
+
+<div $=bs.Table responsive='1' striped='' bordered='1' condensed='1' hover='1'>
+  <div $=bs.Thead sty__='background:#e8e8e8'><div $=bs.Tr>
+    <div $=bs.Th width='{160}'>属性</div>
+    <div $=bs.Th width='{80}'>类型</div>
+    <div $=bs.Th width='{100}'>缺省值</div>
+    <div $=bs.Th>描述</div>
+  </div></div>
+  <div $=bs.Tbody><div $=bs.Tr>
+    <div $=bs.Td><code>props.bsClass</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>'navbar-header'</div>
+    <div $=bs.Td></div>
+  </div></div>
+</div>
+
+<a name="api_navbarform"></a>构件 `bs.NavbarForm`（继承自 `bs.Form`）：
+
+<div $=bs.Table responsive='1' striped='' bordered='1' condensed='1' hover='1'>
+  <div $=bs.Thead sty__='background:#e8e8e8'><div $=bs.Tr>
+    <div $=bs.Th width='{160}'>属性</div>
+    <div $=bs.Th width='{80}'>类型</div>
+    <div $=bs.Th width='{100}'>缺省值</div>
+    <div $=bs.Th>描述</div>
+  </div></div>
+  <div $=bs.Tbody><div $=bs.Tr>
+    <div $=bs.Td><code>props.bsClass</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>'navbar-form'</div>
+    <div $=bs.Td></div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.pullRight</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td></div>
+    <div $=bs.Td>是否浮向右侧，取值：'' 或 '1' </div>
+  </div></div>
+</div>
+
+<a name="api_navbarcollapse"></a>构件 `bs.NavbarCollapse`（继承自 `bs.Collapse`）：
+
+<div $=bs.Table responsive='1' striped='' bordered='1' condensed='1' hover='1'>
+  <div $=bs.Thead sty__='background:#e8e8e8'><div $=bs.Tr>
+    <div $=bs.Th width='{160}'>属性</div>
+    <div $=bs.Th width='{80}'>类型</div>
+    <div $=bs.Th width='{100}'>缺省值</div>
+    <div $=bs.Th>描述</div>
+  </div></div>
+  <div $=bs.Tbody><div $=bs.Tr>
+    <div $=bs.Td><code>props.bsClass</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>'navbar-collapse'</div>
+    <div $=bs.Td></div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>props.collapseClass</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>'navbar-collapse'</div>
+    <div $=bs.Td>指定附加的 class 定义</div>
+  </div></div>
+</div>
+
+<a name="api_navbartoggle"></a>构件 `bs.NavbarToggle`（继承自 `Button`）：
+
+<div $=bs.Table responsive='1' striped='' bordered='1' condensed='1' hover='1'>
+  <div $=bs.Thead sty__='background:#e8e8e8'><div $=bs.Tr>
+    <div $=bs.Th width='{160}'>属性</div>
+    <div $=bs.Th width='{80}'>类型</div>
+    <div $=bs.Th width='{100}'>缺省值</div>
+    <div $=bs.Th>描述</div>
+  </div></div>
+  <div $=bs.Tbody><div $=bs.Tr>
+    <div $=bs.Td><code>props.bsClass</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>'navbar-toggle'</div>
+    <div $=bs.Td></div>
+  </div></div>
+</div>
+
+<a name="api_navbarbrand"></a>构件 `bs.NavbarBrand`（继承自 `A`）：
+
+<div $=bs.Table responsive='1' striped='' bordered='1' condensed='1' hover='1'>
+  <div $=bs.Thead sty__='background:#e8e8e8'><div $=bs.Tr>
+    <div $=bs.Th width='{160}'>属性</div>
+    <div $=bs.Th width='{80}'>类型</div>
+    <div $=bs.Th width='{100}'>缺省值</div>
+    <div $=bs.Th>描述</div>
+  </div></div>
+  <div $=bs.Tbody><div $=bs.Tr>
+    <div $=bs.Td><code>props.bsClass</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>'navbar-brand'</div>
+    <div $=bs.Td></div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.icon</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td></div>
+    <div $=bs.Td>设置图标，指示图标 URL 值。缺省不使用图标，若用图标，厂商的名称不再显示。</div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.glyph</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td></div>
+    <div $=bs.Td>设置 Glyphicon 图标。缺省不使用图标，若用图标，厂商的名称不再显示。</div>
+  </div></div>
+</div>
+
+<a name="api_navbartext"></a>构件 `bs.NavbarText`（继承自 `bs.P`）：
+
+<div $=bs.Table responsive='1' striped='' bordered='1' condensed='1' hover='1'>
+  <div $=bs.Thead sty__='background:#e8e8e8'><div $=bs.Tr>
+    <div $=bs.Th width='{160}'>属性</div>
+    <div $=bs.Th width='{80}'>类型</div>
+    <div $=bs.Th width='{100}'>缺省值</div>
+    <div $=bs.Th>描述</div>
+  </div></div>
+  <div $=bs.Tbody><div $=bs.Tr>
+    <div $=bs.Td><code>props.bsClass</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>'navbar-text'</div>
+    <div $=bs.Td></div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.pullRight</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td></div>
+    <div $=bs.Td>是否浮向右侧，取值：'' 或 '1' </div>
+  </div></div>
+</div>
+
+<a name="api_navbarlink"></a>构件 `bs.NavbarLink`（继承自 `A`）：
+
+<div $=bs.Table responsive='1' striped='' bordered='1' condensed='1' hover='1'>
+  <div $=bs.Thead sty__='background:#e8e8e8'><div $=bs.Tr>
+    <div $=bs.Th width='{160}'>属性</div>
+    <div $=bs.Th width='{80}'>类型</div>
+    <div $=bs.Th width='{100}'>缺省值</div>
+    <div $=bs.Th>描述</div>
+  </div></div>
+  <div $=bs.Tbody><div $=bs.Tr>
+    <div $=bs.Td><code>props.bsClass</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>'navbar-link'</div>
+    <div $=bs.Td></div>
+  </div></div>
+</div>
+
+&nbsp;

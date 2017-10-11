@@ -1,0 +1,4 @@
+bs.CtrlLabel
+7.2.!api_ctrllabel
+[ props ]
+  bsClass: 'control-label'

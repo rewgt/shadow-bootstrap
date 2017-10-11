@@ -1,0 +1,8 @@
+<div $=bs.Div2 $$for='item in duals.data' 
+     dual-data='{["default","success","warning","danger","info","primary"]}'>
+  <div $=bs.Panel $key='"a" + index' $bs-style='item'>
+    <div $=bs.PanelHeader>Heading</div>
+    <div $=bs.PanelBody>Basic panel example</div>
+    <div $=bs.PanelFooter>It is footer</div>
+  </div>
+</div>

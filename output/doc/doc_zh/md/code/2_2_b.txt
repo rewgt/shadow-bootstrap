@@ -1,0 +1,8 @@
+<div $=bs.P>
+  <span $=bs.Label bs-style='default' sty__='margin:2px'>Default</span>
+  <span $=bs.Label bs-style='primary' sty__='margin:2px'>Primary</span>
+  <span $=bs.Label bs-style='success' sty__='margin:2px'>Success</span>
+  <span $=bs.Label bs-style='info' sty__='margin:2px'>Info</span>
+  <span $=bs.Label bs-style='warning' sty__='margin:2px'>Warning</span>
+  <span $=bs.Label bs-style='danger' sty__='margin:2px'>Danger</span>
+</div>

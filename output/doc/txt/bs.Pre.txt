@@ -1,0 +1,4 @@
+bs.Pre
+9.3.!api_pre
+[ props ]
+  bsClass: 'pre'

@@ -1,0 +1,23 @@
+<div $=bs.Div2>
+  <div $=bs.Media>
+    <div $=bs.MediaLeft>
+      <span $=Img src='md/res/64x64.svg'></span>
+    </div>
+    <div $=bs.MediaBody>
+      <div $=bs.MediaHeading>Media Heading</div>
+      <div $=bs.P>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo.</div>
+      <div $=bs.Media>
+        <div $=bs.MediaLeft>
+          <span $=Img src='md/res/64x64.svg'></span>
+        </div>
+        <div $=bs.MediaBody>
+          <div $=bs.MediaHeading>Nested Media Heading</div>
+          <div $=bs.P>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo.</div>
+        </div>
+        <div $=bs.MediaRight>
+          <span $=Img src='md/res/64x64.svg'></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

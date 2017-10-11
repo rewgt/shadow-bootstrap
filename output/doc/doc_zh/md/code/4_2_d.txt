@@ -1,0 +1,10 @@
+<div $=bs.Navbar $$for='' $width='duals(".body").innerSize[0]-duals(".body.book.summary").width-94'>
+  <div $=bs.NavbarHeader>
+    <span $=bs.NavbarBrand href='https://github.com/rewgt/shadow-bootstrap'>Shadow bootstrap</span>
+  </div>
+  <div $=bs.NavbarText>
+     <span $=Span>Login as: </span>
+     <span $=bs.NavbarLink href='#4.2.'>wayne</span>
+  </div>
+  <div $=bs.NavbarText pull-right='1' margin='{[15,0,15,15]}'>Have a great day!</div>
+</div>

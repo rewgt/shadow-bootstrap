@@ -1,0 +1,6 @@
+bs.NavbarForm
+4.2.!api_navbarform
+[ props ]
+  bsClass: 'navbar-form'
+[ duals ]
+  pullRight

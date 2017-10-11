@@ -1,0 +1,4 @@
+bs.MediaRight
+8.4.!api_mediaright
+[ props ]
+  bsClass: 'media-right'

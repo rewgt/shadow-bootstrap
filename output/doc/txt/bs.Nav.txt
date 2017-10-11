@@ -1,0 +1,9 @@
+bs.Nav
+4.1.!api_nav
+[ props ]
+  bsClass: 'nav'
+[ duals ]
+  bsStyle: 'pills'
+  justified
+  stacked
+  pullRight

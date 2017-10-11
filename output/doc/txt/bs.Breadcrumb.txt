@@ -1,0 +1,6 @@
+bs.Breadcrumb
+4.3.!api_breadcrumb
+[ props ]
+  bsClass: 'breadcrumb'
+[ duals ]
+  role: 'navigation'

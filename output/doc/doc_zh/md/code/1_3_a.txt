@@ -1,0 +1,10 @@
+<div $=bs.Grid klass='align_center-right-default' $$for=''
+     $width='duals(".body").innerSize[0]-duals(".body.book.summary").width-94'>
+  <div $=bs.Row>
+    <div $=bs.Col xs='{4}' md='{3}' sty__='background:#eee'>xs=4 md=3</div>
+    <div $=bs.Col xs='{4}' md='{3}' sty__='background:#ddd'>xs=4 md=3</div>
+    <div $=bs.Clearfix></div>
+    <div $=bs.Col xs='{4}' md='{3}' sty__='background:#ccc'>xs=4 md=3</div>
+    <div $=bs.Col xs='{4}' md='{3}' sty__='background:#bbb'>xs=4 md=3</div>
+  </div>
+</div>

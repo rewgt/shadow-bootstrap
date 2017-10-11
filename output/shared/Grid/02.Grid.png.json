@@ -1,0 +1,5 @@
+{
+  "name": "bs.Grid",
+  "widget": ["bs.Grid",{"minHeight":20}],
+  "scene": ["bs.Grid",{"width":0.9999,"minHeight":20}]
+}

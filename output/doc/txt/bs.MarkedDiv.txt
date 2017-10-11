@@ -1,0 +1,14 @@
+bs.MarkedDiv
+9.3.!api_markeddiv
+[ props ]
+  bsClass: 'markeddiv'
+[ duals ]
+  width: null
+  height: null
+  left: null
+  top: null
+  minWidth: 0
+  minHeight: 0
+  margin: [null,null,null,null]
+  padding: [null,null,null,null]
+  borderWidth: [null,null,null,null]

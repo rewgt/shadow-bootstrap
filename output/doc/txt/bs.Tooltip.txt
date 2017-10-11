@@ -1,0 +1,9 @@
+bs.Tooltip
+6.2.!api_tooltip
+[ props ]
+  bsClass: 'tooltip'
+[ duals ]
+  role: 'tooltip'
+  placement: 'right'
+  arrowPosition: 0.5
+  offset: [0,0,0,2]

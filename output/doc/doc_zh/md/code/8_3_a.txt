@@ -1,0 +1,15 @@
+<div $=bs.Grid>
+  <div $=bs.Row><div $=bs.Col xs='{10}' md='{8}'>
+    <div $=bs.Carousel active-index='{0}' slide='1' $for='item in [1,2,3]'>
+      <div $=bs.CarouselItem $key='"a"+index'>
+        <span $=Img sty__='width:900px; height:500px' alt='900x500'
+              src='md/res/carousel.png'></span>
+        <div $=bs.CarouselCaption>
+          <div $=bs.H3 $html='"Slide " + (index+1) + " of " + count'></div>
+          <div $=bs.P>Please write short description here.</div>
+        </div>
+      </div>
+      </div>
+    </div>
+  </div></div>
+</div>

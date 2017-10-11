@@ -1,0 +1,61 @@
+{
+  "name": "bs.Table",
+  "widget": [ ["bs.Table",{"striped":"1","bordered":"1","condensed":"1","hover":"1"}],
+    [ ["bs.Thead",{}],
+      [ ["bs.Tr",{}],
+        ["bs.Th",{"html.":"#"}],
+        ["bs.Th",{"html.":"First Name"}],
+        ["bs.Th",{"html.":"Last Name"}],
+        ["bs.Th",{"html.":"Forward"}]
+      ]
+    ],
+    [ ["bs.Tbody",{}],
+      [ ["bs.Tr",{}],
+        ["bs.Td",{"html.":"1"}],
+        ["bs.Td",{"klass":"warning","html.":"Mark"}],
+        ["bs.Td",{"html.":"Otto"}],
+        ["bs.Td",{"html.":"@mdo"}]
+      ],
+      [ ["bs.Tr",{"klass":"info"}],
+        ["bs.Td",{"html.":"2"}],
+        ["bs.Td",{"html.":"Jacob"}],
+        ["bs.Td",{"html.":"Thornton"}],
+        ["bs.Td",{"html.":"@fat"}]
+      ],
+      [ ["bs.Tr",{}],
+        ["bs.Td",{"html.":"3"}],
+        ["bs.Td",{"colSpan":2,"html.":"Larry the Bird"}],
+        ["bs.Td",{"html.":"@twitter"}]
+      ]
+    ]
+  ],
+  "scene": [ ["bs.Table",{"width":600,"striped":"1","bordered":"1","condensed":"1","hover":"1"}],
+    [ ["bs.Thead",{}],
+      [ ["bs.Tr",{}],
+        ["bs.Th",{"html.":"#"}],
+        ["bs.Th",{"html.":"First Name"}],
+        ["bs.Th",{"html.":"Last Name"}],
+        ["bs.Th",{"html.":"Forward"}]
+      ]
+    ],
+    [ ["bs.Tbody",{}],
+      [ ["bs.Tr",{}],
+        ["bs.Td",{"html.":"1"}],
+        ["bs.Td",{"klass":"warning","html.":"Mark"}],
+        ["bs.Td",{"html.":"Otto"}],
+        ["bs.Td",{"html.":"@mdo"}]
+      ],
+      [ ["bs.Tr",{"klass":"info"}],
+        ["bs.Td",{"html.":"2"}],
+        ["bs.Td",{"html.":"Jacob"}],
+        ["bs.Td",{"html.":"Thornton"}],
+        ["bs.Td",{"html.":"@fat"}]
+      ],
+      [ ["bs.Tr",{}],
+        ["bs.Td",{"html.":"3"}],
+        ["bs.Td",{"colSpan":2,"html.":"Larry the Bird"}],
+        ["bs.Td",{"html.":"@twitter"}]
+      ]
+    ]
+  ]
+}

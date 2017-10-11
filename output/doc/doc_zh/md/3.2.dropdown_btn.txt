@@ -1,0 +1,167 @@
+3.2 DropdownBtn
+-------------
+
+&nbsp;
+
+### DropdownBtn 基本用法
+
+下拉按钮 `bs.DropdownBtn` 与 `bs.Btn` 类似，也用 `duals.bsStyle` 指定按钮风格，用 `duals.bsSize` 指定大小，另外，`duals.itemSpace`，`duals['data-checked']`，`duals.disabled` 的用法与 `bs.Btn` 一致。
+
+举例如下。
+
+<div $='.rewgt.ui_demo' src='md/code/3_2_a.txt' input-height='{210}'></div>
+
+属性 `duals.desc` 用来指示按钮上的文字。
+
+因为 `bs.DropdownBtn` 继承自 `MarkedDiv`，所以转义标签中要用 `<pre>` 表达 Markdown 文本，子级菜单项在 Markdown 文本中，以 `bs.MenuItem` 构件的形式表达。关于 `bs.MenuItem` 的细节定义，请参考后文 [“3.5 MenuList”](#3.5.)。
+
+用 `duals.dropup` 指示菜单项是否改为上弹，如下。
+
+<div $='.rewgt.ui_demo' src='md/code/3_2_b.txt' input-height='{180}'></div>
+
+用 `duals.noCaret` 控制是否隐藏下拉或上弹图标，如下。
+
+<div $='.rewgt.ui_demo' src='md/code/3_2_c.txt' input-height='{170}'></div>
+
+### DropdownBtn 的回调函数
+
+shadow-bootstrap 中的回调函数不同于构件的事件函数，事件函数以 `'$'` 前缀命名，并与 DOM 节点的事件处理一一对应。回调函数则是构件定制过程中，为特定目的提供的回调处理，作为在构件接口声明的回调函数，回调处理还是规范的，有固定规则。相关规定如下：
+
+1. 这类回调函数均支持两种实现方式，一是从 `props` 传入，二是在该 Component 节点预定义。
+2. 如果某回调函数同时有 `props` 传入与在 Component 预定义，将以 props 传入函数为准，忽略预定义函数。
+3. 回调某构件（`comp`）某回调函数（`fn`）时，总按 `fn.apply(comp,[arg1,...])` 方式进行。
+
+比如 `bs.DropdownBtn` 在菜单弹出或收起时，自动回调 `onToggle(isOpen,event,info)`。我们可以这么预定义 `onToggle`：
+
+``` js
+01   // ...
+02   getInitialState: function() {
+03     var state = this._getInitialState(this);
+~~     // this.onToggle = function(isOpen,event,info) { ... }
+05     return state;
+06   },
+07   
+~~   onToggle: function(isOpen,event,info) {
+~~     // ...
+~~   },
+```
+
+按上述 `08` 行或 `04` 行实现回调定义，又或者，通过 `props.onToggle` 传入也行。
+
+`bs.DropdownBtn` 回调 `onToggle(isOpen,event,info)` 时，参数 `isOpen` 指示菜单即将弹出还是收起；参数 `event` 是触发菜单动作的事件（自来相关事件函数的 `event` 参数），触发动作的原因可能是键盘输入，也可能是鼠标点击；参数 `info` 进一步指明触发源，格式为 `{source: sReason}`，其中 `sReason` 以 string 格式描述弹出或收起菜单的原因。
+
+还有一个回调函数 `onSelect(sKey,event)`，用于 `bs.DropdownBtn` 在菜单项选中时回调。
+
+### SplitBtn
+
+构件 `bs.SplitBtn` 继承自 `bs.DropdownBtn`，这两者功能一样，只是界面表现稍有差异。举例如下。
+
+<div $='.rewgt.ui_demo' src='md/code/3_2_d.txt' input-height='{210}'></div>
+
+### API 接口
+
+<a name="api_dropdownbtn"></a>构件 `bs.DropdownBtn`（继承自 `bs.MarkedDiv`）：
+
+<div $=bs.Table responsive='1' striped='' bordered='1' condensed='1' hover='1'>
+  <div $=bs.Thead sty__='background:#e8e8e8'><div $=bs.Tr>
+    <div $=bs.Th width='{160}'>属性</div>
+    <div $=bs.Th width='{80}'>类型</div>
+    <div $=bs.Th width='{100}'>缺省值</div>
+    <div $=bs.Th>描述</div>
+  </div></div>
+  <div $=bs.Tbody><div $=bs.Tr>
+    <div $=bs.Td><code>props.bsClass</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>'dropdown'</div>
+    <div $=bs.Td></div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>props.noSelect</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td></div>
+    <div $=bs.Td>是否不允许选中，仅在 bs.Nav 下有效，可选值：'' 或 '1'，如果当前 bs.Nav 处在 bs.Navbar 下缺省取值 '1'，即 “不允许选中”，否则缺省取 ''，即 “允许选中” </div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.desc</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>''</div>
+    <div $=bs.Td>按钮上的文字</div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.bsStyle</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>'default'</div>
+    <div $=bs.Td>选择按钮风格，可选项有：'default', 'primary', 'success', 'info', 'warning', 'danger', 'link' </div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.bsSize</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td></div>
+    <div $=bs.Td>按钮大小，可选项有：'', 'large', 'medium', 'small', 'xsmall' </div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals['data-checked']</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td></div>
+    <div $=bs.Td>是否处于活动态，可选：'' 或 '1' </div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.disabled</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>''</div>
+    <div $=bs.Td>是否禁用，可选：'' 或 '1' </div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.itemSpace</code></div>
+    <div $=bs.Td>number</div>
+    <div $=bs.Td></div>
+    <div $=bs.Td>可选设置按钮左、右侧 margin 像素值，取 undefined 值表示不设置</div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.noCaret</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td></div>
+    <div $=bs.Td>是否显示下拉或上弹图标，取值：'' 或 '1'</div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.dropup</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td></div>
+    <div $=bs.Td>是否改让菜单向上弹出，取值：'' 或 '1'</div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.pullRight</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td></div>
+    <div $=bs.Td>下拉菜单项是否靠右对齐，缺省是左边对齐，取值：'' 或 '1'</div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.open</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td></div>
+    <div $=bs.Td>用于指示菜单是否已打开的状态量，取值：'' 或 '1'</div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>focus()</code></div>
+    <div $=bs.Td>method</div>
+    <div $=bs.Td></div>
+    <div $=bs.Td>移动焦点到本构件</div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>onToggle(isOpen,event,info)</code></div>
+    <div $=bs.Td>function</div>
+    <div $=bs.Td></div>
+    <div $=bs.Td>菜单弹出或收起时的回调函数，参数 isOpen 指示菜单即将弹出还是收起；参数 event 是触发菜单动作的事件（自来相关事件函数的 event 参数）；参数 info 进一步指明触发源，格式为 {source: sReason}，其中 sReason 以 string 格式描述弹出或收起菜单的原因，有如下取值：'select' 表示菜单项已选，'keydown' 表示按键触发（如按 Esc 键），'disabled' 表示设置 disabled，'click' 表示鼠标点击，'rootClose' 表示由外部点击触发菜单收起</div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>onSelect(sKey,event)</code></div>
+    <div $=bs.Td>function</div>
+    <div $=bs.Td></div>
+    <div $=bs.Td>菜单项选中时的回调函数，参数 sKey 指示选中菜单项的 key 值，参数 event 是触发选中动作的事件（自来相关事件函数的 event 参数）</div>
+  </div></div>
+</div>
+
+<a name="api_splitbtn"></a>构件 `bs.SplitBtn`（继承自 `bs.DropdownBtn`）：
+
+<div $=bs.Table responsive='1' striped='' bordered='1' condensed='1' hover='1'>
+  <div $=bs.Thead sty__='background:#e8e8e8'><div $=bs.Tr>
+    <div $=bs.Th width='{160}'>属性</div>
+    <div $=bs.Th width='{80}'>类型</div>
+    <div $=bs.Th width='{100}'>缺省值</div>
+    <div $=bs.Th>描述</div>
+  </div></div>
+  <div $=bs.Tbody><div $=bs.Tr>
+    <div $=bs.Td><code>props.bsClass</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>'dropdown'</div>
+    <div $=bs.Td></div>
+  </div></div>
+</div>
+
+&nbsp;

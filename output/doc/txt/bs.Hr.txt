@@ -1,0 +1,4 @@
+bs.Hr
+9.3.!api_hr
+[ props ]
+  bsClass: 'hr'

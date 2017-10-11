@@ -1,0 +1,4 @@
+bs.ListGroup
+5.3.!api_listgroup
+[ props ]
+  bsClass: 'list-group'

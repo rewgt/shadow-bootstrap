@@ -1,0 +1,13 @@
+<div $=bs.Div2>
+  <div $=bs.Tooltip left='{80}' placement='top'
+       arrow-position='{0.3}'>Tooltip top</div>
+</div>
+<div $=bs.Div2>
+  <div $=bs.Tooltip placement='left'>Tooltip left</div>
+  <div $=bs.Btn bs-size='small'>Here</div>
+  <div $=bs.Tooltip placement='right'>Tooltip right</div>
+</div>
+<div $=bs.Div2>
+  <div $=bs.Tooltip left='{30}' placement='bottom'
+       arrow-position='{0.8}'>Tooltip bottom</div>
+</div>

@@ -1,0 +1,7 @@
+<div $=bs.Grid klass='align_center-right-default' $$for=''
+     $width='duals(".body").innerSize[0]-duals(".body.book.summary").width-94'>
+  <div $=bs.Row>
+    <div $=bs.Col xs='{6}' xs-offset='{6}' sty__='background:#eee'>xs=6 xsOffset=6</div>
+    <div $=bs.Col xs='{6}'sty__='background:#ddd'>xs=6</div>
+  </div>
+</div>

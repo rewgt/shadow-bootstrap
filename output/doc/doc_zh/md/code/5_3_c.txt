@@ -1,0 +1,6 @@
+<div $=bs.ListGroup>
+  <div $=bs.ListItem data-checked='1'>Cras justo odio</div>
+  <div $=bs.ListItem disabled='1'>Dapibus ac facilisis in</div>
+  <div $=bs.ListItem bs-style='info'>Porta ac consectetur ac</div>
+  <div $=bs.ListItem bs-style='warning'>Vestibulum at eros</div>
+</div>

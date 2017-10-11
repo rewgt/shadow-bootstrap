@@ -1,0 +1,9 @@
+bs.Clearfix
+1.3.!api_clearfix
+[ props ]
+  bsClass: 'clearfix'
+[ duals ]
+  xsBlock
+  smBlock
+  mdBlock
+  lgBlock

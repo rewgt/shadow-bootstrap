@@ -1,0 +1,11 @@
+bs.ProgressBar
+4.6.!api_progressbar
+[ props ]
+  bsClass: 'progress-bar'
+[ duals ]
+  bsStyle: ''
+  striped
+  active
+  min
+  max
+  now

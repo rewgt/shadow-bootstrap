@@ -1,0 +1,7 @@
+bs.Badge
+2.3.!api_badge
+[ props ]
+  bsClass: 'badge'
+[ duals ]
+  pullRight
+  itemSpace

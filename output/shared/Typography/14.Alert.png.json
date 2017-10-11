@@ -1,0 +1,8 @@
+{
+  "name": "bs.Alert",
+  "widget": [ ["bs.Alert",{"bsStyle":"warning","dismissable":""}],
+    [ ["Strong",{"html.":"Holy guacamole! "}],
+      ["Span",{"html.":"Best check yo self, you're not looking too good."}]
+    ]
+  ]
+}

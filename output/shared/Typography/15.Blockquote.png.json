@@ -1,0 +1,7 @@
+{
+  "name": "bs.Blockquote",
+  "widget": [ ["bs.Blockquote",{"reverse":""}],
+    ["bs.P",{"html.":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante."}],
+    ["Small",{"html.":"Someone famous in Source Title"}]
+  ]
+}

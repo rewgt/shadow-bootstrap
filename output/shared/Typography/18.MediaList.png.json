@@ -1,0 +1,29 @@
+{
+  "name": "bs.MediaList",
+  "widget": [ ["bs.MediaList",{}],
+    [ ["bs.MediaItem",{}],
+      [ ["bs.MediaLeft",{"alignTo":"top"}],
+        ["Img",{"src":"/app/rewgt/shadow-bootstrap/web/output/64x64.svg"}]
+      ],
+      [ ["bs.MediaBody",{}],
+        ["bs.MediaHeading",{"html.":"Media Heading"}],
+        ["bs.P",{"html.":"Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo."}]
+      ],
+      [ ["bs.MediaRight",{"alignTo":"top"}],
+        ["Img",{"src":"/app/rewgt/shadow-bootstrap/web/output/64x64.svg"}]
+      ]
+    ],
+    [ ["bs.MediaItem",{}],
+      [ ["bs.MediaLeft",{"alignTo":"top"}],
+        ["Img",{"src":"/app/rewgt/shadow-bootstrap/web/output/64x64.svg"}]
+      ],
+      [ ["bs.MediaBody",{}],
+        ["bs.MediaHeading",{"html.":"Media Heading"}],
+        ["bs.P",{"html.":"Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo."}]
+      ],
+      [ ["bs.MediaRight",{"alignTo":"top"}],
+        ["Img",{"src":"/app/rewgt/shadow-bootstrap/web/output/64x64.svg"}]
+      ]
+    ]
+  ]
+}

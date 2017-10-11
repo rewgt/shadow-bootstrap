@@ -1,0 +1,13 @@
+{
+  "name": "bs.FormGroup",
+  "widget": [ ["bs.FormGroup",{"bsSize":""}],
+    ["bs.CtrlLabel",{"html.":"Example with validation"}],
+    [ ["bs.FormCtrl",{"type":"select","multiple":"1"}],
+      ["Option",{"value":"volvo","html.":"Volvo"}],
+      ["Option",{"value":"saab","html.":"Saab"}],
+      ["Option",{"value":"opel","html.":"Opel"}]
+    ],
+    ["bs.FormFeedback",{}],
+    ["bs.HelpBlock",{"html.":"Help string for this field"}]
+  ]
+}

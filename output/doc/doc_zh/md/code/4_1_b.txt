@@ -1,0 +1,11 @@
+<div $=bs.NavDiv>
+  <div $=bs.Nav bs-style='pills' klass='align_center-right-default' stacked='1' width='{200}'>
+    <div $=bs.NavItem key='item1' data-checked='1'>NavItem 1</div>
+    <div $=bs.NavItem key='item2'>NavItem 2</div>
+    <div $=bs.NavItem key='item3'>NavItem 3</div>
+    <pre $=bs.DropdownBtn key='drop' desc='Others'>
+<div $=bs.OptItem key='item4'>Menu 1</div>
+<div $=bs.OptItem key='item5'>Menu 2</div>
+</pre>
+  </div>
+</div>

@@ -1,0 +1,10 @@
+<div $=bs.Grid $$for='' 
+     $width='duals(".body").innerSize[0]-duals(".body.book.summary").width-94'>
+  <div $=bs.Jumbotron>
+    <div $=bs.H1>Hello, world!</div>
+    <div $=bs.P>This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</div>
+    <div $=bs.P>
+      <span $=bs.Btn bs-style='primary'>Learn more</span>
+    </div>
+  </div>
+</div>

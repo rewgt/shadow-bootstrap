@@ -1,0 +1,3 @@
+<div $=bs.PageHeader>
+  <div $=bs.P klass='S4'>Example page header</div>
+</div>

@@ -1,0 +1,4 @@
+bs.P
+9.3.!api_p
+[ props ]
+  bsClass: 'p'

@@ -1,0 +1,8 @@
+{
+  "name": "bs.Fade",
+  "widget": [ ["bs.Fade", {"defaultExpanded":"1","minWidth":20,"minHeight":20}],
+    [ ["bs.Div2",{"klass":"alert alert-warning"}],
+      ["Span",{"klass":"text-success","html.":"Fading message"}]
+    ]
+  ]
+}

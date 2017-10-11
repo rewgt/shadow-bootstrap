@@ -1,0 +1,4 @@
+bs.Dt
+9.3.!api_dt
+[ props ]
+  bsClass: 'dt'

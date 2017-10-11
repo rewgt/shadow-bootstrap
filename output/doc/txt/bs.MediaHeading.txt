@@ -1,0 +1,4 @@
+bs.MediaHeading
+8.4.!api_mediaheading
+[ props ]
+  bsClass: 'media-heading'

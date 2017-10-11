@@ -1,0 +1,8 @@
+<div $=bs.Div2 klass='alert alert-warning'>
+  <span $=Strong>Holy guacamole! </span>
+  <span $=Span klass='text-success'>Best check yo self, </span>
+  <span $=Span>you're not looking too good.</span>
+</div>
+
+<div $=bs.P klass='text-muted'>Fusce dapibus, tellus ac cursus commodo.</div>
+<div $=bs.P klass='text-danger'>Etiam porta sem malesuada magna mollis euismod.</div>

@@ -1,0 +1,9 @@
+<div $=bs.Form>
+  <div $=bs.FormGroup $for=''>
+    <span $=bs.CtrlLabel>Example with validation</span>
+    <span $=bs.FormCtrl key='input' placeholder='Input name' 
+       $trigger='["//",{$set:duals("input").value.length >= 2?"success":"warning"},"validation"]'></span>
+    <span $=bs.FormFeedback></span>
+    <span $=bs.HelpBlock>Validation is based on string length.</span>
+  </div>
+</div>

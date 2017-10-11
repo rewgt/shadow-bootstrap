@@ -1,0 +1,7 @@
+{
+  "name": "bs.FormGroup",
+  "widget": [ ["bs.FormGroup",{"bsSize":""}],
+    ["bs.Radio",{"name":"group1","defaultChecked":"","html.":"Radio1"}],
+    ["bs.Radio",{"name":"group1","defaultChecked":"","html.":"Radio2"}]
+  ]
+}

@@ -1,0 +1,19 @@
+bs.DropdownBtn
+3.2.!api_dropdownbtn
+[ props ]
+  bsClass: 'dropdown'
+  noSelect
+[ duals ]
+  desc: ''
+  bsStyle: 'default'
+  bsSize
+  data-checked: ''
+  disabled: ''
+  itemSpace
+  noCaret
+  dropup
+  pullRight
+  open
+  focus()
+  onToggle(isOpen,event,info)
+  onSelect(sKey,event)

@@ -1,0 +1,27 @@
+<div $=bs.Table striped='1' bordered='1' condensed='1' hover='1'>
+  <div $=bs.Thead>
+    <div $=bs.Tr>
+      <div $=bs.Th>#</div>
+      <div $=bs.Th>First Name</div>
+      <div $=bs.Th>Last Name</div>
+      <div $=bs.Th>Username</div>
+    </div>
+  </div>
+  <div $=bs.Tbody>
+    <div $=bs.Tr>
+      <div $=bs.Td>1</div>
+      <div $=bs.Td klass='warning'>Mark</div>
+      <div $=bs.Td>Otto</div>
+      <div $=bs.Td>@mdo</div>
+    </div><div $=bs.Tr klass='info'>
+      <div $=bs.Td>2</div>
+      <div $=bs.Td>Jacob</div>
+      <div $=bs.Td>Thornton</div>
+      <div $=bs.Td>@fat</div>
+    </div><div $=bs.Tr>
+      <div $=bs.Td>3</div>
+      <div $=bs.Td col-span='{2}'>Larry the Bird</div>
+      <div $=bs.Td>@twitter</div>
+    </div>
+  </div>
+</div>

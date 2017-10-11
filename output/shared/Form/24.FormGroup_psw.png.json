@@ -1,0 +1,9 @@
+{
+  "name": "bs.FormGroup",
+  "widget": [ ["bs.FormGroup",{"bsSize":""}],
+    ["bs.CtrlLabel",{"html.":"Example with validation"}],
+    ["bs.FormCtrl",{"type":"password","placeholder":""}],
+    ["bs.FormFeedback",{}],
+    ["bs.HelpBlock",{"html.":"Help string for this field"}]
+  ]
+}

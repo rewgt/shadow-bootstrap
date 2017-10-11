@@ -1,0 +1,4 @@
+bs.HelpBlock
+7.2.!api_helpblock
+[ props ]
+  bsClass: 'help-block'

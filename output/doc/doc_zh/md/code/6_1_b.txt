@@ -1,0 +1,12 @@
+<div $=bs.ModalDialog key='dia' dialog-width='large'>
+  <div $=bs.ModalHeader desc='Modal title'></div>
+  <div $=bs.ModalBody>example...</div>
+  <div $=bs.ModalFooter>
+    <span $=bs.Btn>Reset</span>
+    <span $=bs.Btn bs-style='primary'>Save changes</span>
+  </div>
+</div>
+<div $=bs.P>
+  <span $=bs.OptBtn fire-type='onsite'
+    $trigger='["////dia",{$set:"1"},"showModal"]'>Show dialog</span>
+</div>

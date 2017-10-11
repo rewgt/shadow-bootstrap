@@ -1,0 +1,7 @@
+bs.FormCtrl
+7.1.!api_formctrl
+[ props ]
+  bsClass: 'form-control'
+[ duals ]
+  type: 'text'
+  bsSize

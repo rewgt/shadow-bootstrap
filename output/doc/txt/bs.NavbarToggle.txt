@@ -1,0 +1,4 @@
+bs.NavbarToggle
+4.2.!api_navbartoggle
+[ props ]
+  bsClass: 'navbar-toggle'

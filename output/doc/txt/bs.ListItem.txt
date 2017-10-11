@@ -1,0 +1,10 @@
+bs.ListItem
+5.3.!api_listitem
+[ props ]
+  bsClass: 'list-group-item'
+[ duals ]
+  bsStyle: ''
+  data-checked
+  disabled
+  href
+  header

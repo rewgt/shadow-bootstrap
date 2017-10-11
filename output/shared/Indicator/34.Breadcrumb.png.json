@@ -1,0 +1,8 @@
+{
+  "name": "bs.Breadcrumb",
+  "widget": [ ["bs.Breadcrumb", {}],
+    ["bs.BreadItem",{"href":"","html.":"Home"}],
+    ["bs.BreadItem",{"href":"","html.":"Library"}],
+    ["bs.BreadItem",{"active":"1","html.":"Data"}]
+  ]
+}

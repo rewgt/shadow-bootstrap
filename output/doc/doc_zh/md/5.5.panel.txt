@@ -1,0 +1,178 @@
+5.5 Panel
+-----------
+
+&nbsp;
+
+### Panel 面板
+
+Bootstrap 中的面板 `bs.Panel`，与 Shadow Widget 中用于 flex 布局的面板含义不同，功能也完全不同，这两者没有关联。
+
+`bs.Panel` 提供由 `duals.bsStyle` 指定显示风格的面板，举例如下。
+
+<div $='.rewgt.ui_demo' src='md/code/5_5_a.txt' input-height='{160}'></div>
+
+其中 `bs.PanelHeader, bs.PanelBody, bs.PanelFooter` 在本例中分别表达面板标题、面板内容、面板脚注，这 3 种构件可选使用。
+
+### 使用 PanelCollapse
+
+如果想让面板内容可伸缩，可在 Panel 下放置 `bs.PanelCollapse` 构件。
+
+<div $='.rewgt.ui_demo' src='md/code/5_5_b.txt' input-height='{150}'></div>
+
+`props.defaultExpanded` 用来指示缺省是否展开。PanelCollapse 的 `duals.expanded` 属性既是状态量，指示内容是否已展开，它还是控制器，对它赋值可展开或收缩 PanelCollapse 中的内容。
+
+下面例子在面板标题点击，可切换面板内容展开或收缩。
+
+<div $='.rewgt.ui_demo' src='md/code/5_5_c.txt' input-height='{170}'></div>
+
+下面例子构造一组面板，可点选任一面板展示其内容。
+
+<div $='.rewgt.ui_demo' src='md/code/5_5_d.txt' input-height='{210}'></div>
+
+说明：`bs.PanelCollapse` 支持以 `duals.animation='1'` 启用面板内容展开或收缩的动画效果。
+
+### Panel 的内容定义
+
+`bs.Panel` 面板内容可直接在它的子层定义，不过我们一般把内容包在 `bs.PanelBody` 中，再把 `bs.PanelBody` 挂到 `bs.Panel` 的子层，因为 `bs.PanelBody` 缺省设置的 padding 对齐更好用些。`bs.PanelBody` 中，视需要可定义任意复杂的界面，一个 `bs.Panel` 下还装入多个 `bs.PanelBody`。
+
+下面例子在 `bs.Panel` 装入一个列表组。
+
+<div $='.rewgt.ui_demo' src='md/code/5_5_e.txt' input-height='{210}'></div>
+
+下面例子在 `bs.Panel` 装入一个表格。
+
+<div $='.rewgt.ui_demo' src='md/code/5_5_f.txt' input-height='{560}'></div>
+
+### PanelGroup 面板组
+
+上面有个例子演示创建一组面板，点选其中任意一个来切换内容展示，shadow-bootstrap 为此类应用提供了更好的封装：`bs.PanelGroup`。
+
+<div $='.rewgt.ui_demo' src='md/code/5_5_g.txt' input-height='{190}'></div>
+
+属性 `props.accordion` 指示是否关联 “多选一展开” 的功能，若关联了，点击其下各面板的 `bs.PanelHeader` 时，将 `bs.PanelGroup` 的 `duals.activeKey` 设为指定面板的 key 值。`duals.activeKey` 用来控制同组面板中，哪个面板要展开显示。
+
+### API 接口
+
+<a name="api_panel"></a>构件 `bs.Panel`（继承自 `bs.Div2`）：
+
+<div $=bs.Table responsive='1' striped='' bordered='1' condensed='1' hover='1'>
+  <div $=bs.Thead sty__='background:#e8e8e8'><div $=bs.Tr>
+    <div $=bs.Th width='{160}'>属性</div>
+    <div $=bs.Th width='{80}'>类型</div>
+    <div $=bs.Th width='{100}'>缺省值</div>
+    <div $=bs.Th>描述</div>
+  </div></div>
+  <div $=bs.Tbody><div $=bs.Tr>
+    <div $=bs.Td><code>props.bsClass</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>'panel'</div>
+    <div $=bs.Td></div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.bsStyle</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>'default'</div>
+    <div $=bs.Td>面板表现风格，取值：'default', 'success', 'warning', 'danger', 'info', 'primary'</div>
+  </div></div>
+</div>
+
+<a name="api_panelheader"></a>构件 `bs.PanelHeader`（继承自 `bs.Div2`）：
+
+<div $=bs.Table responsive='1' striped='' bordered='1' condensed='1' hover='1'>
+  <div $=bs.Thead sty__='background:#e8e8e8'><div $=bs.Tr>
+    <div $=bs.Th width='{160}'>属性</div>
+    <div $=bs.Th width='{80}'>类型</div>
+    <div $=bs.Th width='{100}'>缺省值</div>
+    <div $=bs.Th>描述</div>
+  </div></div>
+  <div $=bs.Tbody><div $=bs.Tr>
+    <div $=bs.Td><code>props.bsClass</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>'panel-heading'</div>
+    <div $=bs.Td></div>
+  </div></div>
+</div>
+
+<a name="api_panelfooter"></a>构件 `bs.PanelFooter`（继承自 `bs.Div2`）：
+
+<div $=bs.Table responsive='1' striped='' bordered='1' condensed='1' hover='1'>
+  <div $=bs.Thead sty__='background:#e8e8e8'><div $=bs.Tr>
+    <div $=bs.Th width='{160}'>属性</div>
+    <div $=bs.Th width='{80}'>类型</div>
+    <div $=bs.Th width='{100}'>缺省值</div>
+    <div $=bs.Th>描述</div>
+  </div></div>
+  <div $=bs.Tbody><div $=bs.Tr>
+    <div $=bs.Td><code>props.bsClass</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>'panel-footer'</div>
+    <div $=bs.Td></div>
+  </div></div>
+</div>
+
+<a name="api_panelbody"></a>构件 `bs.PanelBody`（继承自 `bs.Div2`）：
+
+<div $=bs.Table responsive='1' striped='' bordered='1' condensed='1' hover='1'>
+  <div $=bs.Thead sty__='background:#e8e8e8'><div $=bs.Tr>
+    <div $=bs.Th width='{160}'>属性</div>
+    <div $=bs.Th width='{80}'>类型</div>
+    <div $=bs.Th width='{100}'>缺省值</div>
+    <div $=bs.Th>描述</div>
+  </div></div>
+  <div $=bs.Tbody><div $=bs.Tr>
+    <div $=bs.Td><code>props.bsClass</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>'panel-body'</div>
+    <div $=bs.Td></div>
+  </div></div>
+</div>
+
+<a name="api_panelcollapse"></a>构件 `bs.PanelCollapse`（继承自 `bs.Collapse`）：
+
+<div $=bs.Table responsive='1' striped='' bordered='1' condensed='1' hover='1'>
+  <div $=bs.Thead sty__='background:#e8e8e8'><div $=bs.Tr>
+    <div $=bs.Th width='{160}'>属性</div>
+    <div $=bs.Th width='{80}'>类型</div>
+    <div $=bs.Th width='{100}'>缺省值</div>
+    <div $=bs.Th>描述</div>
+  </div></div>
+  <div $=bs.Tbody><div $=bs.Tr>
+    <div $=bs.Td><code>props.bsClass</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>'panel-collapse'</div>
+    <div $=bs.Td></div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>props.collapseClass</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>'panel-collapse'</div>
+    <div $=bs.Td>指定附加的 class 定义</div>
+  </div></div>
+</div>
+
+<a name="api_panelgroup"></a>构件 `bs.PanelGroup`（继承自 `bs.Div2`）：
+
+<div $=bs.Table responsive='1' striped='' bordered='1' condensed='1' hover='1'>
+  <div $=bs.Thead sty__='background:#e8e8e8'><div $=bs.Tr>
+    <div $=bs.Th width='{160}'>属性</div>
+    <div $=bs.Th width='{80}'>类型</div>
+    <div $=bs.Th width='{100}'>缺省值</div>
+    <div $=bs.Th>描述</div>
+  </div></div>
+  <div $=bs.Tbody><div $=bs.Tr>
+    <div $=bs.Td><code>props.bsClass</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>'panel-group'</div>
+    <div $=bs.Td></div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>props.accordion</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td></div>
+    <div $=bs.Td>是否关联 “多选一展开”，取值：'' 或 '1' </div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.activeKey</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>''</div>
+    <div $=bs.Td>在同组面板中，用 key 值指示哪个面板选中展开</div>
+  </div></div>
+</div>
+
+&nbsp;

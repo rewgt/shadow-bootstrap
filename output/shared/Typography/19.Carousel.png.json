@@ -1,0 +1,33 @@
+{
+  "name": "bs.Carousel",
+  "widget": [ ["bs.Carousel", {
+      "data-group.opt":"mono/none",
+      "width": 900,
+      "height": 500,
+      "activeIndex": 0,
+      "slide": "1",
+
+      "dual-data": [ {
+        "src":"/app/rewgt/shadow-bootstrap/web/output/carousel.png",
+        "title": "First slide",
+        "desc":"It is short description"
+      },{
+        "src":"/app/rewgt/shadow-bootstrap/web/output/carousel.png",
+        "title": "Second slide",
+        "desc":"It is short description"
+      },{
+        "src":"/app/rewgt/shadow-bootstrap/web/output/carousel.png",
+        "title": "Third slide",
+        "desc":"It is short description"
+      }],
+      "$$for": "item in duals.data"
+    }],
+    [ ["bs.CarouselItem",{"$key":"'a'+index"}],
+      ["Img",{"style":{"width":"100%","height":"100%"},"$src":"item.src"}],
+      [ ["bs.CarouselCaption",{}],
+        ["bs.H3",{"$html":"item.title"}],
+        ["bs.P",{"$html":"item.desc"}]
+      ]
+    ]
+  ]
+}

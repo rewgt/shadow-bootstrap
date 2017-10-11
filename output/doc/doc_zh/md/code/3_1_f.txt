@@ -1,0 +1,12 @@
+<div $=bs.P>
+  <span $=bs.Btn bs-style='info' icon='md/res/linker.png'> Linker</span>
+  <span $=bs.Btn bs-style='info' glyph='film' item-space='{2}'> Vedio</span>
+</div>
+<div $=bs.P>
+  <span $=bs.Btn bs-style='success'>
+    <span $=Img src='md/res/linker.png'></span><span $=Span> Linker</span>
+  </span>
+  <span $=bs.Btn bs-style='success' item-space='{2}'>
+    <span $=bs.Glyphicon glyph='film' sty__='color:yellow'></span><span $=Span> Vedio</span>
+  </span>
+</div>

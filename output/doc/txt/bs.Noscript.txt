@@ -1,0 +1,4 @@
+bs.Noscript
+9.3.!api_noscript
+[ props ]
+  bsClass: 'noscript'

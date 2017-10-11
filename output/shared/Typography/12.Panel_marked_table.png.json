@@ -1,0 +1,10 @@
+{
+  "name": "bs.Panel",
+  "widget": [ ["bs.Panel",{}],
+    ["bs.PanelHeader",{"html.":"Heading"}],
+    [ ["bs.PanelCollapse",{"defaultExpanded":"1"}],
+      ["bs.MarkedTable",{"klass":"default-large-small p1-p2-p3-p0","html.":"Row1ColA\n\nRow1ColB\n\n---\n\nRow2ColA\n\nRow2ColB\n"}]
+    ],
+    ["bs.PanelFooter",{"html.":"It is footer"}]
+  ]
+}

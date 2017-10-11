@@ -1,0 +1,6 @@
+bs.Panel
+5.5.!api_panel
+[ props ]
+  bsClass: 'panel'
+[ duals ]
+  bsStyle: 'default'

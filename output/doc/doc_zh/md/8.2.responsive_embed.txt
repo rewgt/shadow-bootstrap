@@ -1,0 +1,45 @@
+8.2 ResponsiveEmbed
+-------------
+
+&nbsp;
+
+### ResponsiveEmbed 响应式嵌入内容
+
+`bs.ResponsiveEmbed` 是用来容纳可嵌入内容的容器，可嵌入内容包括 `<iframe>, <embed>, <video>, <object>` 等，通常在 ResponsiveEmbed 指定宽度，系统自动创建一个具有固定宽高比例，让浏览器自适应尺寸的视频或演示胶片。
+
+<div $='.rewgt.ui_demo' src='md/code/8_2_a.txt' input-height='{130}'></div>
+
+对于被嵌入的内容对象，如果你希望最终样式与其他属性匹配，应在 `klass` 属性指定 `'embed-responsive-item'` 类。提示：不必为 `<iframe>` 设置 `frameborder='0'`，因为 Bootstrap 已替你做了。
+
+属性 `duals.a16by9` 指示是否使用 `9:16` 纵横比，`duals.a4by3` 指示是否使用 `3:4` 纵横比。
+
+### API 接口
+
+<a name="api_responsiveembed"></a>构件 `bs.ResponsiveEmbed`（继承自 `bs.Div2`）：
+
+<div $=bs.Table responsive='1' striped='' bordered='1' condensed='1' hover='1'>
+  <div $=bs.Thead sty__='background:#e8e8e8'><div $=bs.Tr>
+    <div $=bs.Th width='{160}'>属性</div>
+    <div $=bs.Th width='{80}'>类型</div>
+    <div $=bs.Th width='{100}'>缺省值</div>
+    <div $=bs.Th>描述</div>
+  </div></div>
+  <div $=bs.Tbody><div $=bs.Tr>
+    <div $=bs.Td><code>props.bsClass</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>'embed-responsive'</div>
+    <div $=bs.Td></div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.a16by9</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td></div>
+    <div $=bs.Td>是否使用 "9:16" 纵横比，取值：'' 或 '1' </div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.a4by3</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td></div>
+    <div $=bs.Td>是否使用 "3:4" 纵横比，取值：'' 或 '1' </div>
+  </div></div>
+</div>
+
+&nbsp;

@@ -1,0 +1,9 @@
+<div $=bs.Panel $for='' dual-data='1'>
+  <div $=bs.PanelHeader>
+    <span $=OptA fire-type='onsite' $trigger='["////",{$set:duals.data?"":"1"}]'>Heading</span>
+  </div>
+  <div $=bs.PanelCollapse $expanded='duals.data'>
+    <div $=bs.PanelBody>example</div>
+  </div>
+  <div $=bs.PanelFooter>It is footer</div>
+</div>

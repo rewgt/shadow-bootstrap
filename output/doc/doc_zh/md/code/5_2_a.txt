@@ -1,0 +1,6 @@
+<div $=bs.PageHeader>
+  <div $=bs.H1>
+    <span $=Span>Example page header </span>
+    <span $=Small>Subtext for header</span>
+  </div>
+</div>

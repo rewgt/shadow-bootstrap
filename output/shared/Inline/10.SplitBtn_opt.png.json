@@ -1,0 +1,6 @@
+{
+  "name": "bs.SplitBtn",
+  "widget": ["bs.SplitBtn", {"desc":"Test", "itemSpace":0,
+    "html.": "<div $=bs.OptItem key='m1'>Action</div>\n<div $=bs.OptItem key='m2'>Another action</div>\n<div $=bs.OptItem key='m3' data-checked='1' href=''>Active Item</div>\n<div $=bs.OptItem key='m4' divider='1'></div>\n<div $=bs.OptItem key='m5'>Separated link</div>\n"
+  }]
+}

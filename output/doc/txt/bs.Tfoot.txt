@@ -1,0 +1,4 @@
+bs.Tfoot
+9.3.!api_tfoot
+[ props ]
+  bsClass: 'tfoot'

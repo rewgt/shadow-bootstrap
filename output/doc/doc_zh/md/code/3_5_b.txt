@@ -1,0 +1,7 @@
+<div $=bs.Div2 height='{100}'>
+  <pre $=bs.MenuList default-open='1'>
+<div $=bs.MenuItem key='m2' icon='md/res/linker.png'> Menu item 2</div>
+<div $=bs.MenuItem key='m3' divider='1'></div>
+<div $=bs.MenuItem key='m4' glyph='film'> Menu item 3</div>
+</pre>
+</div>

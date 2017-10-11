@@ -1,0 +1,7 @@
+bs.ResponsiveEmbed
+8.2.!api_responsiveembed
+[ props ]
+  bsClass: 'embed-responsive'
+[ duals ]
+  a16by9
+  a4by3

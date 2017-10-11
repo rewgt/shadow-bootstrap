@@ -1,0 +1,4 @@
+{
+  "name": "bs.Well",
+  "widget": ["bs.Well",{"bsSize":"","html.":"Look, I'm in a well!"}]
+}

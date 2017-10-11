@@ -1,0 +1,72 @@
+7.4 InputGroup
+-----------
+
+&nbsp;
+
+### InputGroup
+
+`bs.InputGroup` 在 `bs.FormCtrl` 输入框之前或之后添加额外构件。
+
+<div $='.rewgt.ui_demo' src='md/code/7_4_a.txt' input-height='{720}'></div>
+
+InputGroup 用 `duals.bsSize` 指定其下输入框大小。在 InputGroup 之下，可选择放置 `bs.InputGroupAddon`，`bs.InputGroupBtn`，`bs.DropdownBtn` 等。
+
+### API 接口
+
+<a name="api_inputgroup"></a>构件 `bs.InputGroup`（继承自 `Span`）：
+
+<div $=bs.Table responsive='1' striped='' bordered='1' condensed='1' hover='1'>
+  <div $=bs.Thead sty__='background:#e8e8e8'><div $=bs.Tr>
+    <div $=bs.Th width='{160}'>属性</div>
+    <div $=bs.Th width='{80}'>类型</div>
+    <div $=bs.Th width='{100}'>缺省值</div>
+    <div $=bs.Th>描述</div>
+  </div></div>
+  <div $=bs.Tbody><div $=bs.Tr>
+    <div $=bs.Td><code>props.bsClass</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>'input-group'</div>
+    <div $=bs.Td></div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.bsSize</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td></div>
+    <div $=bs.Td>指定输入框大小，可选：'', 'large', 'small' </div>
+  </div></div>
+</div>
+
+<a name="api_inputgroupaddon"></a>构件 `bs.InputGroupAddon`（继承自 `Span`）：
+
+<div $=bs.Table responsive='1' striped='' bordered='1' condensed='1' hover='1'>
+  <div $=bs.Thead sty__='background:#e8e8e8'><div $=bs.Tr>
+    <div $=bs.Th width='{160}'>属性</div>
+    <div $=bs.Th width='{80}'>类型</div>
+    <div $=bs.Th width='{100}'>缺省值</div>
+    <div $=bs.Th>描述</div>
+  </div></div>
+  <div $=bs.Tbody><div $=bs.Tr>
+    <div $=bs.Td><code>props.bsClass</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>'input-group-addon'</div>
+    <div $=bs.Td></div>
+  </div></div>
+</div>
+
+<a name="api_inputgroupbtn"></a>构件 `bs.InputGroupBtn`（继承自 `Span`）：
+
+<div $=bs.Table responsive='1' striped='' bordered='1' condensed='1' hover='1'>
+  <div $=bs.Thead sty__='background:#e8e8e8'><div $=bs.Tr>
+    <div $=bs.Th width='{160}'>属性</div>
+    <div $=bs.Th width='{80}'>类型</div>
+    <div $=bs.Th width='{100}'>缺省值</div>
+    <div $=bs.Th>描述</div>
+  </div></div>
+  <div $=bs.Tbody><div $=bs.Tr>
+    <div $=bs.Td><code>props.bsClass</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>'input-group-btn'</div>
+    <div $=bs.Td></div>
+  </div></div>
+</div>
+
+&nbsp;

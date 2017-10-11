@@ -1,0 +1,4 @@
+bs.OptItem
+3.5.!api_optitem
+[ props ]
+  bsClass: 'menuitem'

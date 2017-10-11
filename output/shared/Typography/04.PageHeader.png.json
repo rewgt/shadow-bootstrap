@@ -1,0 +1,15 @@
+{
+  "name": "bs.PageHeader",
+  "widget": [ ["bs.PageHeader",{}],
+    [ ["bs.H1",{"html.":"Shadow Widget + Bootstrap"}],
+      ["Span",{"html.":"Example page header "}],
+      ["Small",{"html.":"Subtext for header"}]
+    ]
+  ],
+  "scene": [ ["bs.PageHeader",{"width":600}],
+    [ ["bs.H1",{"html.":"Shadow Widget + Bootstrap"}],
+      ["Span",{"html.":"Example page header "}],
+      ["Small",{"html.":"Subtext for header"}]
+    ]
+  ]
+}

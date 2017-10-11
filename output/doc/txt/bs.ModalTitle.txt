@@ -1,0 +1,4 @@
+bs.ModalTitle
+6.1.!api_modaltitle
+[ props ]
+  bsClass: 'modal-title'

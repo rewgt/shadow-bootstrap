@@ -1,0 +1,12 @@
+bs.MenuItem
+3.5.!api_menuitem
+[ props ]
+  bsClass: 'menuitem'
+[ duals ]
+  header
+  divider
+  role
+  data-checked
+  disabled: ''
+  icon
+  glyph

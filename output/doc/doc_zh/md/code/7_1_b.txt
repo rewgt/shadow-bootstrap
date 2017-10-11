@@ -1,0 +1,10 @@
+<div $=bs.P>
+  <span $=bs.FormCtrl type='select'>
+    <span $=Option value='volvo'>Volvo</span>
+    <span $=Option value='saab'>Saab</span>
+    <span $=Option value='opel'>Opel</span>
+  </span>
+</div>
+<div $=bs.P>
+  <span $=bs.FormCtrl type='textarea'></span>
+</div>

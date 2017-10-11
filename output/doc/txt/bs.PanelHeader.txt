@@ -1,0 +1,4 @@
+bs.PanelHeader
+5.5.!api_panelheader
+[ props ]
+  bsClass: 'panel-heading'

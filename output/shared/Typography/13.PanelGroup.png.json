@@ -1,0 +1,26 @@
+{
+  "name": "bs.PanelGroup",
+  "widget": [ ["bs.PanelGroup",{"accordion":"1","activeKey":"a"}],
+    [ ["bs.Panel",{"key":"a"}],
+      ["bs.PanelHeader",{"html.":"Heading"}],
+      [ ["bs.PanelCollapse",{"animation":"1"}],
+        ["bs.PanelBody",{"html.":"Basic panel example"}]
+      ],
+      ["bs.PanelFooter",{"html.":"It is footer"}]
+    ],
+    [ ["bs.Panel",{"key":"b"}],
+      ["bs.PanelHeader",{"html.":"Heading"}],
+      [ ["bs.PanelCollapse",{"animation":"1"}],
+        ["bs.PanelBody",{"html.":"Basic panel example"}]
+      ],
+      ["bs.PanelFooter",{"html.":"It is footer"}]
+    ],
+    [ ["bs.Panel",{"key":"c"}],
+      ["bs.PanelHeader",{"html.":"Heading"}],
+      [ ["bs.PanelCollapse",{"animation":"1"}],
+        ["bs.PanelBody",{"html.":"Basic panel example"}]
+      ],
+      ["bs.PanelFooter",{"html.":"It is footer"}]
+    ]
+  ]
+}

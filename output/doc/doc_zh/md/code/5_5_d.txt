@@ -1,0 +1,11 @@
+<div $=bs.NavDiv $$for='item in duals.data' dual-which='a' dual-data='{["a","b","c"]}'>
+  <div $=bs.Panel $key='item' margin='{[5,0,5,0]}'>
+    <div $=bs.PanelHeader>
+      <span $=OptA fire-type='onsite' $trigger='["./",{$set:item},"which"]'>Heading</span>
+    </div>
+    <div $=bs.PanelCollapse animation='1' $expanded='duals(-1).which === item?"1":""'>
+      <div $=bs.PanelBody $html='"PanelBody: " + item'></div>
+    </div>
+    <div $=bs.PanelFooter>It is footer</div>
+  </div>
+</div>

@@ -1,0 +1,4 @@
+{
+  "name": "bs.FormCtrlStatic",
+  "widget": ["bs.FormCtrlStatic",{"html.":"FormCtrlStatic text"}]
+}

@@ -1,0 +1,8 @@
+{
+  "name": "bs.Collapse",
+  "widget": [ ["bs.Collapse", {"defaultExpanded":"1","anamation":"1","minWidth":20,"minHeight":20}],
+    [ ["bs.Div2",{"klass":"alert alert-info"}],
+      ["Span",{"klass":"text-success","html.":"Collapsing message"}]
+    ]
+  ]
+}

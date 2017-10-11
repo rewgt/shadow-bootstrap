@@ -1,0 +1,6 @@
+bs.ModalHead
+6.1.!api_modalhead
+[ props ]
+  bsClass: 'modal-header'
+[ duals ]
+  desc

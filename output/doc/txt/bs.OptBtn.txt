@@ -1,0 +1,16 @@
+bs.OptBtn
+3.4.!api_optbtn
+[ props ]
+  bsClass: 'btn'
+[ duals ]
+  role: 'button'
+  type: 'button'
+  bsStyle: 'default'
+  bsSize
+  block: ''
+  data-checked: ''
+  disabled: ''
+  icon
+  glyph
+  itemSpace
+  href

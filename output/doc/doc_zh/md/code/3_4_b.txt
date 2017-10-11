@@ -1,0 +1,10 @@
+<div $=bs.NavDiv>
+  <div $=bs.BtnToolbar>
+    <div $=bs.BtnGroup>
+      <span $=bs.OptBtn key='page1' data-checked='1'>Page 1</span>
+      <span $=bs.OptBtn key='page2'>Page 2</span>
+    </div>
+  </div>
+  <div $=bs.GroundDiv key='page1' width='{0.9999}'>In page 1</div>
+  <div $=bs.GroundDiv key='page2' width='{0.9999}'>In page 2</div>
+</div>

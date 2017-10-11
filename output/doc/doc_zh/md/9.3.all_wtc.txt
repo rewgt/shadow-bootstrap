@@ -1,0 +1,885 @@
+9.3 类继承一览表
+----------
+
+&nbsp;
+
+### 类继承列表
+
+由 shadow-bootstrap 扩展的所有 WTC，类继承关系如下。
+
+```
+  Div2
+  +-- bs.Div2
+  |   +-- bs.Noscript/Fieldset/Details/Dl/Dd/Dt/Figure/Figcaption
+  |   +-- bs.Menu/Menuitem/Address/Iframe/Blockquote/Caption
+  |   +-- bs.Colgroup/Td/Tbody/Thead/Tfoot/Th/Tr/Hgroup
+  |   +-- bs.H1/H2/H3/H5/H6/Hr/Pre
+  |   +-- bs.Form
+  |   |   +-- bs.NavbarForm
+  |   +-- bs.Table
+  |   +-- bs.P
+  |   |   +-- bs.NavbarText
+  |   |   +-- bs.FormCtrlStatic
+  |   +-- bs.H4
+  |   |   +-- bs.ModalTitle
+  |   |   +-- bs.MediaHeading
+  |   +-- bs.Ul
+  |   |   +-- bs.Nav
+  |   |   +-- bs.Pagination
+  |   |   +-- bs.Pager
+  |   |   +-- bs.MediaList
+  |   +-- bs.Ol
+  |   |   +-- bs.Breadcrumb
+  |   +-- bs.Li
+  |   |   +-- bs.MenuItem
+  |   |   |   +-- bs.OptItem
+  |   |   +-- bs.BreadItem
+  |   |   +-- bs.PagerItem
+  |   |   +-- bs.MediaItem
+  |   +-- bs.BtnGroup
+  |   +-- bs.BtnToolbar
+  |   +-- bs.ModalDialog
+  |   +-- bs.ModalHeader
+  |   +-- bs.ModalBody
+  |   +-- bs.ModalFooter
+  |   +-- bs.Tooltip
+  |   +-- bs.Popover
+  |   +-- bs.OverlayTrigger
+  |   +-- bs.Navbar
+  |   +-- bs.NavbarHeader
+  |   +-- bs.Fade
+  |   +-- bs.Collapse
+  |   |   +-- bs.NavbarCollapse
+  |   |   +-- bs.PanelCollapse
+  |   +-- bs.Grid
+  |   +-- bs.Row
+  |   +-- bs.Col
+  |   +-- bs.Clearfix
+  |   +-- bs.Jumbotron
+  |   +-- bs.PageHeader
+  |   +-- bs.ListGroup
+  |   +-- bs.ListItem
+  |   +-- bs.Panel
+  |   +-- bs.PanelGroup
+  |   +-- bs.PanelHeader
+  |   +-- bs.PanelFooter
+  |   +-- bs.PanelBody
+  |   +-- bs.Well
+  |   +-- bs.FormGroup
+  |   +-- bs.Thumbnail
+  |   +-- bs.ResponsiveEmbed
+  |   +-- bs.Carousel
+  |   +-- bs.CarouselItem
+  |   +-- bs.CarouselCaption
+  |   +-- bs.Media
+  |   +-- bs.MediaLeft
+  |   |   +-- bs.MediaRight
+  |   +-- bs.MediaBody
+  |   +-- bs.Alert
+  |   +-- bs.Progress
+  |   +-- bs.ProgressBar
+
+  MarkedDiv
+  +-- bs.MarkedDiv
+  |   +-- bs.MenuList
+  |   +-- bs.DropdownBtn
+  |   |   +-- bs.SplitBtn
+  |   +-- bs.MarkedItem
+
+  MarkedTable
+  +-- bs.MarkedTable
+
+  NavDiv
+  +-- bs.NavDiv
+
+  GroundDiv
+  +-- bs.GroundDiv
+
+  OptLi
+  +-- bs.NavItem
+
+  Span
+  +-- bs.FormFeedback
+  +-- bs.HelpBlock
+  +-- bs.InputGroup
+  +-- bs.InputGroupAddon
+  +-- bs.InputGroupBtn
+  +-- bs.Glyphicon
+  +-- bs.Label
+  +-- bs.Badge
+
+  Button
+  +-- bs.Btn
+  +-- bs.NavbarToggle
+
+  OptButton
+  +-- bs.OptBtn
+
+  A
+  +-- bs.NavbarBrand
+  +-- bs.NavbarLink
+
+  Label
+  +-- bs.CtrlLabel
+  +-- bs.Checkbox
+  |   +-- bs.Radio
+
+  Input
+  +-- bs.FormCtrl
+
+  Img
+  +-- bs.Image
+```
+
+上面从 `Span` 项往后都是行内构件（即，均属 Span 类）。大家在编程中，如果分不清某个构件属于 P 类还是 Span 类，不妨查阅上表。
+
+### API 接口
+
+<a name="api_div2"></a>构件 `bs.Div2`（继承自 `Div2`）：
+
+<div $=bs.Table responsive='1' striped='' bordered='1' condensed='1' hover='1'>
+  <div $=bs.Thead sty__='background:#e8e8e8'><div $=bs.Tr>
+    <div $=bs.Th width='{160}'>属性</div>
+    <div $=bs.Th width='{80}'>类型</div>
+    <div $=bs.Th width='{100}'>缺省值</div>
+    <div $=bs.Th>描述</div>
+  </div></div>
+  <div $=bs.Tbody><div $=bs.Tr>
+    <div $=bs.Td><code>props.bsClass</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>'div2'</div>
+    <div $=bs.Td></div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.width</code></div>
+    <div $=bs.Td>number</div>
+    <div $=bs.Td>null</div>
+    <div $=bs.Td></div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.height</code></div>
+    <div $=bs.Td>number</div>
+    <div $=bs.Td>null</div>
+    <div $=bs.Td></div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.left</code></div>
+    <div $=bs.Td>number</div>
+    <div $=bs.Td>null</div>
+    <div $=bs.Td></div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.top</code></div>
+    <div $=bs.Td>number</div>
+    <div $=bs.Td>null</div>
+    <div $=bs.Td></div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.minWidth</code></div>
+    <div $=bs.Td>number</div>
+    <div $=bs.Td>0</div>
+    <div $=bs.Td></div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.minHeight</code></div>
+    <div $=bs.Td>number</div>
+    <div $=bs.Td>0</div>
+    <div $=bs.Td></div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.margin</code></div>
+    <div $=bs.Td>array</div>
+    <div $=bs.Td>[null,null,null,null]</div>
+    <div $=bs.Td></div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.padding</code></div>
+    <div $=bs.Td>array</div>
+    <div $=bs.Td>[null,null,null,null]</div>
+    <div $=bs.Td></div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.borderWidth</code></div>
+    <div $=bs.Td>array</div>
+    <div $=bs.Td>[null,null,null,null]</div>
+    <div $=bs.Td></div>
+  </div></div>
+</div>
+
+<a name="api_markeddiv"></a>构件 `bs.MarkedDiv`（继承自 `MarkedDiv`）：
+
+<div $=bs.Table responsive='1' striped='' bordered='1' condensed='1' hover='1'>
+  <div $=bs.Thead sty__='background:#e8e8e8'><div $=bs.Tr>
+    <div $=bs.Th width='{160}'>属性</div>
+    <div $=bs.Th width='{80}'>类型</div>
+    <div $=bs.Th width='{100}'>缺省值</div>
+    <div $=bs.Th>描述</div>
+  </div></div>
+  <div $=bs.Tbody><div $=bs.Tr>
+    <div $=bs.Td><code>props.bsClass</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>'markeddiv'</div>
+    <div $=bs.Td></div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.width</code></div>
+    <div $=bs.Td>number</div>
+    <div $=bs.Td>null</div>
+    <div $=bs.Td></div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.height</code></div>
+    <div $=bs.Td>number</div>
+    <div $=bs.Td>null</div>
+    <div $=bs.Td></div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.left</code></div>
+    <div $=bs.Td>number</div>
+    <div $=bs.Td>null</div>
+    <div $=bs.Td></div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.top</code></div>
+    <div $=bs.Td>number</div>
+    <div $=bs.Td>null</div>
+    <div $=bs.Td></div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.minWidth</code></div>
+    <div $=bs.Td>number</div>
+    <div $=bs.Td>0</div>
+    <div $=bs.Td></div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.minHeight</code></div>
+    <div $=bs.Td>number</div>
+    <div $=bs.Td>0</div>
+    <div $=bs.Td></div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.margin</code></div>
+    <div $=bs.Td>array</div>
+    <div $=bs.Td>[null,null,null,null]</div>
+    <div $=bs.Td></div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.padding</code></div>
+    <div $=bs.Td>array</div>
+    <div $=bs.Td>[null,null,null,null]</div>
+    <div $=bs.Td></div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.borderWidth</code></div>
+    <div $=bs.Td>array</div>
+    <div $=bs.Td>[null,null,null,null]</div>
+    <div $=bs.Td></div>
+  </div></div>
+</div>
+
+<a name="api_markedtable"></a>构件 `bs.MarkedTable`（继承自 `MarkedTable`）：
+
+<div $=bs.Table responsive='1' striped='' bordered='1' condensed='1' hover='1'>
+  <div $=bs.Thead sty__='background:#e8e8e8'><div $=bs.Tr>
+    <div $=bs.Th width='{160}'>属性</div>
+    <div $=bs.Th width='{80}'>类型</div>
+    <div $=bs.Th width='{100}'>缺省值</div>
+    <div $=bs.Th>描述</div>
+  </div></div>
+  <div $=bs.Tbody><div $=bs.Tr>
+    <div $=bs.Td><code>props.bsClass</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>'markedtable'</div>
+    <div $=bs.Td></div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.width</code></div>
+    <div $=bs.Td>number</div>
+    <div $=bs.Td>null</div>
+    <div $=bs.Td></div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.height</code></div>
+    <div $=bs.Td>number</div>
+    <div $=bs.Td>null</div>
+    <div $=bs.Td></div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.left</code></div>
+    <div $=bs.Td>number</div>
+    <div $=bs.Td>null</div>
+    <div $=bs.Td></div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.top</code></div>
+    <div $=bs.Td>number</div>
+    <div $=bs.Td>null</div>
+    <div $=bs.Td></div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.minWidth</code></div>
+    <div $=bs.Td>number</div>
+    <div $=bs.Td>0</div>
+    <div $=bs.Td></div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.minHeight</code></div>
+    <div $=bs.Td>number</div>
+    <div $=bs.Td>0</div>
+    <div $=bs.Td></div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.margin</code></div>
+    <div $=bs.Td>array</div>
+    <div $=bs.Td>[null,null,null,null]</div>
+    <div $=bs.Td></div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.padding</code></div>
+    <div $=bs.Td>array</div>
+    <div $=bs.Td>[null,null,null,null]</div>
+    <div $=bs.Td></div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.borderWidth</code></div>
+    <div $=bs.Td>array</div>
+    <div $=bs.Td>[null,null,null,null]</div>
+    <div $=bs.Td></div>
+  </div></div>
+</div>
+
+<a name="api_p"></a>构件 `bs.P`（继承自 `bs.Div`）：
+
+<div $=bs.Table responsive='1' striped='' bordered='1' condensed='1' hover='1'>
+  <div $=bs.Thead sty__='background:#e8e8e8'><div $=bs.Tr>
+    <div $=bs.Th width='{160}'>属性</div>
+    <div $=bs.Th width='{80}'>类型</div>
+    <div $=bs.Th width='{100}'>缺省值</div>
+    <div $=bs.Th>描述</div>
+  </div></div>
+  <div $=bs.Tbody><div $=bs.Tr>
+    <div $=bs.Td><code>props.bsClass</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>'p'</div>
+    <div $=bs.Td></div>
+  </div></div>
+</div>
+
+<a name="api_h1"></a>构件 `bs.H1`（继承自 `bs.Div`）：
+
+<div $=bs.Table responsive='1' striped='' bordered='1' condensed='1' hover='1'>
+  <div $=bs.Thead sty__='background:#e8e8e8'><div $=bs.Tr>
+    <div $=bs.Th width='{160}'>属性</div>
+    <div $=bs.Th width='{80}'>类型</div>
+    <div $=bs.Th width='{100}'>缺省值</div>
+    <div $=bs.Th>描述</div>
+  </div></div>
+  <div $=bs.Tbody><div $=bs.Tr>
+    <div $=bs.Td><code>props.bsClass</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>'h1'</div>
+    <div $=bs.Td></div>
+  </div></div>
+</div>
+
+<a name="api_h2"></a>构件 `bs.H2`（继承自 `bs.Div`）：
+
+<div $=bs.Table responsive='1' striped='' bordered='1' condensed='1' hover='1'>
+  <div $=bs.Thead sty__='background:#e8e8e8'><div $=bs.Tr>
+    <div $=bs.Th width='{160}'>属性</div>
+    <div $=bs.Th width='{80}'>类型</div>
+    <div $=bs.Th width='{100}'>缺省值</div>
+    <div $=bs.Th>描述</div>
+  </div></div>
+  <div $=bs.Tbody><div $=bs.Tr>
+    <div $=bs.Td><code>props.bsClass</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>'h2'</div>
+    <div $=bs.Td></div>
+  </div></div>
+</div>
+
+<a name="api_h3"></a>构件 `bs.H3`（继承自 `bs.Div`）：
+
+<div $=bs.Table responsive='1' striped='' bordered='1' condensed='1' hover='1'>
+  <div $=bs.Thead sty__='background:#e8e8e8'><div $=bs.Tr>
+    <div $=bs.Th width='{160}'>属性</div>
+    <div $=bs.Th width='{80}'>类型</div>
+    <div $=bs.Th width='{100}'>缺省值</div>
+    <div $=bs.Th>描述</div>
+  </div></div>
+  <div $=bs.Tbody><div $=bs.Tr>
+    <div $=bs.Td><code>props.bsClass</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>'h3'</div>
+    <div $=bs.Td></div>
+  </div></div>
+</div>
+
+<a name="api_h4"></a>构件 `bs.H4`（继承自 `bs.Div`）：
+
+<div $=bs.Table responsive='1' striped='' bordered='1' condensed='1' hover='1'>
+  <div $=bs.Thead sty__='background:#e8e8e8'><div $=bs.Tr>
+    <div $=bs.Th width='{160}'>属性</div>
+    <div $=bs.Th width='{80}'>类型</div>
+    <div $=bs.Th width='{100}'>缺省值</div>
+    <div $=bs.Th>描述</div>
+  </div></div>
+  <div $=bs.Tbody><div $=bs.Tr>
+    <div $=bs.Td><code>props.bsClass</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>'h4'</div>
+    <div $=bs.Td></div>
+  </div></div>
+</div>
+
+<a name="api_h5"></a>构件 `bs.H5`（继承自 `bs.Div`）：
+
+<div $=bs.Table responsive='1' striped='' bordered='1' condensed='1' hover='1'>
+  <div $=bs.Thead sty__='background:#e8e8e8'><div $=bs.Tr>
+    <div $=bs.Th width='{160}'>属性</div>
+    <div $=bs.Th width='{80}'>类型</div>
+    <div $=bs.Th width='{100}'>缺省值</div>
+    <div $=bs.Th>描述</div>
+  </div></div>
+  <div $=bs.Tbody><div $=bs.Tr>
+    <div $=bs.Td><code>props.bsClass</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>'h5'</div>
+    <div $=bs.Td></div>
+  </div></div>
+</div>
+
+<a name="api_h6"></a>构件 `bs.H6`（继承自 `bs.Div`）：
+
+<div $=bs.Table responsive='1' striped='' bordered='1' condensed='1' hover='1'>
+  <div $=bs.Thead sty__='background:#e8e8e8'><div $=bs.Tr>
+    <div $=bs.Th width='{160}'>属性</div>
+    <div $=bs.Th width='{80}'>类型</div>
+    <div $=bs.Th width='{100}'>缺省值</div>
+    <div $=bs.Th>描述</div>
+  </div></div>
+  <div $=bs.Tbody><div $=bs.Tr>
+    <div $=bs.Td><code>props.bsClass</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>'h6'</div>
+    <div $=bs.Td></div>
+  </div></div>
+</div>
+
+<a name="api_hr"></a>构件 `bs.Hr`（继承自 `bs.Div`）：
+
+<div $=bs.Table responsive='1' striped='' bordered='1' condensed='1' hover='1'>
+  <div $=bs.Thead sty__='background:#e8e8e8'><div $=bs.Tr>
+    <div $=bs.Th width='{160}'>属性</div>
+    <div $=bs.Th width='{80}'>类型</div>
+    <div $=bs.Th width='{100}'>缺省值</div>
+    <div $=bs.Th>描述</div>
+  </div></div>
+  <div $=bs.Tbody><div $=bs.Tr>
+    <div $=bs.Td><code>props.bsClass</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>'hr'</div>
+    <div $=bs.Td></div>
+  </div></div>
+</div>
+
+<a name="api_pre"></a>构件 `bs.Pre`（继承自 `bs.Div`）：
+
+<div $=bs.Table responsive='1' striped='' bordered='1' condensed='1' hover='1'>
+  <div $=bs.Thead sty__='background:#e8e8e8'><div $=bs.Tr>
+    <div $=bs.Th width='{160}'>属性</div>
+    <div $=bs.Th width='{80}'>类型</div>
+    <div $=bs.Th width='{100}'>缺省值</div>
+    <div $=bs.Th>描述</div>
+  </div></div>
+  <div $=bs.Tbody><div $=bs.Tr>
+    <div $=bs.Td><code>props.bsClass</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>'pre'</div>
+    <div $=bs.Td></div>
+  </div></div>
+</div>
+
+<a name="api_hgroup"></a>构件 `bs.Hgroup`（继承自 `bs.Div`）：
+
+<div $=bs.Table responsive='1' striped='' bordered='1' condensed='1' hover='1'>
+  <div $=bs.Thead sty__='background:#e8e8e8'><div $=bs.Tr>
+    <div $=bs.Th width='{160}'>属性</div>
+    <div $=bs.Th width='{80}'>类型</div>
+    <div $=bs.Th width='{100}'>缺省值</div>
+    <div $=bs.Th>描述</div>
+  </div></div>
+  <div $=bs.Tbody><div $=bs.Tr>
+    <div $=bs.Td><code>props.bsClass</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>'hgroup'</div>
+    <div $=bs.Td></div>
+  </div></div>
+</div>
+
+<a name="api_ul"></a>构件 `bs.Ul`（继承自 `bs.Div`）：
+
+<div $=bs.Table responsive='1' striped='' bordered='1' condensed='1' hover='1'>
+  <div $=bs.Thead sty__='background:#e8e8e8'><div $=bs.Tr>
+    <div $=bs.Th width='{160}'>属性</div>
+    <div $=bs.Th width='{80}'>类型</div>
+    <div $=bs.Th width='{100}'>缺省值</div>
+    <div $=bs.Th>描述</div>
+  </div></div>
+  <div $=bs.Tbody><div $=bs.Tr>
+    <div $=bs.Td><code>props.bsClass</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>'ul'</div>
+    <div $=bs.Td></div>
+  </div></div>
+</div>
+
+<a name="api_ol"></a>构件 `bs.Ol`（继承自 `bs.Div`）：
+
+<div $=bs.Table responsive='1' striped='' bordered='1' condensed='1' hover='1'>
+  <div $=bs.Thead sty__='background:#e8e8e8'><div $=bs.Tr>
+    <div $=bs.Th width='{160}'>属性</div>
+    <div $=bs.Th width='{80}'>类型</div>
+    <div $=bs.Th width='{100}'>缺省值</div>
+    <div $=bs.Th>描述</div>
+  </div></div>
+  <div $=bs.Tbody><div $=bs.Tr>
+    <div $=bs.Td><code>props.bsClass</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>'ol'</div>
+    <div $=bs.Td></div>
+  </div></div>
+</div>
+
+<a name="api_li"></a>构件 `bs.Li`（继承自 `bs.Div`）：
+
+<div $=bs.Table responsive='1' striped='' bordered='1' condensed='1' hover='1'>
+  <div $=bs.Thead sty__='background:#e8e8e8'><div $=bs.Tr>
+    <div $=bs.Th width='{160}'>属性</div>
+    <div $=bs.Th width='{80}'>类型</div>
+    <div $=bs.Th width='{100}'>缺省值</div>
+    <div $=bs.Th>描述</div>
+  </div></div>
+  <div $=bs.Tbody><div $=bs.Tr>
+    <div $=bs.Td><code>props.bsClass</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>'li'</div>
+    <div $=bs.Td></div>
+  </div></div>
+</div>
+
+<a name="api_dl"></a>构件 `bs.Dl`（继承自 `bs.Div`）：
+
+<div $=bs.Table responsive='1' striped='' bordered='1' condensed='1' hover='1'>
+  <div $=bs.Thead sty__='background:#e8e8e8'><div $=bs.Tr>
+    <div $=bs.Th width='{160}'>属性</div>
+    <div $=bs.Th width='{80}'>类型</div>
+    <div $=bs.Th width='{100}'>缺省值</div>
+    <div $=bs.Th>描述</div>
+  </div></div>
+  <div $=bs.Tbody><div $=bs.Tr>
+    <div $=bs.Td><code>props.bsClass</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>'dl'</div>
+    <div $=bs.Td></div>
+  </div></div>
+</div>
+
+<a name="api_dd"></a>构件 `bs.Dd`（继承自 `bs.Div`）：
+
+<div $=bs.Table responsive='1' striped='' bordered='1' condensed='1' hover='1'>
+  <div $=bs.Thead sty__='background:#e8e8e8'><div $=bs.Tr>
+    <div $=bs.Th width='{160}'>属性</div>
+    <div $=bs.Th width='{80}'>类型</div>
+    <div $=bs.Th width='{100}'>缺省值</div>
+    <div $=bs.Th>描述</div>
+  </div></div>
+  <div $=bs.Tbody><div $=bs.Tr>
+    <div $=bs.Td><code>props.bsClass</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>'dd'</div>
+    <div $=bs.Td></div>
+  </div></div>
+</div>
+
+<a name="api_dt"></a>构件 `bs.Dt`（继承自 `bs.Div`）：
+
+<div $=bs.Table responsive='1' striped='' bordered='1' condensed='1' hover='1'>
+  <div $=bs.Thead sty__='background:#e8e8e8'><div $=bs.Tr>
+    <div $=bs.Th width='{160}'>属性</div>
+    <div $=bs.Th width='{80}'>类型</div>
+    <div $=bs.Th width='{100}'>缺省值</div>
+    <div $=bs.Th>描述</div>
+  </div></div>
+  <div $=bs.Tbody><div $=bs.Tr>
+    <div $=bs.Td><code>props.bsClass</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>'dt'</div>
+    <div $=bs.Td></div>
+  </div></div>
+</div>
+
+<a name="api_iframe"></a>构件 `bs.Iframe`（继承自 `bs.Div`）：
+
+<div $=bs.Table responsive='1' striped='' bordered='1' condensed='1' hover='1'>
+  <div $=bs.Thead sty__='background:#e8e8e8'><div $=bs.Tr>
+    <div $=bs.Th width='{160}'>属性</div>
+    <div $=bs.Th width='{80}'>类型</div>
+    <div $=bs.Th width='{100}'>缺省值</div>
+    <div $=bs.Th>描述</div>
+  </div></div>
+  <div $=bs.Tbody><div $=bs.Tr>
+    <div $=bs.Td><code>props.bsClass</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>'iframe'</div>
+    <div $=bs.Td></div>
+  </div></div>
+</div>
+
+<a name="api_noscript"></a>构件 `bs.Noscript`（继承自 `bs.Div`）：
+
+<div $=bs.Table responsive='1' striped='' bordered='1' condensed='1' hover='1'>
+  <div $=bs.Thead sty__='background:#e8e8e8'><div $=bs.Tr>
+    <div $=bs.Th width='{160}'>属性</div>
+    <div $=bs.Th width='{80}'>类型</div>
+    <div $=bs.Th width='{100}'>缺省值</div>
+    <div $=bs.Th>描述</div>
+  </div></div>
+  <div $=bs.Tbody><div $=bs.Tr>
+    <div $=bs.Td><code>props.bsClass</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>'noscript'</div>
+    <div $=bs.Td></div>
+  </div></div>
+</div>
+
+<a name="api_fieldset"></a>构件 `bs.Fieldset`（继承自 `bs.Div`）：
+
+<div $=bs.Table responsive='1' striped='' bordered='1' condensed='1' hover='1'>
+  <div $=bs.Thead sty__='background:#e8e8e8'><div $=bs.Tr>
+    <div $=bs.Th width='{160}'>属性</div>
+    <div $=bs.Th width='{80}'>类型</div>
+    <div $=bs.Th width='{100}'>缺省值</div>
+    <div $=bs.Th>描述</div>
+  </div></div>
+  <div $=bs.Tbody><div $=bs.Tr>
+    <div $=bs.Td><code>props.bsClass</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>'fieldset'</div>
+    <div $=bs.Td></div>
+  </div></div>
+</div>
+
+<a name="api_details"></a>构件 `bs.Details`（继承自 `bs.Div`）：
+
+<div $=bs.Table responsive='1' striped='' bordered='1' condensed='1' hover='1'>
+  <div $=bs.Thead sty__='background:#e8e8e8'><div $=bs.Tr>
+    <div $=bs.Th width='{160}'>属性</div>
+    <div $=bs.Th width='{80}'>类型</div>
+    <div $=bs.Th width='{100}'>缺省值</div>
+    <div $=bs.Th>描述</div>
+  </div></div>
+  <div $=bs.Tbody><div $=bs.Tr>
+    <div $=bs.Td><code>props.bsClass</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>'details'</div>
+    <div $=bs.Td></div>
+  </div></div>
+</div>
+
+<a name="api_figure"></a>构件 `bs.Figure`（继承自 `bs.Div`）：
+
+<div $=bs.Table responsive='1' striped='' bordered='1' condensed='1' hover='1'>
+  <div $=bs.Thead sty__='background:#e8e8e8'><div $=bs.Tr>
+    <div $=bs.Th width='{160}'>属性</div>
+    <div $=bs.Th width='{80}'>类型</div>
+    <div $=bs.Th width='{100}'>缺省值</div>
+    <div $=bs.Th>描述</div>
+  </div></div>
+  <div $=bs.Tbody><div $=bs.Tr>
+    <div $=bs.Td><code>props.bsClass</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>'figure'</div>
+    <div $=bs.Td></div>
+  </div></div>
+</div>
+
+<a name="api_figcaption"></a>构件 `bs.Figcaption`（继承自 `bs.Div`）：
+
+<div $=bs.Table responsive='1' striped='' bordered='1' condensed='1' hover='1'>
+  <div $=bs.Thead sty__='background:#e8e8e8'><div $=bs.Tr>
+    <div $=bs.Th width='{160}'>属性</div>
+    <div $=bs.Th width='{80}'>类型</div>
+    <div $=bs.Th width='{100}'>缺省值</div>
+    <div $=bs.Th>描述</div>
+  </div></div>
+  <div $=bs.Tbody><div $=bs.Tr>
+    <div $=bs.Td><code>props.bsClass</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>'figcaption'</div>
+    <div $=bs.Td></div>
+  </div></div>
+</div>
+
+<a name="api_menu"></a>构件 `bs.Menu`（继承自 `bs.Div`）：
+
+<div $=bs.Table responsive='1' striped='' bordered='1' condensed='1' hover='1'>
+  <div $=bs.Thead sty__='background:#e8e8e8'><div $=bs.Tr>
+    <div $=bs.Th width='{160}'>属性</div>
+    <div $=bs.Th width='{80}'>类型</div>
+    <div $=bs.Th width='{100}'>缺省值</div>
+    <div $=bs.Th>描述</div>
+  </div></div>
+  <div $=bs.Tbody><div $=bs.Tr>
+    <div $=bs.Td><code>props.bsClass</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>'menu'</div>
+    <div $=bs.Td></div>
+  </div></div>
+</div>
+
+<a name="api_menuitem"></a>构件 `bs.Menuitem`（继承自 `bs.Div`）：
+
+<div $=bs.Table responsive='1' striped='' bordered='1' condensed='1' hover='1'>
+  <div $=bs.Thead sty__='background:#e8e8e8'><div $=bs.Tr>
+    <div $=bs.Th width='{160}'>属性</div>
+    <div $=bs.Th width='{80}'>类型</div>
+    <div $=bs.Th width='{100}'>缺省值</div>
+    <div $=bs.Th>描述</div>
+  </div></div>
+  <div $=bs.Tbody><div $=bs.Tr>
+    <div $=bs.Td><code>props.bsClass</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>'menuitem'</div>
+    <div $=bs.Td></div>
+  </div></div>
+</div>
+
+<a name="api_address"></a>构件 `bs.Address`（继承自 `bs.Div`）：
+
+<div $=bs.Table responsive='1' striped='' bordered='1' condensed='1' hover='1'>
+  <div $=bs.Thead sty__='background:#e8e8e8'><div $=bs.Tr>
+    <div $=bs.Th width='{160}'>属性</div>
+    <div $=bs.Th width='{80}'>类型</div>
+    <div $=bs.Th width='{100}'>缺省值</div>
+    <div $=bs.Th>描述</div>
+  </div></div>
+  <div $=bs.Tbody><div $=bs.Tr>
+    <div $=bs.Td><code>props.bsClass</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>'address'</div>
+    <div $=bs.Td></div>
+  </div></div>
+</div>
+
+<a name="api_caption"></a>构件 `bs.Caption`（继承自 `bs.Div`）：
+
+<div $=bs.Table responsive='1' striped='' bordered='1' condensed='1' hover='1'>
+  <div $=bs.Thead sty__='background:#e8e8e8'><div $=bs.Tr>
+    <div $=bs.Th width='{160}'>属性</div>
+    <div $=bs.Th width='{80}'>类型</div>
+    <div $=bs.Th width='{100}'>缺省值</div>
+    <div $=bs.Th>描述</div>
+  </div></div>
+  <div $=bs.Tbody><div $=bs.Tr>
+    <div $=bs.Td><code>props.bsClass</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>'caption'</div>
+    <div $=bs.Td></div>
+  </div></div>
+</div>
+
+<a name="api_colgroup"></a>构件 `bs.Colgroup`（继承自 `bs.Div`）：
+
+<div $=bs.Table responsive='1' striped='' bordered='1' condensed='1' hover='1'>
+  <div $=bs.Thead sty__='background:#e8e8e8'><div $=bs.Tr>
+    <div $=bs.Th width='{160}'>属性</div>
+    <div $=bs.Th width='{80}'>类型</div>
+    <div $=bs.Th width='{100}'>缺省值</div>
+    <div $=bs.Th>描述</div>
+  </div></div>
+  <div $=bs.Tbody><div $=bs.Tr>
+    <div $=bs.Td><code>props.bsClass</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>'colgroup'</div>
+    <div $=bs.Td></div>
+  </div></div>
+</div>
+
+<a name="api_td"></a>构件 `bs.Td`（继承自 `bs.Div`）：
+
+<div $=bs.Table responsive='1' striped='' bordered='1' condensed='1' hover='1'>
+  <div $=bs.Thead sty__='background:#e8e8e8'><div $=bs.Tr>
+    <div $=bs.Th width='{160}'>属性</div>
+    <div $=bs.Th width='{80}'>类型</div>
+    <div $=bs.Th width='{100}'>缺省值</div>
+    <div $=bs.Th>描述</div>
+  </div></div>
+  <div $=bs.Tbody><div $=bs.Tr>
+    <div $=bs.Td><code>props.bsClass</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>'td'</div>
+    <div $=bs.Td></div>
+  </div></div>
+</div>
+
+<a name="api_tbody"></a>构件 `bs.Tbody`（继承自 `bs.Div`）：
+
+<div $=bs.Table responsive='1' striped='' bordered='1' condensed='1' hover='1'>
+  <div $=bs.Thead sty__='background:#e8e8e8'><div $=bs.Tr>
+    <div $=bs.Th width='{160}'>属性</div>
+    <div $=bs.Th width='{80}'>类型</div>
+    <div $=bs.Th width='{100}'>缺省值</div>
+    <div $=bs.Th>描述</div>
+  </div></div>
+  <div $=bs.Tbody><div $=bs.Tr>
+    <div $=bs.Td><code>props.bsClass</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>'tbody'</div>
+    <div $=bs.Td></div>
+  </div></div>
+</div>
+
+<a name="api_thead"></a>构件 `bs.Thead`（继承自 `bs.Div`）：
+
+<div $=bs.Table responsive='1' striped='' bordered='1' condensed='1' hover='1'>
+  <div $=bs.Thead sty__='background:#e8e8e8'><div $=bs.Tr>
+    <div $=bs.Th width='{160}'>属性</div>
+    <div $=bs.Th width='{80}'>类型</div>
+    <div $=bs.Th width='{100}'>缺省值</div>
+    <div $=bs.Th>描述</div>
+  </div></div>
+  <div $=bs.Tbody><div $=bs.Tr>
+    <div $=bs.Td><code>props.bsClass</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>'thead'</div>
+    <div $=bs.Td></div>
+  </div></div>
+</div>
+
+<a name="api_tfoot"></a>构件 `bs.Tfoot`（继承自 `bs.Div`）：
+
+<div $=bs.Table responsive='1' striped='' bordered='1' condensed='1' hover='1'>
+  <div $=bs.Thead sty__='background:#e8e8e8'><div $=bs.Tr>
+    <div $=bs.Th width='{160}'>属性</div>
+    <div $=bs.Th width='{80}'>类型</div>
+    <div $=bs.Th width='{100}'>缺省值</div>
+    <div $=bs.Th>描述</div>
+  </div></div>
+  <div $=bs.Tbody><div $=bs.Tr>
+    <div $=bs.Td><code>props.bsClass</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>'tfoot'</div>
+    <div $=bs.Td></div>
+  </div></div>
+</div>
+
+<a name="api_th"></a>构件 `bs.Th`（继承自 `bs.Div`）：
+
+<div $=bs.Table responsive='1' striped='' bordered='1' condensed='1' hover='1'>
+  <div $=bs.Thead sty__='background:#e8e8e8'><div $=bs.Tr>
+    <div $=bs.Th width='{160}'>属性</div>
+    <div $=bs.Th width='{80}'>类型</div>
+    <div $=bs.Th width='{100}'>缺省值</div>
+    <div $=bs.Th>描述</div>
+  </div></div>
+  <div $=bs.Tbody><div $=bs.Tr>
+    <div $=bs.Td><code>props.bsClass</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>'th'</div>
+    <div $=bs.Td></div>
+  </div></div>
+</div>
+
+<a name="api_tr"></a>构件 `bs.Tr`（继承自 `bs.Div`）：
+
+<div $=bs.Table responsive='1' striped='' bordered='1' condensed='1' hover='1'>
+  <div $=bs.Thead sty__='background:#e8e8e8'><div $=bs.Tr>
+    <div $=bs.Th width='{160}'>属性</div>
+    <div $=bs.Th width='{80}'>类型</div>
+    <div $=bs.Th width='{100}'>缺省值</div>
+    <div $=bs.Th>描述</div>
+  </div></div>
+  <div $=bs.Tbody><div $=bs.Tr>
+    <div $=bs.Td><code>props.bsClass</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>'tr'</div>
+    <div $=bs.Td></div>
+  </div></div>
+</div>
+
+&nbsp;

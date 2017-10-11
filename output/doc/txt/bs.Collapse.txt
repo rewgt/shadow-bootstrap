@@ -1,0 +1,9 @@
+bs.Collapse
+9.1.!api_collapse
+[ props ]
+  bsClass: 'collapse'
+  defaultExpanded
+[ duals ]
+  role: 'collapsible'
+  anamation
+  expanded: ''

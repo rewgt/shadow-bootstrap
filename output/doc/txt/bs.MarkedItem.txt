@@ -1,0 +1,9 @@
+bs.MarkedItem
+5.3.!api_markeditem
+[ props ]
+  bsClass: 'list-group-item'
+[ duals ]
+  padding: [0,null,0,null]	
+  bsStyle: ''
+  data-checked
+  disabled

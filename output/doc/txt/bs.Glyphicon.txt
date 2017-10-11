@@ -1,0 +1,7 @@
+bs.Glyphicon
+2.1.!api_glyphicon
+[ props ]
+  bsClass: 'glyphicon'
+[ duals ]
+  glyph
+  itemSpace

@@ -1,0 +1,4 @@
+bs.PageHeader
+5.2.!api_pageheader
+[ props ]
+  bsClass: 'page-header'

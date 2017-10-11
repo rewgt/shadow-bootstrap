@@ -1,0 +1,25 @@
+<div $=bs.Form horizontal='1'>
+  <div $=bs.FormGroup>
+    <div $=bs.Col sm='{2}'><span $=bs.CtrlLabel>Name</span></div>
+    <div $=bs.Col sm='{10}'>
+      <span $=bs.FormCtrl placeholder='Jane Doe'></span>
+    </div>
+  </div>
+  <div $=bs.FormGroup>
+    <div $=bs.Col sm='{2}'><span $=bs.CtrlLabel>Password</span></div>
+    <div $=bs.Col sm='{10}'>
+      <span $=bs.FormCtrl type='password'></span>
+    </div>
+  </div>
+  <div $=bs.FormGroup>
+    <div $=bs.Col sm='{2}'><span $=bs.CtrlLabel>Email</span></div>
+    <div $=bs.Col sm='{10}'>
+      <div $=bs.FormCtrlStatic>jane.doe@example.com</div>
+    </div>
+  </div>
+  <div $=bs.FormGroup>
+    <div $=bs.Col sm-offset='{2}' sm='{10}'>
+      <span $=bs.Btn type='submit'>Send invitation</span>
+    </div>
+  </div>
+</div>

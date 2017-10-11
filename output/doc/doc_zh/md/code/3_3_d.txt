@@ -1,0 +1,7 @@
+<div $=bs.BtnToolbar>
+  <div $=bs.BtnGroup justified='1' width='{450}'>
+    <span $=bs.Btn>Test 1</span>
+    <span $=bs.Btn>Test 2</span>
+    <span $=bs.Btn>Test 3</span>
+  </div>
+</div>

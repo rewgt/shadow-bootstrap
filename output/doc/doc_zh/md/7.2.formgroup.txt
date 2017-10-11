@@ -1,0 +1,162 @@
+7.2 FormGroup
+-----------
+
+&nbsp;
+
+### FormGroup 表项组
+
+`bs.FormGroup` 为一项输入提供封装，把标题（`bs.CtrlLabel`）、输入框（`bs.FormCtrl`）、状态回馈（`bs.FormFeedback`）、帮助信息（`bs.HelpBlock`）、静态文本（`bs.FormCtrlStatic`）等构件包装一起，让各构件保持合理间距。
+
+<div $='.rewgt.ui_demo' src='md/code/7_2_a.txt' input-height='{180}'></div>
+
+FormGroup 支持用 `duals.bsSize` 指定输入框大小，可选：`'', 'large', 'small'`，用 `duals.validation` 指定输入的校验状态，可选：`'', 'success', 'warning', 'error'`。
+
+在 FormGroup 之下，`bs.CtrlLabel` 用来描述 `<label>` 标签，`bs.FormCtrl` 描述 `<input>` 标签，两者的 `htmlFor` 关联 ID 可由 FormGroup 的 `duals.controlId` 指定，如果未指定，系统将自动为它们生成一个唯一命名的 ID 值。
+
+构件 `bs.FormFeedback` 只在 FormGroup 之下使用，它能自动侦听 FormGroup 的 `duals.validation` 并同步到自身 `duals.validation`。
+
+### FormGroup 布局
+
+Form 缺省对其下若干 FormGroup 纵向逐行排列，但它也提供 `duals.inline` 属性，用来指示是否按 `inline-block` 排列其下各个 FormGroup。
+
+<div $='.rewgt.ui_demo' src='md/code/7_2_b.txt' input-height='{230}'></div>
+
+另外，如果 Form 指定 `duals.horizontal='1'`，其下各 FormGroup 将用 `bs.Col`  排列子项，比如标题与输入框摆一行，各占指定宽度，如下例。
+
+<div $='.rewgt.ui_demo' src='md/code/7_2_c.txt' input-height='{420}'></div>
+
+### API 接口
+
+<a name="api_form"></a>构件 `bs.Form`（继承自 `bs.Div2`）：
+
+<div $=bs.Table responsive='1' striped='' bordered='1' condensed='1' hover='1'>
+  <div $=bs.Thead sty__='background:#e8e8e8'><div $=bs.Tr>
+    <div $=bs.Th width='{160}'>属性</div>
+    <div $=bs.Th width='{80}'>类型</div>
+    <div $=bs.Th width='{100}'>缺省值</div>
+    <div $=bs.Th>描述</div>
+  </div></div>
+  <div $=bs.Tbody><div $=bs.Tr>
+    <div $=bs.Td><code>props.bsClass</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>'form'</div>
+    <div $=bs.Td></div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.inline</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td></div>
+    <div $=bs.Td>是否将子级各 FormGroup 指定为 inline-block，可选：'' 或 '1' </div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.horizontal</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td></div>
+    <div $=bs.Td>指示子级 FormGroup 是否用 bs.Col 水平排列标题、输入项等，可选：'' 或 '1' </div>
+  </div></div>
+</div>
+
+<a name="api_formgroup"></a>构件 `bs.FormGroup`（继承自 `bs.Div2`）：
+
+<div $=bs.Table responsive='1' striped='' bordered='1' condensed='1' hover='1'>
+  <div $=bs.Thead sty__='background:#e8e8e8'><div $=bs.Tr>
+    <div $=bs.Th width='{160}'>属性</div>
+    <div $=bs.Th width='{80}'>类型</div>
+    <div $=bs.Th width='{100}'>缺省值</div>
+    <div $=bs.Th>描述</div>
+  </div></div>
+  <div $=bs.Tbody><div $=bs.Tr>
+    <div $=bs.Td><code>props.bsClass</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>'form-group'</div>
+    <div $=bs.Td></div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.bsSize</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td></div>
+    <div $=bs.Td>指定输入框大小，可选：'', 'large', 'small' </div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.validation</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>''</div>
+    <div $=bs.Td>指定输入的校验状态，取值：'', 'success', 'warning', 'error'</div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.controlId</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td></div>
+    <div $=bs.Td>为一个 FormGroup 下相关构件（CtrlLabel、FormCtrl）提供 htmlFor 属性，缺省本属性未指定，系统自动生成一个不重复的 ID 字串</div>
+  </div></div>
+</div>
+
+<a name="api_ctrllable"></a>构件 `bs.CtrlLabel`（继承自 `Label`）：
+
+<div $=bs.Table responsive='1' striped='' bordered='1' condensed='1' hover='1'>
+  <div $=bs.Thead sty__='background:#e8e8e8'><div $=bs.Tr>
+    <div $=bs.Th width='{160}'>属性</div>
+    <div $=bs.Th width='{80}'>类型</div>
+    <div $=bs.Th width='{100}'>缺省值</div>
+    <div $=bs.Th>描述</div>
+  </div></div>
+  <div $=bs.Tbody><div $=bs.Tr>
+    <div $=bs.Td><code>props.bsClass</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>'control-label'</div>
+    <div $=bs.Td></div>
+  </div></div>
+</div>
+
+<a name="api_formfeedback"></a>构件 `bs.FormFeedback`（继承自 `Span`）：
+
+<div $=bs.Table responsive='1' striped='' bordered='1' condensed='1' hover='1'>
+  <div $=bs.Thead sty__='background:#e8e8e8'><div $=bs.Tr>
+    <div $=bs.Th width='{160}'>属性</div>
+    <div $=bs.Th width='{80}'>类型</div>
+    <div $=bs.Th width='{100}'>缺省值</div>
+    <div $=bs.Th>描述</div>
+  </div></div>
+  <div $=bs.Tbody><div $=bs.Tr>
+    <div $=bs.Td><code>props.bsClass</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>'form-control-feedback'</div>
+    <div $=bs.Td></div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.validation</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td></div>
+    <div $=bs.Td>指定输入的校验状态，可选：'', 'success', 'warning', 'error'，如果在 bs.FormGroup 下使用，它将自动侦听并同步 FormGroup 的 duals.validation </div>
+  </div></div>
+</div>
+
+<a name="api_helpblock"></a>构件 `bs.HelpBlock`（继承自 `Span`）：
+
+<div $=bs.Table responsive='1' striped='' bordered='1' condensed='1' hover='1'>
+  <div $=bs.Thead sty__='background:#e8e8e8'><div $=bs.Tr>
+    <div $=bs.Th width='{160}'>属性</div>
+    <div $=bs.Th width='{80}'>类型</div>
+    <div $=bs.Th width='{100}'>缺省值</div>
+    <div $=bs.Th>描述</div>
+  </div></div>
+  <div $=bs.Tbody><div $=bs.Tr>
+    <div $=bs.Td><code>props.bsClass</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>'help-block'</div>
+    <div $=bs.Td></div>
+  </div></div>
+</div>
+
+<a name="api_formctrlstatic"></a>构件 `bs.FormCtrlStatic`（继承自 `bs.P`）：
+
+<div $=bs.Table responsive='1' striped='' bordered='1' condensed='1' hover='1'>
+  <div $=bs.Thead sty__='background:#e8e8e8'><div $=bs.Tr>
+    <div $=bs.Th width='{160}'>属性</div>
+    <div $=bs.Th width='{80}'>类型</div>
+    <div $=bs.Th width='{100}'>缺省值</div>
+    <div $=bs.Th>描述</div>
+  </div></div>
+  <div $=bs.Tbody><div $=bs.Tr>
+    <div $=bs.Td><code>props.bsClass</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>'form-control-static'</div>
+    <div $=bs.Td></div>
+  </div></div>
+</div>
+
+&nbsp;

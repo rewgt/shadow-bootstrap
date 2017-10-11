@@ -1,0 +1,138 @@
+6.2 Tooltip
+-----------
+
+&nbsp;
+
+### Tooltip 信息提示框
+
+`bs.Tooltip` 用来展示一条简短的提示信息，针对某构件，在它旁边显示注解信息。
+
+<div $='.rewgt.ui_demo' src='md/code/6_2_a.txt' input-height='{230}'></div>
+
+Tooltip 的 `style.position` 缺省配置是 `'relative'`，所以可以用 `duals.left` 与 `duals.top` 指定偏移。
+
+用 `duals.placement` 指定 Tooltip 显示在被提示构件的哪一侧，可选：`'top', 'left', 'right', 'bottom'`；`duals.arrowPosition` 以 `0~1` 值代表百分比，指定 Tooltip 箭头位置，如上面 `0.3` 表示 `30%`，`0.7` 表示 `70%`。
+
+### OverlayTrigger 提示触发器
+
+`bs.OverlayTrigger` 用来触发 `bs.Tooltip`，比如下面例子，将鼠标移到各行文本上，相应信息提示将会浮现。
+
+<div $='.rewgt.ui_demo' src='md/code/6_2_b.txt' input-height='{350}'></div>
+
+给某个构件套一层 `bs.OverlayTrigger`，该构件就具备触发 Tooltip 的能力了，被提示构件可以是行内构件，如本例前三行文本，也可以是非行内构件，如本例最后一行。
+
+`bs.placement` 指示在上下左右哪个位置显示提示信息，`duals.desc` 指定提示的文本内容，`duals.delay` 指示是否自动隐藏提示，及过多久隐藏提示，其值取 `0` 表示不自动隐藏提示，否则为延时隐藏的时长，以毫秒为单位。
+
+OverlayTrigger 还支持用 `duals.fireBy` 定义如何触发 Tooltip，取值 `'hover'` 表示 “鼠标悬停” 时触发，取值 `'focus'` 表示 “获得焦点” 时触发。缺省取值为 `'hover,focus'`，表示这两种情况均能触发。
+
+<div $='.rewgt.ui_demo' src='md/code/6_2_c.txt' input-height='{300}'></div>
+
+### 定制信息提示框
+
+构件 `bs.Tooltip` 继承自 `bs.Div2`，它缺省按流式布局，如果我们设它的 `style.position` 为 `'absolute'`，它就适合被 OverlayTrigger 引用，从而提供信息提示。
+
+下面例子中，先定义一个 Tooltip，设置为绝对定位，然后由 OverlayTrigger 的 `duals.path` 引用该 Tooltip。
+
+<div $='.rewgt.ui_demo' src='md/code/6_2_d.txt' input-height='{320}'></div>
+
+任意绝对定位的构件，均能被 OverlayTrigger 引用，如本例 `tip2` 构件，被引用构件可能用 `props.offset` 指定上、右、下、左 4 个方向的偏移量，以像素为单位，这里 `tip2` 构件在左侧位置增加 `20px` 偏移。
+
+说明：被引用的绝对定位的构件，须以 W 树根节点为基准，从它所处位置到根节点路径上不该有其它 `position:absolute` 或 `position:relative` 定位的节点，或者即使有这两种节点，也应调整其左上角位置与根节点左上角重合。如果不能满足这个条件，被引用节点应改在 `'.body'` 节点下定义。
+
+### API 接口
+
+<a name="api_tooltip"></a>构件 `bs.Tooltip`（继承自 `bs.Div2`）：
+
+<div $=bs.Table responsive='1' striped='' bordered='1' condensed='1' hover='1'>
+  <div $=bs.Thead sty__='background:#e8e8e8'><div $=bs.Tr>
+    <div $=bs.Th width='{160}'>属性</div>
+    <div $=bs.Th width='{80}'>类型</div>
+    <div $=bs.Th width='{100}'>缺省值</div>
+    <div $=bs.Th>描述</div>
+  </div></div>
+  <div $=bs.Tbody><div $=bs.Tr>
+    <div $=bs.Td><code>props.bsClass</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>'tooltip'</div>
+    <div $=bs.Td></div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.role</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>'tooltip'</div>
+    <div $=bs.Td></div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.placement</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>'right'</div>
+    <div $=bs.Td>指示提示信息要在目标构件的哪个方位显示，可选：'top', 'right', 'bottom', 'left' </div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.arrowPosition</code></div>
+    <div $=bs.Td>number</div>
+    <div $=bs.Td>0.5</div>
+    <div $=bs.Td>箭头所处位置，以百分比表示，取值：0~1 </div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>props.offset</code></div>
+    <div $=bs.Td>array</div>
+    <div $=bs.Td>[0,0,0,2]</div>
+    <div $=bs.Td>被 bs.OverlayTrigger 触发显示本提示框时，本属性指示在上、右、下、左 4 个方位的偏移量，以像素为单位</div>
+  </div></div>
+</div>
+
+<a name="api_overlaytrigger"></a>构件 `bs.OverlayTrigger`（继承自 `bs.Div2`）：
+
+<div $=bs.Table responsive='1' striped='' bordered='1' condensed='1' hover='1'>
+  <div $=bs.Thead sty__='background:#e8e8e8'><div $=bs.Tr>
+    <div $=bs.Th width='{160}'>属性</div>
+    <div $=bs.Th width='{80}'>类型</div>
+    <div $=bs.Th width='{100}'>缺省值</div>
+    <div $=bs.Th>描述</div>
+  </div></div>
+  <div $=bs.Tbody><div $=bs.Tr>
+    <div $=bs.Td><code>props.bsClass</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>'overlay-trigger'</div>
+    <div $=bs.Td></div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.placement</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>'right'</div>
+    <div $=bs.Td>指示提示信息要在目标构件的哪个方位显示，可选：'top', 'right', 'bottom', 'left' </div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.desc</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td></div>
+    <div $=bs.Td>指示用于自动生成 bs.Tooltip 时所用的提示信息</div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.arrowPosition</code></div>
+    <div $=bs.Td>number</div>
+    <div $=bs.Td>0.5</div>
+    <div $=bs.Td>箭头所处位置，以百分比表示，取值：0~1 </div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.delay</code></div>
+    <div $=bs.Td>number</div>
+    <div $=bs.Td></div>
+    <div $=bs.Td>指示延时多少毫秒后自动隐藏信息提示，取 0 值表示不自动隐藏，缺省为不自动隐藏</div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.fireBy</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>'hover,focus'</div>
+    <div $=bs.Td>指示信息提示的可触发事件，取值：'hover', 'focus', 'hover,focus' </div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.path</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td></div>
+    <div $=bs.Td>引用一个已存在，且绝对定位的构件用作信息提示时，本属性指示被引用构件的位置</div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>onEnter()</code></div>
+    <div $=bs.Td>function</div>
+    <div $=bs.Td></div>
+    <div $=bs.Td>回调函数，当信息提示弹出时自动调用</div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>onExit()</code></div>
+    <div $=bs.Td>function</div>
+    <div $=bs.Td></div>
+    <div $=bs.Td>回调函数，当信息提示退出时自动调用</div>
+  </div></div>
+</div>
+
+&nbsp;

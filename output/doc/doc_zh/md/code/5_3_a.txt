@@ -1,0 +1,9 @@
+<div $=bs.ListGroup width='{300}'>
+  <pre $=bs.MarkedItem>Cras justo odio</pre>
+  <pre $=bs.MarkedItem>**Item heading**
+
+Dapibus ac facilisis in
+</pre>
+  <pre $=bs.MarkedItem>Porta ac consectetur ac</pre>
+  <pre $=bs.MarkedItem>Vestibulum at eros</pre>
+</div>

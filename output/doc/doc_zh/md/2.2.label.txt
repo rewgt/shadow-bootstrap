@@ -1,0 +1,45 @@
+2.2 Label
+---------
+
+&nbsp;
+
+### Label
+
+`bs.Label` 用于高亮显示一段信息，比如：
+
+<div $='.rewgt.ui_demo' src='md/code/2_2_a.txt' input-height='{310}'></div>
+
+可以用 `duals.bsStyle` 设置上下文风格，比如：
+
+<div $='.rewgt.ui_demo' src='md/code/2_2_b.txt' input-height='{150}'></div>
+
+### API 接口
+
+<a name="api_label"></a>构件 `bs.Label`（继承自 `Span`）：
+
+<div $=bs.Table responsive='1' striped='' bordered='1' condensed='1' hover='1'>
+  <div $=bs.Thead sty__='background:#e8e8e8'><div $=bs.Tr>
+    <div $=bs.Th width='{160}'>属性</div>
+    <div $=bs.Th width='{80}'>类型</div>
+    <div $=bs.Th width='{100}'>缺省值</div>
+    <div $=bs.Th>描述</div>
+  </div></div>
+  <div $=bs.Tbody><div $=bs.Tr>
+    <div $=bs.Td><code>props.bsClass</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>'label'</div>
+    <div $=bs.Td></div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.bsStyle</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>'default'</div>
+    <div $=bs.Td>选择上下文风格，可选项有：'default', 'primary', 'success', 'info', 'warning', 'danger' </div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.itemSpace</code></div>
+    <div $=bs.Td>number</div>
+    <div $=bs.Td></div>
+    <div $=bs.Td>可选设置按钮左、右侧 margin 像素值，取 undefined 值表示不设置</div>
+  </div></div>
+</div>
+
+&nbsp;

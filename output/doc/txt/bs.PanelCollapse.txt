@@ -1,0 +1,5 @@
+bs.PanelCollapse
+5.5.!api_panelcollapse
+[ props ]
+  bsClass: 'panel-collapse'
+  collapseClass: 'panel-collapse'

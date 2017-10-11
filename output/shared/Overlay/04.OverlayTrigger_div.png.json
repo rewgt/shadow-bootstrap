@@ -1,0 +1,24 @@
+{
+  "name": "bs.OverlayTrigger",
+  "widget": [ 
+    ["bs.Div2", {
+      "minWidth":20, "minHeight":20, "$for":"",
+      "dual-placement": "right",
+      "dual-desc": "tips ...",
+      "dual-arrow-position": 0.5,
+      "dual-delay": 0,
+      "dual-fire-by": "hover,focus",
+      "dual-path": ""
+    }],
+    [ ["bs.OverlayTrigger", { "key":"overlay",
+        "$placement": "duals.placement",
+        "$desc": "duals.desc",
+        "$arrowPosition": "duals.arrowPosition",
+        "$delay": "duals.delay",
+        "$fireBy": "duals.fireBy",
+        "$path": "duals.path"
+      }],
+      ["bs.Div2",{"key":"div","minWidth":20,"minHeight":20}]
+    ]
+  ]
+}

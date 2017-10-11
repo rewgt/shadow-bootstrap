@@ -1,0 +1,17 @@
+<div $=bs.Div2>
+  <div $=bs.P>
+    <div $=bs.OverlayTrigger fire-by='hover' desc='At right'>
+      <span $=Input type='text' placeholder='hover'></span>
+    </div>
+  </div>
+  <div $=bs.P>
+    <div $=bs.OverlayTrigger fire-by='focus' desc='At right'>
+      <span $=Input type='text' placeholder='focus'></span>
+    </div>
+  </div>
+  <div $=bs.P>
+    <div $=bs.OverlayTrigger fire-by='hover,focus' desc='At right'>
+      <span $=Input type='text' placeholder='hover,focus'></span>
+    </div>
+  </div>
+</div>

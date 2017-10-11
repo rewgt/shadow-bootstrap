@@ -1,0 +1,150 @@
+6.1 ModalDialog
+-----------
+
+&nbsp;
+
+### ModalDialog 模式对话框
+
+`bs.ModalDialog` 用来构造弹出对话框，举例如下。
+
+<div $='.rewgt.ui_demo' src='md/code/6_1_a.txt' input-height='{220}'></div>
+
+ModalDialog 的 `duals.showModal` 既表示模式对话框是否处于显示状态，也用于控制对话框弹出与关闭，对它赋值即可；`duals.canEsc` 指示对话框弹出后能否用 Esc 键关闭它；`duals.manualClose` 指示是否手工关闭对话框（通常要设计专门的 “Close” 按钮），缺省是自动关闭，即，用户在对话框之外区域点击触发关闭操作。
+
+说明：在可视设计器中，我们可在右侧 property 页设置 `duals.showModal='1'` 让模式对话框可见，然后设计对话框内容界面，增、删、改 ModalDialog 的各级子构件，最后设计完毕，设置 `duals.showModal=''` 关闭模式对话框。
+
+对话框的宽度可用 `duals.dialogWidth` 设置，可取 `'', 'large', 'small'` 分别指示缺省宽、偏大与偏小宽度。另外，这个属性也可传数值，取 `0 ~ 1` 之间的值表示百分比，取值大于等于 1 表示像素数。
+
+<div $='.rewgt.ui_demo' src='md/code/6_1_b.txt' input-height='{220}'></div>
+
+### 定义对话框的内容
+
+在 ModalDialog 中需用 `bs.ModalHeader, bs.ModalBody, bs.ModalFooter` 定义对话框内容。
+
+其中，`bs.ModalHeader` 既可按简便形式定义，也可扩展定制。上面举例属于简便形式，用 `duals.desc` 指定标题文字，并由父节点 `bs.ModalDialog` 的 `duals.hasClose` 属性，指示是否在右侧显示一个 “关闭” 按钮。如果想扩展定制，只须在 `bs.ModalHeader` 节点下定义相应内容，举例如下。
+
+<div $='.rewgt.ui_demo' src='md/code/6_1_c.txt' input-height='{320}'></div>
+
+### API 接口
+
+<a name="api_modaldialog"></a>构件 `bs.ModalDialog`（继承自 `bs.Div2`）：
+
+<div $=bs.Table responsive='1' striped='' bordered='1' condensed='1' hover='1'>
+  <div $=bs.Thead sty__='background:#e8e8e8'><div $=bs.Tr>
+    <div $=bs.Th width='{160}'>属性</div>
+    <div $=bs.Th width='{80}'>类型</div>
+    <div $=bs.Th width='{100}'>缺省值</div>
+    <div $=bs.Th>描述</div>
+  </div></div>
+  <div $=bs.Tbody><div $=bs.Tr>
+    <div $=bs.Td><code>props.bsClass</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>'modal'</div>
+    <div $=bs.Td></div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.role</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>'dialog'</div>
+    <div $=bs.Td></div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.manualClose</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td></div>
+    <div $=bs.Td>是否手工关闭对话框，取值：'' 或 '1' </div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.canEsc</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td></div>
+    <div $=bs.Td>是否支持用 Esc 键关闭对话框，取值：'' 或 '1' </div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.hasClose</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>'1'</div>
+    <div $=bs.Td>指示下级 bs.ModalHeader 是否包含关闭对话框的按钮，取值：'' 或 '1' </div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.dialogWidth</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td></div>
+    <div $=bs.Td>指定对话框的宽度，可选：'', 'large', 'small'，或者用 0~1 的数值表达百分比，用大于 1 的值表达像素数</div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.showModal</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td></div>
+    <div $=bs.Td>指示对话框是否处于显示状态，修改本属性可控制对话框打开或关闭，取值：'' 或 '1' </div>
+  </div></div>
+</div>
+
+<a name="api_modalheader"></a>构件 `bs.ModalHeader`（继承自 `bs.Div2`）：
+
+<div $=bs.Table responsive='1' striped='' bordered='1' condensed='1' hover='1'>
+  <div $=bs.Thead sty__='background:#e8e8e8'><div $=bs.Tr>
+    <div $=bs.Th width='{160}'>属性</div>
+    <div $=bs.Th width='{80}'>类型</div>
+    <div $=bs.Th width='{100}'>缺省值</div>
+    <div $=bs.Th>描述</div>
+  </div></div>
+  <div $=bs.Tbody><div $=bs.Tr>
+    <div $=bs.Td><code>props.bsClass</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>'modal-header'</div>
+    <div $=bs.Td></div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.desc</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td></div>
+    <div $=bs.Td>对话框的标题</div>
+  </div></div>
+</div>
+
+<a name="api_modaltitle"></a>构件 `bs.ModalTitle`（继承自 `bs.H4`）：
+
+<div $=bs.Table responsive='1' striped='' bordered='1' condensed='1' hover='1'>
+  <div $=bs.Thead sty__='background:#e8e8e8'><div $=bs.Tr>
+    <div $=bs.Th width='{160}'>属性</div>
+    <div $=bs.Th width='{80}'>类型</div>
+    <div $=bs.Th width='{100}'>缺省值</div>
+    <div $=bs.Th>描述</div>
+  </div></div>
+  <div $=bs.Tbody><div $=bs.Tr>
+    <div $=bs.Td><code>props.bsClass</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>'modal-title'</div>
+    <div $=bs.Td></div>
+  </div></div>
+</div>
+
+<a name="api_modalbody"></a>构件 `bs.ModalBody`（继承自 `bs.Div2`）：
+
+<div $=bs.Table responsive='1' striped='' bordered='1' condensed='1' hover='1'>
+  <div $=bs.Thead sty__='background:#e8e8e8'><div $=bs.Tr>
+    <div $=bs.Th width='{160}'>属性</div>
+    <div $=bs.Th width='{80}'>类型</div>
+    <div $=bs.Th width='{100}'>缺省值</div>
+    <div $=bs.Th>描述</div>
+  </div></div>
+  <div $=bs.Tbody><div $=bs.Tr>
+    <div $=bs.Td><code>props.bsClass</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>'modal-body'</div>
+    <div $=bs.Td></div>
+  </div></div>
+</div>
+
+<a name="api_modalfooter"></a>构件 `bs.ModalFooter`（继承自 `bs.Div2`）：
+
+<div $=bs.Table responsive='1' striped='' bordered='1' condensed='1' hover='1'>
+  <div $=bs.Thead sty__='background:#e8e8e8'><div $=bs.Tr>
+    <div $=bs.Th width='{160}'>属性</div>
+    <div $=bs.Th width='{80}'>类型</div>
+    <div $=bs.Th width='{100}'>缺省值</div>
+    <div $=bs.Th>描述</div>
+  </div></div>
+  <div $=bs.Tbody><div $=bs.Tr>
+    <div $=bs.Td><code>props.bsClass</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>'modal-footer'</div>
+    <div $=bs.Td></div>
+  </div></div>
+</div>
+
+&nbsp;

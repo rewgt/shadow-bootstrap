@@ -1,0 +1,7 @@
+bs.Fade
+9.1.!api_fade
+[ props ]
+  bsClass: 'fade'
+  defaultExpanded
+[ duals ]
+  expanded: ''

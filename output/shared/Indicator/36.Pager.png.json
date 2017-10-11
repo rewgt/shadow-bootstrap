@@ -1,0 +1,7 @@
+{
+  "name": "bs.Pager",
+  "widget": [ ["bs.Pager",{}],
+    ["bs.PagerItem",{"href":"#","prev":"","itemSpace":0,"html.":"\u2190 Previous"}],
+    ["bs.PagerItem",{"href":"#","next":"","itemSpace":0,"html.":"Next \u2192"}]
+  ]
+}

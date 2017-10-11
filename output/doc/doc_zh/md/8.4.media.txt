@@ -1,0 +1,150 @@
+8.4 Media
+---------
+
+&nbsp;
+
+### Media 媒体对象
+
+`bs.Media` 表达 `bs.MediaBody` 的列表，在各表项之前或之后，可选插入媒体内容（`bs.MediaLeft` 与 `bs.MediaRight`），一个多媒体内容可以是图像、视频、音频等。
+
+<div $='.rewgt.ui_demo' src='md/code/8_4_a.txt' input-height='{400}'></div>
+
+Media 构件下可嵌套 Media，如下。
+
+<div $='.rewgt.ui_demo' src='md/code/8_4_b.txt' input-height='{430}'></div>
+
+`bs.MediaLeft` 与 `bs.MediaRight` 支持用 `duals.alignTo` 指定纵向对齐方式，可选 `'top', 'middle', 'bottom'`。
+
+### MediaList 媒体列表
+
+`bs.MediaList` 与 `bs.MediaItem` 组合使用，形成列表，如下例。
+
+<div $='.rewgt.ui_demo' src='md/code/8_4_c.txt' input-height='{280}'></div>
+
+### API 接口
+
+<a name="api_media"></a>构件 `bs.Media`（继承自 `bs.Div2`）：
+
+<div $=bs.Table responsive='1' striped='' bordered='1' condensed='1' hover='1'>
+  <div $=bs.Thead sty__='background:#e8e8e8'><div $=bs.Tr>
+    <div $=bs.Th width='{160}'>属性</div>
+    <div $=bs.Th width='{80}'>类型</div>
+    <div $=bs.Th width='{100}'>缺省值</div>
+    <div $=bs.Th>描述</div>
+  </div></div>
+  <div $=bs.Tbody><div $=bs.Tr>
+    <div $=bs.Td><code>props.bsClass</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>'media'</div>
+    <div $=bs.Td></div>
+  </div></div>
+</div>
+
+<a name="api_mediabody"></a>构件 `bs.MediaBody`（继承自 `bs.Div2`）：
+
+<div $=bs.Table responsive='1' striped='' bordered='1' condensed='1' hover='1'>
+  <div $=bs.Thead sty__='background:#e8e8e8'><div $=bs.Tr>
+    <div $=bs.Th width='{160}'>属性</div>
+    <div $=bs.Th width='{80}'>类型</div>
+    <div $=bs.Th width='{100}'>缺省值</div>
+    <div $=bs.Th>描述</div>
+  </div></div>
+  <div $=bs.Tbody><div $=bs.Tr>
+    <div $=bs.Td><code>props.bsClass</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>'media-body'</div>
+    <div $=bs.Td></div>
+  </div></div>
+</div>
+
+<a name="api_medialeft"></a>构件 `bs.MediaLeft`（继承自 `bs.Div2`）：
+
+<div $=bs.Table responsive='1' striped='' bordered='1' condensed='1' hover='1'>
+  <div $=bs.Thead sty__='background:#e8e8e8'><div $=bs.Tr>
+    <div $=bs.Th width='{160}'>属性</div>
+    <div $=bs.Th width='{80}'>类型</div>
+    <div $=bs.Th width='{100}'>缺省值</div>
+    <div $=bs.Th>描述</div>
+  </div></div>
+  <div $=bs.Tbody><div $=bs.Tr>
+    <div $=bs.Td><code>props.bsClass</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>'media-left'</div>
+    <div $=bs.Td></div>
+  </div><div $=bs.Tr>
+    <div $=bs.Td><code>duals.alignTo</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td></div>
+    <div $=bs.Td>纵向对齐方式，可选：'top', 'middle', 'bottom' </div>
+  </div></div>
+</div>
+
+<a name="api_mediaright"></a>构件 `bs.MediaRight`（继承自 `bs.MediaLeft`）：
+
+<div $=bs.Table responsive='1' striped='' bordered='1' condensed='1' hover='1'>
+  <div $=bs.Thead sty__='background:#e8e8e8'><div $=bs.Tr>
+    <div $=bs.Th width='{160}'>属性</div>
+    <div $=bs.Th width='{80}'>类型</div>
+    <div $=bs.Th width='{100}'>缺省值</div>
+    <div $=bs.Th>描述</div>
+  </div></div>
+  <div $=bs.Tbody><div $=bs.Tr>
+    <div $=bs.Td><code>props.bsClass</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>'media-right'</div>
+    <div $=bs.Td></div>
+  </div></div>
+</div>
+
+<a name="api_mediaheading"></a>构件 `bs.MediaHeading`（继承自 `bs.H4`）：
+
+<div $=bs.Table responsive='1' striped='' bordered='1' condensed='1' hover='1'>
+  <div $=bs.Thead sty__='background:#e8e8e8'><div $=bs.Tr>
+    <div $=bs.Th width='{160}'>属性</div>
+    <div $=bs.Th width='{80}'>类型</div>
+    <div $=bs.Th width='{100}'>缺省值</div>
+    <div $=bs.Th>描述</div>
+  </div></div>
+  <div $=bs.Tbody><div $=bs.Tr>
+    <div $=bs.Td><code>props.bsClass</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>'media-heading'</div>
+    <div $=bs.Td></div>
+  </div></div>
+</div>
+
+<a name="api_medialist"></a>构件 `bs.MediaList`（继承自 `bs.Ul`）：
+
+<div $=bs.Table responsive='1' striped='' bordered='1' condensed='1' hover='1'>
+  <div $=bs.Thead sty__='background:#e8e8e8'><div $=bs.Tr>
+    <div $=bs.Th width='{160}'>属性</div>
+    <div $=bs.Th width='{80}'>类型</div>
+    <div $=bs.Th width='{100}'>缺省值</div>
+    <div $=bs.Th>描述</div>
+  </div></div>
+  <div $=bs.Tbody><div $=bs.Tr>
+    <div $=bs.Td><code>props.bsClass</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>'media-list'</div>
+    <div $=bs.Td></div>
+  </div></div>
+</div>
+
+<a name="api_mediaitem"></a>构件 `bs.MediaItem`（继承自 `bs.Li`）：
+
+<div $=bs.Table responsive='1' striped='' bordered='1' condensed='1' hover='1'>
+  <div $=bs.Thead sty__='background:#e8e8e8'><div $=bs.Tr>
+    <div $=bs.Th width='{160}'>属性</div>
+    <div $=bs.Th width='{80}'>类型</div>
+    <div $=bs.Th width='{100}'>缺省值</div>
+    <div $=bs.Th>描述</div>
+  </div></div>
+  <div $=bs.Tbody><div $=bs.Tr>
+    <div $=bs.Td><code>props.bsClass</code></div>
+    <div $=bs.Td>string</div>
+    <div $=bs.Td>'media'</div>
+    <div $=bs.Td></div>
+  </div></div>
+</div>
+
+&nbsp;

@@ -1,0 +1,20 @@
+<div $=bs.Navbar $$for='' $width='duals(".body").innerSize[0]-duals(".body.book.summary").width-94'>
+  <div $=bs.NavbarHeader>
+    <span $=bs.NavbarBrand href='https://github.com/rewgt/shadow-bootstrap'>Shadow bootstrap</span>
+  </div>
+  <div $=bs.Nav pull-right='1'>
+    <div $=bs.NavItem key='item1' $id__='navbar.login'>Login</div>
+  </div>
+  <div $=bs.Nav>
+    <div $=bs.NavItem key='item2'>Product</div>
+    <pre $=bs.DropdownBtn key='drop' desc='Online help'>
+<div $=bs.MenuItem key='item3'>Chapter 1</div>
+<div $=bs.MenuItem key='item4'>Chapter 2</div>
+</pre>
+  </div>
+  <div $=bs.NavbarForm pull-right='1'>
+    <span $=bs.FormGroup>
+      <span $=bs.FormCtrl type='text' placeholder='Search'></span>
+    </span>
+  </div>
+</div>

@@ -1,0 +1,7 @@
+bs.Form
+7.2.!api_form
+[ props ]
+  bsClass: 'form'
+[ duals ]
+  inline
+  horizontal
