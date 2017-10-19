@@ -8,7 +8,7 @@ var T = W.$templates, creator = W.$creator;
 var utils = W.$utils, ex = W.$ex, main = W.$main, idSetter = W.$idSetter;
 
 idSetter['.rewgt.bt.version'] = function() {
-  return '1.1.1';
+  return '1.1.2';
 };
 
 //--------
