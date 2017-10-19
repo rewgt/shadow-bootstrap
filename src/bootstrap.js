@@ -7,6 +7,10 @@ var W = require('shadow-widget');
 var T = W.$templates, creator = W.$creator;
 var utils = W.$utils, ex = W.$ex, main = W.$main, idSetter = W.$idSetter;
 
+idSetter['.rewgt.bt.version'] = function() {
+  return '1.1.1';
+};
+
 //--------
 function htmlEncode(s) {
   return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
@@ -209,8 +213,8 @@ function makeBsClass3_(TBase,sName,sCls,isInline,sRole) {
 })([ 'P','H1','H2','H3','H4','H5','H6','Hr','Pre','Hgroup',
   'Ul','Ol','Li','Dl','Dd','Dt','Iframe','Noscript',
   'Fieldset','Details','Figure','Figcaption','Menu','Menuitem','Address',
-  'Caption','Colgroup','Td','Tbody','Thead','Tfoot','Th','Tr',
-]); // next will define: bs.Form, bs.Blockquote, bs.Table
+  'Caption','Colgroup','Td','Tbody','Thead','Tfoot','Th','Tr', // no 'Col'
+]); // next will define: bs.Form, bs.Blockquote, bs.Table      // bs.Col is special
 
 var form_klass_ = { 'form-horizontal':true, 'form-inline':true };
 

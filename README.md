@@ -1,7 +1,7 @@
 
 ### About shadow-bootstrap
 
-Port [bootstrap](http://getbootstrap.com) to Shadow Widget system.
+Port [bootstrap](http://getbootstrap.com) to shadow-widget platform.
 
 ### Install
 
@@ -33,7 +33,6 @@ Or, open online help:
 <a target="_blank" href="https://rewgt.github.io/shadow-bootstrap/output/doc/doc_zh/index.html">Shadow Bootstrap User Manual (in Chinese)</a>
 
 [shadow-server Project](https://github.com/rewgt/shadow-server)   
-[shadow-widget Project](https://github.com/rewgt/shadow-widget)   
 [shadow-bootstrap Project](https://github.com/rewgt/shadow-bootstrap)
 
 ### BSD License
